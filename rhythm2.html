@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="description" content="University final year project to test the feasibility of a voice controlled website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Joseph Percival">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm2</title>
+   <!--Link to the websites style sheet-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--Links to external Javascripts-->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSecular+One%7CCantarell:400i%7CCourgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+            <!--Links to internal sources within the website, to improve load times-->
+    <script src="scripts/voice-commands.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/jquery-3.4.0.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <header>
+    <!--Anchor point placed above all content and is used in tandem with the anchor point at the bottom of the page for scrolling-->
+            <a id="#header-anchor"></a>
+    <!--head banner 100vW of the screen -->
+            <div class="head-banner">
+    <!--wrapper has 6 frame css grid system and 960px width to enhance readability-->
+                <div class="head-banner-content">
+    <!--menu icon's wrapper which enables the styling and positioning of the element-->
+                    <div class="hamburger-menu">
+          <!--menu icon placed in side of the button element and the function, is triggered when the user interacts-->
+                            <button class="burger-button">
+                                <i class="fa fa-bars" title="Edit"></i>
+                            </button>
+
+                    </div>
+                    <!--Logo is placed in columns 1 -3 with a home link to enhance usability throughout the website-->
+                    <div class="logo">
+
+                        <a href="index.html" title="Guitar Lessons">
+                            <h2><span>GUITAR</span> LESSONS</h2>
+                        </a>
+                    </div>
+                <!--Desktop navigation is placed in the remaining columns of the grid system-->
+                <nav class="nav">
+                    <ul>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="basics.html">Basics</a></li>
+                        <li> <a href="frets.html">Frets</a></li>
+                        <li> <a href="chords.html">Chords</a></li>
+                        <li> <a href="rhythm.html">Rhythm</a></li>
+                        <li> <a href="lead.html">Lead</a></li>
+
+                    </ul>
+                </nav>
+
+<!--mobile navigation is not displayed until 930px screen size, is triggered using the menu button and the functins inside of the menu.js file. Has its own grid system, so when it is displayed it displays full width and under the header -->
+                    <nav class="mobile-navigation">
+
+                        <a href="index.html">HOME</a>
+                        <a href="basics.html">BASICS</a>
+                        <a href="frets.html">FRETS</a>
+                        <a href="chords.html">CHORDS</a>
+                        <a href="rhythm.html">RHYTHM</a>
+                        <a href="lead.html">LEAD</a>
+                    </nav>
+            </div>
+        </div>
+        <!--end of header-->
+        </header>
+<!--banner image covers 100vW of any device screen and is not included within any grid system for the website to enable this-->
+    <div id="main-banner-image-frets">
+        <img src="img/nav5.png" alt="main image and title">
+    </div>
+    <article>
+          <!--This modal box holds instructions on voice commands that the user can say to navigate through the website, it remains hidden until triggered using a voice command indicated on every page-->
+            <div id="dialog" class="help-box" title="help-box">
+    <!--Once triggered the modal box appears above the rest of the content and has a table of instructions-->
+                             <h2>Help Box</h2>
+              <p>Hello, you can call this help box at any time, by saying, "What to say."<br>
+                Below are a list of command's that you can say to go anywhere within this website - Have fun.<br></p>
+                <div class="table">
+                <table>
+                      <tr>
+                        <th>What to say</th>
+                        <th>What happens</th>
+                      </tr>
+                      <tr>
+                        <td>Scroll Up</td>
+                        <td>Scroll's the page up</td>
+                      </tr>
+                      <tr>
+                        <td>Scroll Down</td>
+                        <td>Scroll's the page down</td>
+                      </tr>
+                                            <tr>
+                        <td>Go to the Top</td>
+                        <td>Takes you to the top of the page</td>
+                      </tr>
+                                            <tr>
+                        <td>Go to the bottom</td>
+                        <td>Takes you to the bottom of the page</td>
+                      </tr>
+                      <tr>
+                        <td>Go forward</td>
+                        <td>Goes forward a previously visited page</td>
+                      </tr>
+                      <tr>
+                        <td>Go backwards</td>
+                        <td>returns to the previously visited page</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Takes you to the Home Page</td>
+                      </tr>
+                      <tr>
+                        <td>Open Basics</td>
+                        <td>Takes you to the first Basics Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Open Second Basics Lesson</td>
+                        <td>Takes you to the second Basics Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Open Fret's</td>
+                        <td>Takes you to the first Frets Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Finger positioning</td>
+                        <td>Takes you to the second Fret's lesson on Finger positioning.</td>
+                      </tr>
+                      <tr>
+                        <td>Open Chords</td>
+                        <td>Takes you to the Chords Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>The Power Chord</td>
+                        <td>Takes you to the second Chord's Lesson on Power Chords</td>
+                      </tr>
+                      <tr>
+                        <td>Open Rhythm</td>
+                        <td>Takes you to the Rhythm Guitar Lesson</td>
+                      </tr>
+                      <tr>
+                          <td>First music lesson</td>
+                          <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song</td>
+                      </tr>
+                      <tr>
+                        <td>Open Lead</td>
+                        <td>Takes you to the Lead Guitar Lesson</td>
+                      </tr>
+                      <tr>
+                          <td>Reading music</td>
+                          <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read music</td>
+                        </tr>
+                    </table>
+                </div>
+           </div>
+        <h1>A Rocky Blues Lesson</h1>
+        <div id="main-content-wrapper">
+            <!--Sections of this page are presenting in a repeated 6frame CSS Grid system for conformity with the rest of the site-->
+            <section class="introduction">
+                <p>When you have had enough practice in keeping time, you might find that adding a downward strum to every beat becomes a little tedious, more often than not, songs tend to add half beats between main beats and this is were the upwards strum come's into play. So far we have worked out that we count in 4 second beats and for each beat we strum downwards.
+                    The extra beat usually follows the third beat and can be tricky to master especially with chord changes. One way to overcome this is to count out loud at first, " 1, 2, 3, and 4." Saying the word, "and, " will remind you to include the upwards strum.<br><b> For all voice commands for this website, just say, "What to say" at any time to open the Help Box.</b><br>
+                </p>
+                <h2>Putting It All Together.</h2>
+                <p>
+                    You should by now have learned how to hold the guitar, where to position your fingers whilst playing a chord and hopefully how to strum in time too. So now is the time to learn a basic song to start you playing the Rhythm guitar.
+                </p>
+
+            </section>
+
+
+            <section class="story">
+                <h2>Jimmy Henderix</h2>
+                <img src="img/jimmy-placeholder.png" alt="image of Jimmy Henderix">
+                <p>
+                    One of the most influential artist of all times, is Jimmy Hendrix. In addition to playing with his teeth, behind his back, or without touching the instrument’s strings, he also played his guitar upside down, although there was a very simple reason for that, he was left-handed. Most of his songs were created using the Power Chord. His version of, "All Along the Watchtower," is hailed as a masterpiece, using just one of the Power Chords from this tutorial and a strum pattern already explained, its time for a lesson.</p>
+
+
+                <div class="chord-section1">
+                    <h2>The Chords</h2>
+                    <img src="img/f-power-placeholder.png" alt="Diagram and image the F Power Chord">
+                    <p>
+                        This Power Chord was explained in a previous section of this web site, it is the simplest chord to learn and with enough practice will power drive your way into mastering this song and many more to come too! The chord diagram on the left explains clearly were you should place your finger tips and also, if you remember from a previous tutorial, which fingers tips go where.<br> Don't worry if you have forgotten which number belongs to which finger, the hand diagram, displayed lower, clearly identifies where each finger goes with its respectful number. On the chord diagram the dots represent where you should fret the board along with each corresponding finger number.
+                    </p>
+                </div>
+
+                <div class="chord-section1a">
+                    <h2>Finger Numbers</h2>
+                    <img src="img/finger-placeholder.png" alt="Diagram of fingers and their relative number's">
+                    <p>
+                        The Power Chord above is called the F-Power Chord and the actual shape will not change all of the way through this song, sometimes keeping it simple is the best way to learn anything in life. Practice this chord before starting the lesson, sometimes a beginner may not be fretting the string hard enough, the easiest way to find out if you are playing it correctly is simply by listening. Play each string with your plectrum, is each string playing the right sound?
+                        If you find that some or even all of the strings are making the wrong sound, for example, a slight buzzing sound or if the sound is muted then press harder on the strings and repeat until each string sounds correct.<br>Once you are confident in playing this chord on different frets, each note is sounding as it should then you are ready for the lesson.</p>
+                </div>
+
+
+                <div class="chord-section2">
+                    <h2>The Lesson</h2>
+                    <p>
+                        The chords for this song are the same all of the way through, except they're on different frets.<br>It is worth remembering that a beat is 1 downwards strum every second. The first being on the 9th fret for 4 beats (4 down strums), then the 7th fret for 2 beats (2 down strums), up to the 5th fret for 4 beats then back onto the 7th fret for 4 beats - that's it!<br> A really simple song with a powerful sound. Below is a table which explains things better, giving the chord name, the fret number and what each chord is called - just using the chord shown above.
+                        <br>It will take a lot of practice, if you are a complete beginner be sure to expect some wrist pain and your finger tip's becoming dry and sore-this is completely normal and it will disappear after a week or two of playing your guitar. Remember that you are making wrist and hand movements you have never done before, it will pass after a short while, remember to rest when you need to and keep practicing. <br>Sometimes you will want to quit playing the guitar, but if you don't - Then you will surely be rewarded</p>
+                </div>
+                <!--Table of chontents was added after the description to increase the usability and retainability of information-->
+                <div class="table" title="Song Chords">
+                    <table>
+                        <tr>
+                            <th>Chords</th>
+                            <th>Fret</th>
+                            <th>Beats/Strums</th>
+                        </tr>
+                        <tr>
+                            <td>C#</td>
+                            <td>9</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>7</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>5</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>7</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section class="outro">
+                <h2>Beats</h2>
+                Beats can help measure tempos and are performed in grooves and rhythmic music. They measure the pulse and rhythm of a musical piece. They are usually devided into two kinds: stressed and unstressed. Stressed beats are the 'strong' beats and unstressed are the 'weak' beats.
+                <div class="anchorR1">
+    <!--Every main page has a link box that directs the user to the next lesson for that page, it can be clicked or voice activated-->
+                    <a href="#top">
+                        <img src="img/arrow.jpg" alt="link pointing to the top of page">
+                    </a>
+                    <p>Go to the top</p>
+
+                </div>
+            </section>
+        </div>
+    </article>
+    <footer>
+        <!-- The footer has a full page width, with three social media icons linking to their websites -->
+        <div class="footer-content">
+
+            <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-percival/" aria-label="Link to the Author's Linked In account">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                </svg>
+            </a>
+            <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                </svg>
+            </a>
+
+        </div>
+        <!-- End footer div signifying the end of the footer -->
+    </footer>
+    <!--end Main tag signifying the end of the page-->
+    </main>
+</body>
+</html>

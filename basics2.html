@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="description" content="University final year project to test the feasibility of a voice controlled website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Joseph Percival">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7CSecular+One%7CCantarell:400i%7CCourgette" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/jquery-3.4.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="scripts/voice-commands.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/script.js"></script>
+
+</head>
+
+<body>
+    <main>
+    <header>
+<!--Anchor point placed above all content and is used in tandem with the anchor point at the bottom of the page for scrolling-->
+        <a id="#header-anchor"></a>
+<!--head banner 100vW of the screen -->
+        <div class="head-banner">
+<!--wrapper has 6 frame css grid system and 960px width to enhance readability-->
+            <div class="head-banner-content">
+<!--menu icon's wrapper which enables the styling and positioning of the element-->
+                <div class="hamburger-menu">
+      <!--menu icon placed in side of the button element and the function, is triggered when the user interacts-->
+                        <button class="burger-button">
+                            <i class="fa fa-bars" title="Edit"></i>
+                        </button>
+
+                </div>
+                <!--Logo is placed in columns 1 -3 with a home link to enhance usability throughout the website-->
+                <div class="logo">
+
+                    <a href="index.html" title="Guitar Lessons">
+                        <h2><span>GUITAR</span> LESSONS</h2>
+                    </a>
+                </div>
+                <!--Desktop navigation is placed in the remaining columns of the grid system-->
+                <nav class="nav">
+                    <ul>
+                        <li> <a href="index.html">Home</a></li>
+                        <li> <a href="basics.html">Basics</a></li>
+                        <li> <a href="frets.html">Frets</a></li>
+                        <li> <a href="chords.html">Chords</a></li>
+                        <li> <a href="rhythm.html">Rhythm</a></li>
+                        <li> <a href="lead.html">Lead</a></li>
+
+                    </ul>
+                </nav>
+
+<!--mobile navigation is not displayed until 930px screen size, is triggered using the menu button and the functins inside of the menu.js file. Has its own grid system, so when it is displayed it displays full width and under the header -->
+                    <nav class="mobile-navigation">
+
+                        <a href="index.html">HOME</a>
+                        <a href="basics.html">BASICS</a>
+                        <a href="frets.html">FRETS</a>
+                        <a href="chords.html">CHORDS</a>
+                        <a href="rhythm.html">RHYTHM</a>
+                        <a href="lead.html">LEAD</a>
+
+
+                    </nav>
+
+            </div>
+        </div>
+        </header>
+<!--end of header-->
+<!--banner image covers 100vW of any device screen and is not included within any grid system for the website to enable this-->
+    <div id="main-banner-image-basics">
+        <img src="img/nav1_2.png" alt="Main image and page title">
+    </div>
+
+    <article>
+          <!--This modal box holds instructions on voice commands that the user can say to navigate through the website, it remains hidden until triggered using a voice command indicated on every page-->
+            <div id="dialog" class="help-box" title="help-box">
+    <!--Once triggered the modal box appears above the rest of the content and has a table of instructions-->
+                             <h2>Help Box</h2>
+              <p>Hello, you can call this help box at any time, by saying, "What to say."<br>
+                Below are a list of command's that you can say to go anywhere within this website - Have fun.<br></p>
+                <div class="table">
+                <table>
+                      <tr>
+                        <th>What to say</th>
+                        <th>What happens</th>
+                      </tr>
+                      <tr>
+                        <td>Scroll Up</td>
+                        <td>Scroll's the page up</td>
+                      </tr>
+                      <tr>
+                        <td>Scroll Down</td>
+                        <td>Scroll's the page down</td>
+                      </tr>
+                                            <tr>
+                        <td>Go to the Top</td>
+                        <td>Takes you to the top of the page</td>
+                      </tr>
+                                            <tr>
+                        <td>Go to the bottom</td>
+                        <td>Takes you to the bottom of the page</td>
+                      </tr>
+                      <tr>
+                        <td>Go forward</td>
+                        <td>Goes forward a previously visited page</td>
+                      </tr>
+                      <tr>
+                        <td>Go backwards</td>
+                        <td>returns to the previously visited page</td>
+                      </tr>
+                      <tr>
+                        <td>Home</td>
+                        <td>Takes you to the Home Page</td>
+                      </tr>
+                      <tr>
+                        <td>Open Basics</td>
+                        <td>Takes you to the first Basics Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Open Second Basics Lesson</td>
+                        <td>Takes you to the second Basics Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Open Fret's</td>
+                        <td>Takes you to the first Frets Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>Finger positioning</td>
+                        <td>Takes you to the second Fret's lesson on Finger positioning.</td>
+                      </tr>
+                      <tr>
+                        <td>Open Chords</td>
+                        <td>Takes you to the Chords Lesson</td>
+                      </tr>
+                      <tr>
+                        <td>The Power Chord</td>
+                        <td>Takes you to the second Chord's Lesson on Power Chords</td>
+                      </tr>
+                      <tr>
+                        <td>Open Rhythm</td>
+                        <td>Takes you to the Rhythm Guitar Lesson</td>
+                      <tr>
+                          <td>First music lesson</td>
+                          <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song</td>
+                      </tr>
+                      <tr>
+                        <td>Open Lead</td>
+                        <td>Takes you to the Lead Guitar Lesson</td>
+                      </tr>
+                      <tr>
+                          <td>Reading music</td>
+                          <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read music</td>
+                        </tr>
+                    </table>
+                </div>
+           </div>
+
+          <!--The main contents wrapper mirrors the head wrapper for conformity-->
+        <div id="main-content-wrapper">
+            <!--sections were implicated to enhance the readability and accessability to users-->
+            <section class="welcome">
+                <h1>How to hold a Guitar</h1>
+                <p>This page explains how to hold a guitar correctly so that you can reach around with your fingertips to play the strings effortlessly, be prepared this is not an easy task, your wrists will ache and so will your finger tips. Remember to rest but more importantly keep picking your guitar up and practicing, the aches will disappear after a while and you'll never ache again after that initial period.<br><b> For all voice commands for this website, just say, "What to say" at any time to open the Help Box.</b><br>
+                </p>
+            </section>
+<!--content card's each have their own wrapper with their own grid system within the main grid system, for accurate placement of elememnts therein-->
+            <section class="information-card">
+                <!--content box image placeholder-->
+                <div id="cardB1"></div>
+                <div class="info-boxB1">
+                    <h2>
+                        How to sit with a Guitar.
+                    </h2>
+                    <p>This image explains how you should comfortably hold your guitar whilst being seated. Its a good idea to learn this way in the beginning as playing stood up can accidently make your guitar slip whilst playing. The important thing is to relax, sit with the guitar so that you are comfortable and are enjoying playing it without causing any strains.
+
+                    </p>
+                </div>
+            </section>
+
+            <section class="information-card">
+
+
+                <div id="cardB2">
+                </div>
+                <div class="info-boxB1">
+                    <h2>
+                        How to hold the back of the neck.
+                    </h2>
+                    <p>When holding your guitar its important to cradle the guitar neck rather than to hold tightly. Positioning the thumb around the neck, just before the fretboard whilst the base of your fingers sits on the other side of the fretboard. This should give enough of an arch so that you can reach for any chord you wish to play.
+                    </p>
+                </div>
+            </section>
+
+            <section class="information-card">
+                <div id="cardB3"></div>
+                <div class="info-boxB1">
+                    <h2> How to arch over the Fretboard</h2>
+                    <p>Once you are in a position were you have the correct thumb placement and palm cradling is present, check that your index an middle finger can reach the top three bass strings and your remaining fingers can easily reach the remaining strings. Its best to practice this at the top of the fret board where it is thinner and easier to do.
+                    </p>
+                </div>
+            </section>
+<!--end of content card sections-->
+<!--Each page has an interesting fact, aligned to the right and in italics, this change in text directions enhances the redability in such a way that the users usual eye tracking is altered, keepping the user engaged-->
+            <div class="outroB2">
+                <p>Even a pretty soft strum can get a pretty big sound. A lot of beginner's tend to hit their guitar with everything they’ve got, and can sound harsh to other people. Take your time and try to think about other people too.</p>
+            </div>
+<!--every page that has a screen size above 930px in width has an anchor image at the base of the page, once interacted will transend the, or jump, the page back to the top head anchor and to the head of the page.-->
+            <div class="anchor-basics">
+                  <a href="#top">
+                    <img src="img/arrow.jpg" alt="link pointing to the top of page">
+                </a>
+                <p>Go to the top</p>
+            </div>
+
+        </div>
+    </article>
+    <footer>
+        <!-- The footer has a full page width, with three social media icons linking to their websites -->
+        <div class="footer-content">
+
+            <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"></path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/joseph-percival/" aria-label="Link to the Author's Linked In account">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"></path>
+                </svg>
+            </a>
+            <a href="https://twitter.com/percival_joseph" aria-label="icon link to the Author's Twitter account">
+                <svg class="social-media-icons" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 24 24">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"></path>
+                </svg>
+            </a>
+
+        </div>
+        <!-- End footer div signifying the end of the footer -->
+    </footer>
+    <!--end Main tag signifying the end of the page-->
+    </main>
+</body>
+</html>
