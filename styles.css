@@ -34,6 +34,7 @@ h2 {
     text-align: center;
     line-height: 3rem;
 }
+
 .logo h2 {
     font-family: 'Secular One', sans-serif;
     font-size: 32px;
@@ -41,7 +42,8 @@ h2 {
     height: 58px;
 
 }
-h3{
+
+h3 {
     font-family: 'Courgette', cursive;
     font-size: 2.5rem;
     font-weight: 600;
@@ -53,7 +55,7 @@ h3{
 h4 {
     font-size: 22px;
     color: #fff;
-    text-align:center;
+    text-align: center;
 }
 
 p {
@@ -67,13 +69,13 @@ a {
     color: white;
 }
 
-.emphasis{
-   font-weight: 900;
+.emphasis {
+    font-weight: 900;
 }
 
 .head-banner {
     border-bottom: 1px solid gainsboro;
-    background-color:#BDBDBD;
+    background-color: #BDBDBD;
     height: 59px;
 }
 
@@ -96,14 +98,14 @@ a {
     grid-row: 1;
 }
 
-span { 
+span {
     color: black;
 }
 
 .hamburger-menu {
     position: absolute;
     line-height: 30px;
-    border-right:2px solid lightgrey;
+    border-right: 2px solid lightgrey;
     display: grid;
     grid-column: 1;
     grid-row: 1;
@@ -112,6 +114,7 @@ span {
 .burger-button a:focus {
     outline: none;
 }
+
 .burger-button {
     background: none;
     color: #fff;
@@ -120,10 +123,11 @@ span {
     font: inherit;
     cursor: pointer;
     outline: inherit;
-
 }
 
-.mobile-navigation{display:none;}
+.mobile-navigation {
+    display: none;
+}
 
 /*mobile navigation-style*/
 
@@ -133,8 +137,8 @@ span {
     position: absolute;
     z-index: 999999;
     width: 100%;
-    float:left;
-    margin-top:60px;
+    float: left;
+    margin-top: 60px;
 }
 
 
@@ -184,7 +188,8 @@ span {
     text-decoration: none;
     color: black;
     display: block;
-    transition: .3s background-color;/*adds a 3second transition on hover*/
+    transition: .3s background-color;
+    /*adds a 3second transition on hover*/
 }
 
 .nav a:hover {
@@ -206,7 +211,7 @@ span {
     grid-row: 2;
 }
 
-#touch-nav-content > div img {
+#touch-nav-content>div img {
     height: auto;
     width: 100%;
 
@@ -315,7 +320,7 @@ span {
 }
 
 /*Main pages content styles*/
-#main-content-wrapper{
+#main-content-wrapper {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
     display: grid;
@@ -330,52 +335,93 @@ span {
 
 /*main content styling*/
 
-#main-content-wrapper > .welcome {
+#main-content-wrapper>.welcome {
     grid-column: 1/7;
     grid-row: 1;
     margin: 0;
     text-align: left;
 }
 
-/*modal box styles for all pages*/
-
-.help-box{
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-    background-color:#f2fbfe;
-    grid-gap: 10px;
-    padding:20px;
-    display:none;
+#help-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    margin-left: -150px;
+    margin-top: -150px;
+    overflow: scroll;
+    background-color: transparent;
 }
 
-#dialog{
-    border-radius: 20px;
-    border-bottom: 1px solid lightgray;
-    grid-column: 2/6;
-    align-content: center;
-    text-align:center;
-
-
+.help-center {
+    margin: 0% auto;
+    padding: 20px;
 }
-#dialog > p{
-    grid-column:1/7;
+
+.help-center>.table {
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    width: 80%;
 }
-#dialog > .table{
-    display:grid;
-    grid-column:2/6;
-    justify-content:center;
-    grid-row:2;
-    margin-bottom:3em;
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: gainsboro;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: 8px 6px 19px 0px rgba(50, 50, 50, 0.64);
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*Index Styles*/
 
-
 .welcome img {
-    float: right;/*enables the text to wrap around the image*/
+    float: right;
+    /*enables the text to wrap around the image*/
 }
 
 .outro-index {
@@ -387,6 +433,7 @@ span {
     grid-column: 3/7;
     grid-row: 3;
 }
+
 .outro-basics {
     grid-column: 2/7;
     grid-row: 4;
@@ -396,12 +443,14 @@ span {
     font-size: 1.5rem;
     color: grey;
 }
+
 /*anchor point at the bottom of the html, points to the top of page*/
 .anchor-index {
     grid-column: 6;
     grid-row: 4;
     text-align: center;
 }
+
 /*content cards containing images and their content styles*/
 
 /*basic page 1 styles*/
@@ -417,19 +466,22 @@ span {
     border: 1px solid lightgray;
     grid-column: 1/7;
 }
+
 #card {
     background-image: url(img/headstock2.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     grid-column: 1/3;
     grid-row: 1;
-    margin:20px;
+    margin: 20px;
 }
+
 #info-box {
     margin-top: -5px;
     grid-column: 3/7;
     grid-row: 1;
 }
+
 .information-card2 {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
@@ -442,6 +494,7 @@ span {
     border: 1px solid lightgray;
     grid-column: 1/7;
 }
+
 #card-bridge {
     background-image: url(img/bridge.jpg);
     background-size: contain;
@@ -480,8 +533,8 @@ span {
     background-repeat: no-repeat;
     height: 189px;
     width: 100%;
-      border-radius: 20px;
-    margin:66px 0 0 66px;
+    border-radius: 20px;
+    margin: 66px 0 0 66px;
     max-width: 350px;
     grid-column: 1/3;
     grid-row: 1;
@@ -528,7 +581,7 @@ span {
 }
 
 #information-boxC1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,-0.3)), url(img/music.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, -0.3)), url(img/music.jpg) no-repeat center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
@@ -706,8 +759,8 @@ span {
 #contact-info-detail.contact-info {
     grid-column: 1/7;
     grid-row: 6;
-    height:480px;
-    margin-bottom:5em;
+    height: 480px;
+    margin-bottom: 5em;
 }
 
 .contact-info h4 {
@@ -745,18 +798,20 @@ span {
     grid-row: 8;
 }
 
-#contact-box-lead2  h4 {
+#contact-box-lead2 h4 {
     margin-top: 8em;
     text-align: center;
     font-family: 'Work-Sans', sans-serif;
     font-size: 22px;
     color: gainsboro;
     font-weight: 500;
-    list-style:none;
+    list-style: none;
 }
+
 ul {
-    list-style-type:none;
+    list-style-type: none;
 }
+
 /*general content styles pages*/
 
 .outroB2 {
@@ -768,6 +823,7 @@ ul {
     font-size: 1.5rem;
     color: grey;
 }
+
 #lower-section {
     margin-top: 3em;
     padding-top: 0;
@@ -796,6 +852,7 @@ ul {
     border-radius: 25%;
     float: left;
 }
+
 #information-placeholderF1 p {
     margin-right: 30px;
 }
@@ -813,6 +870,7 @@ ul {
     grid-column: 1/7;
     grid-row: 4;
 }
+
 .placeholder {
     background-image: url(img/frets-placeholder.png);
     background-repeat: no-repeat;
@@ -823,6 +881,7 @@ ul {
     grid-column: 4/7;
     grid-row: 3;
 }
+
 .lessonF1a {
     grid-column: 1/7;
     grid-row: 5;
@@ -844,13 +903,14 @@ ul {
     grid-row: 7;
     border: 2px solid lightgray;
     border-radius: 10px;
-    margin-bottom:2em;
+    margin-bottom: 2em;
 }
 
 #lesson-two-frets h1 {
     font-family: 'Courgette', 'sans-serif';
     font-size: 40px;
 }
+
 .anchorFrets1 {
     grid-column: 6/7;
     grid-row: 7;
@@ -897,6 +957,7 @@ ul {
     grid-row: 1;
     text-align: center;
 }
+
 .outroC1 {
     grid-column: 2/7;
     grid-row: 5;
@@ -906,20 +967,24 @@ ul {
     font-size: 1.5rem;
     color: grey;
 }
+
 #lesson-two-chords {
     grid-column: 1/6;
     grid-row: 6;
     border: 2px solid lightgray;
     border-radius: 10px;
 }
+
 #lesson-two-chords h1 {
     font-family: 'Courgette', 'sans-serif';
     font-size: 40px;
 }
+
 #lesson-two-chords p {
     font-family: 'Secular+One', 'sans-serif';
     text-align: center;
 }
+
 .anchorC1 {
     grid-column: 6;
     grid-row: 6;
@@ -942,6 +1007,7 @@ ul {
     font-size: 1.5rem;
     color: grey;
 }
+
 /*Rhythm page content styles*/
 
 
@@ -983,30 +1049,34 @@ ul {
     font-size: 1.5rem;
     color: lightgray;
 }
+
 #lesson-two-frets {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     background-color: aliceblue;
     height: 180px;
     border-radius: 15px;
     grid-column: 1/5;
     border: 1px solid lightgrey;
 }
+
 #lesson-two-rhythm {
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     background-color: aliceblue;
     height: 180px;
     border-radius: 15px;
     grid-column: 1/5;
     border: 1px solid lightgrey;
 }
-#lesson-two-rhythmR1{
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)) ;
+
+#lesson-two-rhythmR1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     background-color: aliceblue;
     height: 180px;
     border-radius: 15px;
     grid-column: 1/5;
     border: 1px solid lightgrey;
 }
+
 #lesson-two-rhythm h1 {
     color: #77b3d4;
     font-family: Courgette;
@@ -1040,7 +1110,7 @@ ul {
     border-radius: 10px
 }
 
-#head-banner-content-rhythm2 > .chord-section1 {
+#head-banner-content-rhythm2>.chord-section1 {
     grid-column: 1/7;
     grid-row: 4;
 }
@@ -1076,7 +1146,7 @@ ul {
     grid-row: 7;
 }
 
-.table > table {
+.table>table {
     height: auto;
     width: 100%;
     font-family: 'Roboto';
@@ -1193,10 +1263,10 @@ td {
     margin: 0
 }
 
-.disclaimer{
-    grid-column:2/6;
-    grid-row:auto;
-    text-align:center;
+.disclaimer {
+    grid-column: 2/6;
+    grid-row: auto;
+    text-align: center;
 }
 
 /*Anchor Tag and Footer Styling*/
@@ -1205,16 +1275,19 @@ td {
     grid-row: auto;
     text-align: center;
 }
+
 .anchor-basics {
     grid-column: 6;
-    grid-row:auto;
+    grid-row: auto;
     text-align: center;
 }
+
 .anchor1 {
     grid-column: 6;
     grid-row: auto;
     text-align: center;
 }
+
 .anchor {
     grid-column: 6/-1;
     grid-row: auto;
@@ -1226,6 +1299,7 @@ td {
     width: 100%;
     max-width: 150px;
 }
+
 .anchor {
     grid-column: 6;
     grid-row: auto;
@@ -1236,24 +1310,28 @@ td {
     grid-column: 7;
     grid-row: auto;
 }
+
 .outro {
     text-align: right;
     font-style: italic;
     grid-column: 3/7;
     grid-row: 6;
 }
+
 .anchor-final {
     grid-column: 6/7;
     grid-row: auto;
     text-align: center;
 }
-.anchorF2{
-    grid-column:6/7;
-    grid-row:auto;
-    text-align:center;
+
+.anchorF2 {
+    grid-column: 6/7;
+    grid-row: auto;
+    text-align: center;
 }
+
 footer {
-    background-color:#BDBDBD;
+    background-color: #BDBDBD;
     width: 100%;
     display: inline-block;
     margin: 0 auto;
@@ -1273,7 +1351,7 @@ footer {
 }
 
 .footer-content a:hover {
-    background-color:#BDBDBD;
+    background-color: #BDBDBD;
 }
 
 .fact {
@@ -1300,182 +1378,776 @@ footer {
 
 @media only screen and (max-width: 963px) {
 
-    article {margin: 0 20px; }
-    .nav { display: none; }
-    header {   border-bottom: 1px solid grey;}
-    #lesson-two-basics,#lesson-two-lead,#lesson-two-chords,#lesson-two-rhythm,
-    #lesson-two-frets { grid-column: 1/7;margin-bottom:20px;grid-row:auto;}
-    /*Mobile nav stylings*/
-    .burger-button { display: block; float: left; margin: 16px;line-height: 30px; font-size: 28px;}
-    #mobile-menu{overflow: auto;position: absolute;z-index: 999999;width: 100%;float:left;margin-top:60px}
-    #mobile-menu a{ width: 100%; float: left;padding-top: 15px;padding-bottom:15px;background-color: lightgrey;color: #ffffff;text-align: center; padding-left: 16px; text-decoration: none;border-bottom: 1px solid #0065d1;
+    article {
+        margin: 0 20px;
     }
-    .logo {text-align: center;height: auto;width: 400px;line-height: 41px;font-size: 28px; }
-    .main-banner-image {height: 250px;}
-    .banner-message {font-size: 1rem; grid-column:1/5;grid-row:1;margin:10px 0 10px 10px;}
+
+    .nav {
+        display: none;
+    }
+
+    header {
+        border-bottom: 1px solid grey;
+    }
+
+    #lesson-two-basics,
+    #lesson-two-lead,
+    #lesson-two-chords,
+    #lesson-two-rhythm,
+    #lesson-two-frets {
+        grid-column: 1/7;
+        margin-bottom: 20px;
+        grid-row: auto;
+    }
+
+    /*Mobile nav stylings*/
+    .burger-button {
+        display: block;
+        float: left;
+        margin: 16px;
+        line-height: 30px;
+        font-size: 28px;
+    }
+
+    #mobile-menu {
+        overflow: auto;
+        position: absolute;
+        z-index: 999999;
+        width: 100%;
+        float: left;
+        margin-top: 60px
+    }
+
+    #mobile-menu a {
+        width: 100%;
+        float: left;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: lightgrey;
+        color: #ffffff;
+        text-align: center;
+        padding-left: 16px;
+        text-decoration: none;
+        border-bottom: 1px solid #0065d1;
+    }
+
+    .logo {
+        text-align: center;
+        height: auto;
+        width: 400px;
+        line-height: 41px;
+        font-size: 28px;
+    }
+
+    .main-banner-image {
+        height: 250px;
+    }
+
+    .banner-message {
+        font-size: 1rem;
+        grid-column: 1/5;
+        grid-row: 1;
+        margin: 10px 0 10px 10px;
+    }
+
     /*basics styling*/
-    #card-bridge { grid-row: 1; max-height: 200px;align-items: end; border: none;}
-    #cardB1 {grid-column: 3/4;width: 219px;margin-left: 50px;}
-    .info-boxB1 {grid-column: 1/7; grid-row: 2;text-align:center;}
-    #cardB2 {grid-column: 3/5; width: 300px;margin-left: 0;}
-    #cardB3 { grid-column: 2/5;height: 148px;margin:50px 0 0 106px;}
+    #card-bridge {
+        grid-row: 1;
+        max-height: 200px;
+        align-items: end;
+        border: none;
+    }
+
+    #cardB1 {
+        grid-column: 3/4;
+        width: 219px;
+        margin-left: 50px;
+    }
+
+    .info-boxB1 {
+        grid-column: 1/7;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    #cardB2 {
+        grid-column: 3/5;
+        width: 300px;
+        margin-left: 0;
+    }
+
+    #cardB3 {
+        grid-column: 2/5;
+        height: 148px;
+        margin: 50px 0 0 106px;
+    }
+
     /*frets styles*/
-    .contentF2 img { height: 262px; max-width: 300px;}
-    .content2F2 img { height: auto;width: 100%; max-width: 500px;}
+    .contentF2 img {
+        height: 262px;
+        max-width: 300px;
+    }
+
+    .content2F2 img {
+        height: auto;
+        width: 100%;
+        max-width: 500px;
+    }
+
     /*Rhythm 1 styles*/
-    #lower-section-imageR1 { background-size: contain;}
-    #lower-section-image2R1 {background-size: contain;}
+    #lower-section-imageR1 {
+        background-size: contain;
+    }
+
+    #lower-section-image2R1 {
+        background-size: contain;
+    }
+
     /*Chord Styles*/
-    .info-box-power { grid-column: 1/-1; grid-row: 2;padding: 0;margin: 0;}
-    .card-power1 { grid-column: 3; grid-row: 2; width: 300px;height: 300px;margin: 0 0 0 5em;padding: 0;}
-    .info-box-power p {grid-row: 3; }
-    .info-box2-power {grid-column: 1/-1;grid-row: 3;}
-    .card2-power {grid-column: 3; grid-row: 2;width: 300px; height: 300px;margin: 0 0 0 5em;padding: 0;}
-    .info-box2-power p { grid-row: 3;}
-    .info-box2-power {grid-column: 1/-1;grid-row: 3;}
-    .outro-power{ grid-row: 5;}
+    .info-box-power {
+        grid-column: 1/-1;
+        grid-row: 2;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-power1 {
+        grid-column: 3;
+        grid-row: 2;
+        width: 300px;
+        height: 300px;
+        margin: 0 0 0 5em;
+        padding: 0;
+    }
+
+    .info-box-power p {
+        grid-row: 3;
+    }
+
+    .info-box2-power {
+        grid-column: 1/-1;
+        grid-row: 3;
+    }
+
+    .card2-power {
+        grid-column: 3;
+        grid-row: 2;
+        width: 300px;
+        height: 300px;
+        margin: 0 0 0 5em;
+        padding: 0;
+    }
+
+    .info-box2-power p {
+        grid-row: 3;
+    }
+
+    .info-box2-power {
+        grid-column: 1/-1;
+        grid-row: 3;
+    }
+
+    .outro-power {
+        grid-row: 5;
+    }
+
     /*lead*/
-    .higher-section-image-lead { grid-column: 3/5;transform: rotate(310deg);}
-    #tablature-placeholder {grid-row: 3;grid-column: 3/6; }
-    .tablature-description {grid-row: 4;}
-    .guitar-on-tab-placeholder { background-size: contain; grid-row: 5/8; margin-bottom: 2em;}
-    .outro-lead-final { grid-row: 5/8; margin-bottom: 2em;}
+    .higher-section-image-lead {
+        grid-column: 3/5;
+        transform: rotate(310deg);
+    }
+
+    #tablature-placeholder {
+        grid-row: 3;
+        grid-column: 3/6;
+    }
+
+    .tablature-description {
+        grid-row: 4;
+    }
+
+    .guitar-on-tab-placeholder {
+        background-size: contain;
+        grid-row: 5/8;
+        margin-bottom: 2em;
+    }
+
+    .outro-lead-final {
+        grid-row: 5/8;
+        margin-bottom: 2em;
+    }
 
 
-    .anchor-index, .anchor-basics, .anchor1,  .anchor,.anchorF2, .anchorC1,.anchor, .anchor-power, .anchorR1, .anchor,.anchor-basics, .anchorFrets1,.anchorL1, .anchor-final { display: none;}
+    .anchor-index,
+    .anchor-basics,
+    .anchor1,
+    .anchor,
+    .anchorF2,
+    .anchorC1,
+    .anchor,
+    .anchor-power,
+    .anchorR1,
+    .anchor,
+    .anchor-basics,
+    .anchorFrets1,
+    .anchorL1,
+    .anchor-final {
+        display: none;
+    }
 
 }
 
 @media only screen and (max-width: 730px) {
-    section { margin: 0;text-align: center; }
-    h2 {font-size: 22px;}
-    .mobile-navigation ul,.mobile-navigation li, .mob-sub-level { margin-left: 5px;font-size: 22px;line-height: 25px;}
-    .logo h2 { text-align: center; height: 50px;width: 430px;line-height: 50px; font-size: 28px; }
-    #touch-nav-content {  display: flex;flex-direction: column; }
-    #main-banner-image-basics img {width: 400px; }
-    #main-banner-image-frets img { max-width: 400px; }
-    .lower-section-lead { margin: 10px 0 10px 0; }
-    .lower-section-lead p { text-align: center; }
-    .mobile-navigation {width: 90vw; margin-top: 3.8em; }
-    /*basics styling*/
-    #card, #card-bridge { grid-column: 3/5; grid-row: 1;}
-    #info-box, #info-box2 {grid-column: 1/7; grid-row: 2;}
-    #cardB1, #cardB2, #cardB3 { grid-column: 2/4;width: 200px;margin: 6em 0 0 0;
+    section {
+        margin: 0;
+        text-align: center;
     }
-    /*Frets styling*/  .fretboard-placeholder1 {  grid-column: 3/7; grid-row:1;}
-    .information-placeholderF1 { grid-column: 1/7;grid-row: 2;}
-    .fretboard-placeholder2 { background-size: contain;grid-column: 3/6;}
-    #welcomeF2 { max-width: 340px; }
-    .contentF2 {  grid-column: 1/7;grid-row: 3; }
-    .content2F2 { grid-column: 1/7;grid-row: 4; }
-    .contentF2 img { width: 600px; margin: 0 10px; }
-    .placeholder {grid-column: 1;  grid-row: 6; width: 600px; margin: 0 0 10em 0;}
-    .outroF2 {display: none;}
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .mobile-navigation ul,
+    .mobile-navigation li,
+    .mob-sub-level {
+        margin-left: 5px;
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .logo h2 {
+        text-align: center;
+        height: 50px;
+        width: 430px;
+        line-height: 50px;
+        font-size: 28px;
+    }
+
+    #touch-nav-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-banner-image-basics img {
+        width: 400px;
+    }
+
+    #main-banner-image-frets img {
+        max-width: 400px;
+    }
+
+    .lower-section-lead {
+        margin: 10px 0 10px 0;
+    }
+
+    .lower-section-lead p {
+        text-align: center;
+    }
+
+    .mobile-navigation {
+        width: 90vw;
+        margin-top: 3.8em;
+    }
+
+    /*basics styling*/
+    #card,
+    #card-bridge {
+        grid-column: 3/5;
+        grid-row: 1;
+    }
+
+    #info-box,
+    #info-box2 {
+        grid-column: 1/7;
+        grid-row: 2;
+    }
+
+    #cardB1,
+    #cardB2,
+    #cardB3 {
+        grid-column: 2/4;
+        width: 200px;
+        margin: 6em 0 0 0;
+    }
+
+    /*Frets styling*/
+    .fretboard-placeholder1 {
+        grid-column: 3/7;
+        grid-row: 1;
+    }
+
+    .information-placeholderF1 {
+        grid-column: 1/7;
+        grid-row: 2;
+    }
+
+    .fretboard-placeholder2 {
+        background-size: contain;
+        grid-column: 3/6;
+    }
+
+    #welcomeF2 {
+        max-width: 340px;
+    }
+
+    .contentF2 {
+        grid-column: 1/7;
+        grid-row: 3;
+    }
+
+    .content2F2 {
+        grid-column: 1/7;
+        grid-row: 4;
+    }
+
+    .contentF2 img {
+        width: 600px;
+        margin: 0 10px;
+    }
+
+    .placeholder {
+        grid-column: 1;
+        grid-row: 6;
+        width: 600px;
+        margin: 0 0 10em 0;
+    }
+
+    .outroF2 {
+        display: none;
+    }
+
     /*Chords*/
-    .information-boxC1#information-boxC1 {height: 300px;}
-    #horizontal-card-topC1 {padding: 0;height: 700px;}
-    .cardC1 {margin-left: 2em;}
-    .info-boxC1 {height: 300px;}
-    #horizontal-card-topC2 {padding: 0;height: 700px;}
-    .cardC2 {margin-left: 2em;}
-    .info-boxC2 {height: 300px;}
-    .outroC1 {grid-column: 1/7;}
+    .information-boxC1#information-boxC1 {
+        height: 300px;
+    }
+
+    #horizontal-card-topC1 {
+        padding: 0;
+        height: 700px;
+    }
+
+    .cardC1 {
+        margin-left: 2em;
+    }
+
+    .info-boxC1 {
+        height: 300px;
+    }
+
+    #horizontal-card-topC2 {
+        padding: 0;
+        height: 700px;
+    }
+
+    .cardC2 {
+        margin-left: 2em;
+    }
+
+    .info-boxC2 {
+        height: 300px;
+    }
+
+    .outroC1 {
+        grid-column: 1/7;
+    }
+
     /*Rhythm*/
-    .introduction {grid-column: 1/7;}
+    .introduction {
+        grid-column: 1/7;
+    }
+
     /*lead*/
-    .higher-section-image-lead {transform: rotate(0deg);grid-column: 2/6;}
-    .lower-information-box-lead#information-box-lead {height: 500px}
-    #information-box-lead.lower-information-box-lead h4 {margin-top: 5em;font-size: 22px;}
-    .banner-message h1 { font-size: 1.3rem;}
-    #lesson-two-rhythm {margin-bottom:20px;grid-row:8;}
-        #contact-info-detail { grid-column: 1/6;grid-row: 5/8;margin: 0;}
+    .higher-section-image-lead {
+        transform: rotate(0deg);
+        grid-column: 2/6;
+    }
+
+    .lower-information-box-lead#information-box-lead {
+        height: 500px
+    }
+
+    #information-box-lead.lower-information-box-lead h4 {
+        margin-top: 5em;
+        font-size: 22px;
+    }
+
+    .banner-message h1 {
+        font-size: 1.3rem;
+    }
+
+    #lesson-two-rhythm {
+        margin-bottom: 20px;
+        grid-row: 8;
+    }
+
+    #contact-info-detail {
+        grid-column: 1/6;
+        grid-row: 5/8;
+        margin: 0;
+    }
+
     /*    lead2*/
-    #contact-info-detail.contact-info {grid-column: 1/7; grid-row: auto;margin: 2em 0;height:650px;}
+    #contact-info-detail.contact-info {
+        grid-column: 1/7;
+        grid-row: auto;
+        margin: 2em 0;
+        height: 650px;
+    }
+
     .contact-information-box,
-    #contact-box-lead2 {  background-size: contain;  grid-column: 1/7; grid-row:7;margin: 2em 0 9em;border-radius: 10px; }
+    #contact-box-lead2 {
+        background-size: contain;
+        grid-column: 1/7;
+        grid-row: 7;
+        margin: 2em 0 9em;
+        border-radius: 10px;
+    }
 }
 
 @media only screen and (max-width: 430px) {
-    article { margin: 10px; text-align: center;}
-    .mobile-navigation {margin-left: -2em;}
-    .mob-sub-level {font-size: 10px;}
-    h1 {font-size: 32px;}
-    h2 {font-size: 30px;margin: 0;}
-    p {font-size: 22px;}
-    .banner-message {font-size: 1rem;}
-    #head-banner-content-rhythm2 div { padding: 0;}
-    .logo h2 { text-align: center; height: auto; width: 330px; line-height: 60px; font-size: 28px; margin-left:20px;}
+    article {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .mobile-navigation {
+        margin-left: -2em;
+    }
+
+    .mob-sub-level {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .banner-message {
+        font-size: 1rem;
+    }
+
+    #head-banner-content-rhythm2 div {
+        padding: 0;
+    }
+
+    .logo h2 {
+        text-align: center;
+        height: auto;
+        width: 330px;
+        line-height: 60px;
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
     /*basics*/
-    #card,#card-bridge{margin-top:50px;}
-    #lesson-two-rhythm h1{font-size:30px;}
+    #card,
+    #card-bridge {
+        margin-top: 50px;
+    }
+
+    #lesson-two-rhythm h1 {
+        font-size: 30px;
+    }
+
     /*frets*/
-    #information-placeholderF1 img { position: absolute;left: 79px;height: auto; width: 200px;}
-    #information-placeholderF1 p { position: relative; padding: 10em 0 0 0;margin-left:20px;}
-    .fretboard-placeholder2 {background-size: cover;grid-column: 2/6;}
-    .contentF2 p,.content2F2 p {text-align: center;}
-    .contentF2 img,.content2F2 img { width: 270px;}
-    .placeholder { width: 340px; height: 200px;}
+    #information-placeholderF1 img {
+        position: absolute;
+        left: 79px;
+        height: auto;
+        width: 200px;
+    }
+
+    #information-placeholderF1 p {
+        position: relative;
+        padding: 10em 0 0 0;
+        margin-left: 20px;
+    }
+
+    .fretboard-placeholder2 {
+        background-size: cover;
+        grid-column: 2/6;
+    }
+
+    .contentF2 p,
+    .content2F2 p {
+        text-align: center;
+    }
+
+    .contentF2 img,
+    .content2F2 img {
+        width: 270px;
+    }
+
+    .placeholder {
+        width: 340px;
+        height: 200px;
+    }
+
     /*Rhythm Styles*/
-    #main-banner-image-frets img { grid-column: 1/4; }
-    #lower-section-imageR1 { background-size: contain;grid-column: 2/6; grid-row: 2;}
-    #lower-sectionR1 { grid-row: 3;}
-    #lower-section-image2R1 {background-size: contain;grid-row: 4;}
-    .outroR1{grid-row:5;}
+    #main-banner-image-frets img {
+        grid-column: 1/4;
+    }
+
+    #lower-section-imageR1 {
+        background-size: contain;
+        grid-column: 2/6;
+        grid-row: 2;
+    }
+
+    #lower-sectionR1 {
+        grid-row: 3;
+    }
+
+    #lower-section-image2R1 {
+        background-size: contain;
+        grid-row: 4;
+    }
+
+    .outroR1 {
+        grid-row: 5;
+    }
+
     /*rhythm2*/
-    .chord-section1 {grid-row: 4;}
-    .chord-section1 p { width: 90vw; margin: 10px 10px;}
-    .chord-section1 img { width: 100vw; margin: 0;  padding: 0;}
-    .chord-section1a { grid-row: 5; margin: 0; padding: 0;}
-    .chord-section1a img {height: 250px; width: 80vw;}
-    .chord-section2 { grid-row: 6; margin: 0;}
+    .chord-section1 {
+        grid-row: 4;
+    }
+
+    .chord-section1 p {
+        width: 90vw;
+        margin: 10px 10px;
+    }
+
+    .chord-section1 img {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chord-section1a {
+        grid-row: 5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chord-section1a img {
+        height: 250px;
+        width: 80vw;
+    }
+
+    .chord-section2 {
+        grid-row: 6;
+        margin: 0;
+    }
+
     /*chords*/
-    .chord-section1a { display: grid; }
-    .chord-section1a img {  grid-column: 2/6; grid-row: 3; }
-    .chord-section1a p, h2 {grid-column: 1/7;  grid-row: 1; }
-    .story {display: grid;}
-    .story img {grid-column: 1/7; grid-row: 2;}
-    .story p {grid-column: 1/7; grid-row: 3;}
-    .chord-section1 {display: grid;}
-    .chord-section1 img { grid-column: 1/7; margin-left: 3em;grid-row: 2;}
-    .chord-section1 p { grid-column: 1/6;grid-row: 3;}
-    .outroC1 {  display: none;}
-    #lesson-two-chords {  grid-row: 6;}
+    .chord-section1a {
+        display: grid;
+    }
+
+    .chord-section1a img {
+        grid-column: 2/6;
+        grid-row: 3;
+    }
+
+    .chord-section1a p,
+    h2 {
+        grid-column: 1/7;
+        grid-row: 1;
+    }
+
+    .story {
+        display: grid;
+    }
+
+    .story img {
+        grid-column: 1/7;
+        grid-row: 2;
+    }
+
+    .story p {
+        grid-column: 1/7;
+        grid-row: 3;
+    }
+
+    .chord-section1 {
+        display: grid;
+    }
+
+    .chord-section1 img {
+        grid-column: 1/7;
+        margin-left: 3em;
+        grid-row: 2;
+    }
+
+    .chord-section1 p {
+        grid-column: 1/6;
+        grid-row: 3;
+    }
+
+    .outroC1 {
+        display: none;
+    }
+
+    #lesson-two-chords {
+        grid-row: 6;
+    }
+
     /*chords 2*/
-    .cardC1 {  margin-top: 2em;}
-    .cardC2 { margin-bottom: 5em;}
-    .outroC1 { grid-row: 6;  height: 300px;}
-    .information-boxC1#information-boxC1 {  height: 340px;}
+    .cardC1 {
+        margin-top: 2em;
+    }
+
+    .cardC2 {
+        margin-bottom: 5em;
+    }
+
+    .outroC1 {
+        grid-row: 6;
+        height: 300px;
+    }
+
+    .information-boxC1#information-boxC1 {
+        height: 340px;
+    }
+
     /*chords 2*/
-    .welcome-chords2 { grid-row: 1/2;}
-    .card-power1 { margin: 0 0 0 30px;}
-    .card2-power {  margin: 0 0 0 30px;}
-    .outro-power { grid-column: 2/7;  grid-row: 4; }
+    .welcome-chords2 {
+        grid-row: 1/2;
+    }
+
+    .card-power1 {
+        margin: 0 0 0 30px;
+    }
+
+    .card2-power {
+        margin: 0 0 0 30px;
+    }
+
+    .outro-power {
+        grid-column: 2/7;
+        grid-row: 4;
+    }
+
     /*lead*/
-    #main-banner-image-frets img { grid-column: 1/5; width: 300px;}
-    #main-banner-image-basics img {height: auto; width: 100%;width: 300px; }
-    #main-banner-image-frets img {  max-width: 400px;}
-    #information-box-lead.lower-information-box-lead h4 {margin-top: 2em; font-size: 22px; }
-    .outro { grid-column: 1/7;}
-    .fact p { font-size: 21px; margin-left: 10px;}
-    #tablature-placeholder { grid-column: 1/7; }
-    .card-power1,.card2-power {margin: 0;}
+    #main-banner-image-frets img {
+        grid-column: 1/5;
+        width: 300px;
+    }
+
+    #main-banner-image-basics img {
+        height: auto;
+        width: 100%;
+        width: 300px;
+    }
+
+    #main-banner-image-frets img {
+        max-width: 400px;
+    }
+
+    #information-box-lead.lower-information-box-lead h4 {
+        margin-top: 2em;
+        font-size: 22px;
+    }
+
+    .outro {
+        grid-column: 1/7;
+    }
+
+    .fact p {
+        font-size: 21px;
+        margin-left: 10px;
+    }
+
+    #tablature-placeholder {
+        grid-column: 1/7;
+    }
+
+    .card-power1,
+    .card2-power {
+        margin: 0;
+    }
+
     /*rhythm*/
-    #lesson-two-rhythm{grid-row:6;}
+    #lesson-two-rhythm {
+        grid-row: 6;
+    }
 }
 
 @media only screen and (max-width: 330px) {
-    .logo h2 {text-align: center;height: auto; width: 300px; line-height: 70px; font-size: 28px; margin-left: 20px;}
-    .mobile-navigation { margin-left: -2em;}
-     #lesson-two-rhythm h1{font-size:25px;}
+    .logo h2 {
+        text-align: center;
+        height: auto;
+        width: 300px;
+        line-height: 70px;
+        font-size: 28px;
+        margin-left: 20px;
+    }
+
+    .mobile-navigation {
+        margin-left: -2em;
+    }
+
+    #lesson-two-rhythm h1 {
+        font-size: 25px;
+    }
+
     /*frets*/
-    #information-placeholderF1 img { position: absolute; left: 60px;height: auto;width: 200px;}
-    #information-placeholderF1 p {  position: relative; padding: 11em 0 0 0;}
-    .contentF2 p, .content2F2 p {text-align: center;}
-    .contentF2 img, .content2F2 img {width: 270px;}
-    .placeholder {  width: 300px; height: 200px;}
-    .card-power1, .card2-power { margin: 0;}
-    #information-box-lead.lower-information-box-lead h4 {margin-top: 1em;font-size: 21px; }
-    #contact-info-detail,#contact-box-lead2 { margin: 0;}
-    .outro {grid-column: 1/7;}
-    #tablature-placeholder {grid-column: 2/6;}
+    #information-placeholderF1 img {
+        position: absolute;
+        left: 60px;
+        height: auto;
+        width: 200px;
+    }
+
+    #information-placeholderF1 p {
+        position: relative;
+        padding: 11em 0 0 0;
+    }
+
+    .contentF2 p,
+    .content2F2 p {
+        text-align: center;
+    }
+
+    .contentF2 img,
+    .content2F2 img {
+        width: 270px;
+    }
+
+    .placeholder {
+        width: 300px;
+        height: 200px;
+    }
+
+    .card-power1,
+    .card2-power {
+        margin: 0;
+    }
+
+    #information-box-lead.lower-information-box-lead h4 {
+        margin-top: 1em;
+        font-size: 21px;
+    }
+
+    #contact-info-detail,
+    #contact-box-lead2 {
+        margin: 0;
+    }
+
+    .outro {
+        grid-column: 1/7;
+    }
+
+    #tablature-placeholder {
+        grid-column: 2/6;
+    }
 }
