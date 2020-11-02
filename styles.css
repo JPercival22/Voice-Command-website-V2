@@ -342,7 +342,7 @@ span {
     text-align: left;
 }
 
-#help-modal {
+.help-center {
     display: none;
     position: fixed;
     z-index: 1;
@@ -354,13 +354,12 @@ span {
     overflow: scroll;
     background-color: transparent;
 }
-
-.help-center {
+#help-modal {
     margin: 0% auto;
     padding: 20px;
 }
 
-.help-center>.table {
+#help-modal>.table {
     justify-content: center;
     padding: 20px;
     margin: auto;
