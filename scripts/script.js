@@ -2,7 +2,6 @@ $(document).ready(function () {
     var modal = document.getElementById('help-modal');
     var span = document.getElementsByClassName('close')[0];
 
-
     $(".burger-button").click(function () { //applies click event to the burger button
         $(".mobile-navigation,.mobile-navigation ul li ul li").toggle(0); //toggles it on or off
     });
@@ -19,14 +18,18 @@ $(document).ready(function () {
 
     // Help Center Modal 
 
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
 
     window.onclick = function (e) {
         if (e.target == modal || span) {
             modal.style.display = "none";
         }
     }
-    // Voice commands 
 
+    // Voice command 
+    
     if (annyang) {
 
         var commands = {
@@ -35,7 +38,7 @@ $(document).ready(function () {
                 $("#help-modal").toggleClass('help-center')
             },
             'close': function () {
-                $("#dialog").toggleClass('help-center')
+                $("#help-modal").toggleClass('help-center')
             },
             //commands to open pages
             'go back': function () {
@@ -104,22 +107,14 @@ $(document).ready(function () {
 
             },
         };
-
-        //       // Tell KITT to use annyang
-        //   SpeechKITT.annyang();
-
-        //   // Define a stylesheet for KITT to use
-        //   SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
-
-        //   // Render KITT's interface
-        //   SpeechKITT.vroom();
-        // }
-
-        // Add our commands to annyang
         annyang.addCommands(commands);
-
-        // Start listening.`
         annyang.start();
+        //       // Tell KITT to use annyang
+        SpeechKITT.annyang();
+        //   // Define a stylesheet for KITT to use
+        SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/themes/flat.css');
+        //   // Render KITT's interface
+        SpeechKITT.vroom();
     }
-
+    $("#skitt-listening-text__instructions").text("say \"open help center\"");
 });
