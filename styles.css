@@ -44,15 +44,16 @@ ul {
 }
 
 h1 {
-    font-family: 'Raleway-Bold', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
+    font-weight: 700;
     color: #4996B3;
     text-align: center;
     text-transform: capitalize;
 }
 
 h2 {
-    font-family: 'Secular One', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 26px;
     margin: 10px;
     padding: 0;
@@ -64,7 +65,7 @@ h2 {
 
 
 h3 {
-    font-family: 'Courgette', cursive;
+    font-family: 'Raleway', cursive;
     font-size: 2.5rem;
     font-weight: 600;
     margin: 0;
@@ -81,7 +82,7 @@ h4 {
 }
 
 p {
-    font-family: 'Malgun Gothic';
+    font-family: 'Montserrat';
     font-size: 22px;
     color: #4d4e4f;
 }
@@ -95,8 +96,6 @@ a {
 .emphasis {
     font-weight: 900;
 }
-
-
 
 .hamburger-menu {
     position: absolute;
@@ -277,17 +276,14 @@ span {
 #touch-nav-content>div img {
     height: auto;
     width: 100%;
-
 }
 
 .basics1 {
     grid-column: 2/3;
     grid-row: 3/6;
-
 }
 
 .frets1 {
-
     grid-column: 1/2;
     grid-row: 1/3;
 }
@@ -346,7 +342,6 @@ span {
     height: 300px;
     width: 100%;
     border-bottom: 4px solid gainsboro;
-
 }
 
 #main-banner-image-basics img {
@@ -384,7 +379,6 @@ span {
 
 /*Main pages content styles*/
 
-
 .animated-profile {
     border: 1px grey;
     border-radius: 5px;
@@ -420,6 +414,7 @@ span {
 }
 
 /* Modal Header */
+
 .modal-header {
     padding: 2px 16px;
     background-color: gainsboro;
@@ -431,6 +426,7 @@ span {
 }
 
 /* Modal Content */
+
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -613,7 +609,6 @@ span {
 
 /*basics page 2 content cards styles*/
 
-
 #cardB1 {
     background-image: url(img/posture.svg);
     background-size: contain;
@@ -750,6 +745,7 @@ span {
 }
 
 /*chords page content box styles*/
+
 .info-box-power {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
@@ -1444,7 +1440,6 @@ footer {
     border-radius: 50%;
     box-shadow: 0px 10px 13px -7px #000000, 50px 50px 45px -27px rgba(234, 234, 234, 0.02);
     transition: all 3s ease;
-
 }
 
 .facebook .fill {
@@ -1485,7 +1480,6 @@ footer {
     color: grey;
     margin: 5rem 0;
 }
-
 
 .mobile-navigation,
 .burger-button {
