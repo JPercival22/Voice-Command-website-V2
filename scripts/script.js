@@ -26,10 +26,10 @@ $(document).ready(function () {
         if (e.target == modal || span) {
             modal.style.display = "none";
         }
-    }
+    };
 
     // Voice command 
-    
+
     if (annyang) {
 
         var commands = {
@@ -117,4 +117,16 @@ $(document).ready(function () {
         SpeechKITT.vroom();
     }
     $("#skitt-listening-text__instructions").text("say \"open help center\"");
+
+
+    // scroll to the top button 
+    const toTop = document.querySelector(".anchor");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 10) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    })
 });
