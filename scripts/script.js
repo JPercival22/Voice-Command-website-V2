@@ -18,9 +18,15 @@ $(document).ready(function () {
 
     // Help Center Modal 
 
+    $(function () {
+        $(".voice-commands").onClick(function () {
+            $("#help-modal").toggleClass('help-center')
+        })
+    })
+
     span.onclick = function () {
         modal.style.display = "none";
-    }
+    },
 
     window.onclick = function (e) {
         if (e.target == modal || span) {

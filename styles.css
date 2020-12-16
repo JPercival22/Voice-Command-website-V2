@@ -162,6 +162,7 @@ a {
     box-sizing: border-box;
     background-color: transparent;
     height: auto;
+    border-bottom: 2px solid #54565b
 }
 
 .nav-bar {
@@ -219,10 +220,17 @@ span {
     height: auto;
     padding-bottom: 0;
     background-color: transparent;
-    margin: 0 20px;
-    width: 70px;
     height: auto;
     padding: 20px;
+}
+
+.nav-bar li.active{
+    background-color: #f2f2f2;
+}
+
+.nav-bar li:hover{
+    background-color: #f2f2f2;
+    transition: all .2s ease;
 }
 
 .nav-bar li a {
@@ -237,26 +245,20 @@ span {
     white-space: normal;
 }
 
-.nav-bar li a:hover {
-    color: #40cfe9;
-    text-decoration: underline;
-    transition: all .2s ease;
-}
-
 .strip-banner {
     flex: 3;
     width: 100%;
     margin-top: 5px 0;
     text-align: center;
     font-family: Montserrat;
-    color: #40cfe9;
+    color: #608eb5;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
 }
 
 .strip-banner:hover {
-    background-color: #40cfe9;
+    background-color: #608eb5;
     color: #fdfdfd
 }
 
