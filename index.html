@@ -13,7 +13,9 @@
         <title>Guitar Tutorial - Home</title>
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Montserrat&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&family=Raleway:wght@400;500&family=Spartan&display=swap"
+            rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
@@ -35,7 +37,7 @@
                     <div class="logo">
                         <a href="index.html" title="Guitar Lessons">
                             <h2><img class="logo-image" src="img/logo1.png" alt="Just Speak logo">
-                           <span class="dark-text">GUITAR </span><span class="red-text">LESSONS</span></h2>
+                                <span class="dark-text">GUITAR </span><span class="red-text">LESSONS</span></h2>
                         </a>
                     </div>
                     <nav class="nav-bar">
@@ -64,11 +66,11 @@
         </header>
 
 
-        <div class="main-banner-image">
-            <div class="message-wrapper">
-                <div class="banner-message" role="dialog">
+        <div class="primary-banner-with-text">
+            <div class="hero-container">
+                <div class="hero" role="dialog">
                     <h3>
-                        "Where words fail,<br> Music Speaks!"
+                        Where words fail,<br> music speaks!
                     </h3>
                 </div>
             </div>
@@ -176,64 +178,89 @@
                 <!--The main contents wrapper mirrors the head wrapper for conformity-->
                 <div class="main-content-wrapper">
                     <section class="welcome">
-                        <h1>Welcome</h1>
-                        <p><img class="animated-profile" src="img/me.jpg" alt="profile image of the author">Hello, my
-                            name is Joseph Percival,
-                            and welcome to,"Guitar Lessons," a voice activated tutorial website.
-                            I graduated from Edge Hill University with a 1st Class BSc.(Hons) in
-                            Web Design and Web Development. This was my dissertation project covering UX Research, UI
-                            Design and Web Development.
-                        </p>
-                        <p class="emphasis">Just say, "Open Help Center" at any time to open the voice command menu.</p>
-                        <p>This site site aims to give you some general understanding on many guitar aesthetics, how to
-                            play
-                            the guitar and how to read guitar chords and tab's. Its aim is to make learning easier so
-                            you don't
-                            have to 'put the guitar down to turn the next page.'</p>
-                        <p>Below are the links to the main pages for this tutorial, if a lesson has a second part,
-                            this will be shown at the bottom of the page, if it doesn't have one,
-                            then just select a lesson from the navigation above.<br>
-                            please enjoy...</p>
+                        <div class="profile">
+                            <img class="animated-profile" src="img/me.jpg" alt="profile image of the author">
+                            <sub class="profile-caption">Joseph Percival BSc.(hons)<br>First Class.<br>Web Design and
+                                Development</sub>
+                        </div>
+                        <div class="welcome-content">
+                            <h1>Welcome</h1>
+                            <p> Hi, my
+                                name is Joe,
+                                and welcome to,"Guitar Lessons," a voice controlled Guitar tutorial website.</p>
+                            <p class="emphasis">
+                                Just say, "Open Help Center" at any time to open the voice command menu.</p>
+                            <p>
+                                This website can be controlled both vocally or manually and
+                                below are the links to the main pages for this tutorial, if a lesson has a second part,
+                                then this will be shown at the bottom of the page, if it doesn't have one,
+                                then just select a lesson from the navigation above, or Just Speak!<sup>TM</sup><br>
+                                Please enjoy...</p>
+                        </div>
                     </section>
 
-                    <section id="touch-nav-wrapper">
-                        <h2>Touch Navigation</h2>
-                        <div id="touch-nav-content">
-                            <div class="basics1">
-                                <a href="basics.html">
-                                    <img src="img/nav1_2.png" alt="Image link to basics lesson one">
+                    <section>
+                        <h2>Lesson's</h2>
+                        <div class="page-nav-container">
+                            <div class="page-nav-component">
+                                <a class="page-navigation-anchor" href="basics.html">
+                                    <img class="lesson-one-image" src="img/nav1_2.png" alt="Image link to basics lesson one">
+                                    <div class="page-nav_inner-text">
+                                        <h3>Lesson 1: The Basics</h3>
+                                        <p>Starting off can be tough! There are many things to learn, in your first
+                                            lesson we discover how to hold, stand and sit with a guitar.
+                                            What the different components do and more importantly how to tune your
+                                            guitar. </p>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="frets1">
-                                <a href="frets.html">
-                                    <img src="img/nav2.png" alt="Image link of the link to the fret lesson one page">
+
+                            <div class="page-nav-component">
+                                <a class="page-navigation-anchor" href="basics.html">
+                                    <img class="lesson-one-image" src="img/nav2.png" alt="Image link of the link to the fret lesson one page">
+                                    <div class="page-nav_inner-text">
+                                        <h3>Lesson 2: Frets</h3>
+                                        <p> In Lesson two, we learn the fundamentals on what a fret board looks like, how to easily locate fret numbers, sound waves, positive finger positioning 
+                                            and finger posture whilst playing your guitar. </p>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="chords1">
-                                <a href="chords.html">
-                                    <img src="img/nav3.png" alt="Image link of the link to the chords lesson  one page">
+
+                            <div class="page-nav-component">
+                                <a class="page-navigation-anchor" href="basics.html">
+                                    <img class="lesson-one-image" src="img/nav3.png" alt="Image link of the link to the chords lesson  one page">
+                                    <div class="page-nav_inner-text">
+                                        <h3>Lesson 3: The Chords</h3>
+                                        <p>In lesson 3, we learn all about the different types of chords played. For example, the Open Chord, the Barre Chords and the Power Chords  </p>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="rhythm1">
-                                <a href="rhythm.html">
-                                    <img src="img/nav5.png"
-                                        alt="Image link of the link to the rhythm guitar lesson one page">
+                            <div class="page-nav-component">
+                                <a class="page-navigation-anchor" href="basics.html">
+                                    <img class="lesson-one-image" src="img/nav5.png" alt="Image link of the link to the rhythm guitar lesson one page">
+                                    <div class="page-nav_inner-text">
+                                        <h3>Lesson 4: The Rhythm Guitar</h3>
+                                        <p>In Lesson 4 we learn how to keep to a beat, timing, more on chords, finger numbers and we learn how to play our first song.</p>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="lead1">
-                                <a href="lead.html">
-                                    <img src="img/nav4.png"
-                                        alt="Image link of the link to the lead guitar lesson one page">
+                            <div class="page-nav-component">
+                                <a class="page-navigation-anchor" href="basics.html">
+                                    <img class="lesson-one-image" src="img/nav4.png" alt="Image link of the link to the lead guitar lesson one page">
+                                    <div class="page-nav_inner-text">
+                                        <h3>Lesson 5: The Lead Guitar</h3>
+                                        <p>For Lesson 5, we discover when, how and why the Electric Guitar was invented, how to read lead guitar tab's and have a lesson on how to play a solo.</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </section>
 
+
                     <section class="outro-index">
                         <p>
-                            Playing the guitar helps to manage your stress, enhances memory,
-                            improve your communication skills, motor skills and
-                            will help you feel more able to cope with life!
+                            Playing the guitar is really healthy, it can help to manage your stress, enhance your memory,
+                            improve motor skills and will help you feel more able to cope with performing in life!
                         </p>
                     </section>
 

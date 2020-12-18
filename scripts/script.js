@@ -6,16 +6,6 @@ $(document).ready(function () {
         $(".mobile-navigation,.mobile-navigation ul li ul li").toggle(0); //toggles it on or off
     });
 
-
-    // #Hover effect over the page navigation
-    $(function () {
-        $('#touch-nav-content a img').hover(function () {
-            $(this).fadeTo(50, .6);
-        }, function () {
-            $(this).fadeTo(400, 1);
-        });
-    });
-
     // Help Center Modal 
 
     span.onclick = function () {
