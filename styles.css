@@ -1,6 +1,7 @@
 /*General rules*/
 html {
     scroll-behavior: smooth;
+    max-width: 1900px;
 }
 
 body {
@@ -12,6 +13,8 @@ body {
     text-transform: none;
     color: #333;
     background-color: #feffff;
+    height: 100%;
+    margin: 0 auto;
 }
 
 header {
@@ -234,47 +237,69 @@ span {
     margin-top: 5px 0;
     text-align: center;
     font-family: Montserrat;
-    color: #40cfe9;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
+    /* outline: 1px solid #40cfe9 */
 }
 
 .strip-banner:hover {
     background-color: #40cfe9;
-    color: #fdfdfd
+    transition: all 1s ease 0s;
+}
+
+.strip-banner a:hover{
+    color: #ffffff;
 }
 
 /*Index Styles*/
 
-.primary-banner-with-text {
-    background-image: url(img/acoustic-guitar-header.jpg);
-    background-size: cover;
-    padding: 0;
-    height: 400px;
-    width: 100%;
-    z-index: 1;
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    background-image:  linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)),url("img/acoustic-guitar-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
+    min-height: 15em;
+    height: 50%;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f0ec;
+}
+      
+.hero-text {
+    text-align: center;
+    color: white;
 }
 
-.hero-container {
-    width: 100%;
-    height: auto;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0;
+.hero-header{
+    align-self: center;
+    font-size:50px;
 }
 
-.hero {
-    width: 100%;
-    height: auto;
-    grid-column: 1/3;
-    grid-row: 2;
+.hero-button {
+    border: 3px solid #41cfe9;
+    border-radius: 5px;
+    padding: 0 20px;
+    background: #ffffff;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+.hero-button_text {
+    color: inherit;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
-.main-content-wrapper {
+.hero-button:hover {
+    background: #fcf4f4fd;
+    transition: all 0.2s ease 0s;
+}
+.main-content-container {
     max-width: 960px;
     margin: 20px auto;
     height: 100%;
@@ -349,37 +374,11 @@ span {
     line-height: 24px;
 }
 
-.lesson-one-image {
+.lesson-placeholder-image {
     width: 200px;
     height: auto;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
 }
-
-.lesson-two-image {
-    background-color: red;
-    margin: 10px;
-    flex-grow: 1
-}
-
-.three {
-    background-color: blue;
-    margin: 10px;
-    flex-grow: 1
-}
-
-.four {
-    background-color: yellow;
-    margin: 10px;
-    flex-grow: 1
-}
-
-.five {
-    background-color: white;
-    margin: 10px;
-    flex-grow: 1
-}
-
-/* index styles */
 
 .outro-index {
     font-family: 'Roboto';
@@ -387,43 +386,14 @@ span {
     text-align: right;
     font-size: 1.5rem;
     color: grey;
-    grid-column: 3/7;
-    grid-row: 3;
 }
 
 
-
-/* .basics1 {
-    grid-column: 2/3;
-    grid-row: 3/6;
-}
-
-.frets1 {
-    grid-column: 1/2;
-    grid-row: 1/3;
-}
-
-.chords1 {
-
-    grid-column: 3/4;
-    grid-row: 1/3;
-}
-
-.rhythm1 {
-    grid-column: 1/2;
-    grid-row: 5/7;
-}
-
-.lead1 {
-    grid-column: 3/4;
-    grid-row: 5/7;
-} */
-
-/*Primary Banner styles*/
+/* basics styles */
 
 
 
-#main-banner-image-basics {
+.primary-banner-with-text_basics {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-image: url(img/frets-wall.jpg);
