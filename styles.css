@@ -5,15 +5,9 @@ html {
 }
 
 body {
-    font-weight: 400;
     font-family: "Raleway", Helvetica, arial, sans-serif;
-    font-size: 16px;
     letter-spacing: .5px;
     line-height: 1.5;
-    text-transform: none;
-    color: #333;
-    background-color: #feffff;
-    height: 100%;
     margin: 0 auto;
 }
 
@@ -79,6 +73,10 @@ a {
     text-decoration: none;
     color: black;
     cursor: pointer;
+}
+
+sup {
+    font-size: 8px;
 }
 
 .emphasis {
@@ -172,19 +170,13 @@ a {
     text-transform: uppercase;
 }
 
-span {
-    color: black;
-}
-
-.dark-text {
+.logo span {
+    background: -webkit-linear-gradient(left, #000000 25%, #CD1F01 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: relative;
     top: -20px;
-}
-
-.red-text {
-    color: firebrick;
-    position: relative;
-    top: -20px;
+    background-clip: text;
 }
 
 .nav-bar ul {
@@ -248,7 +240,7 @@ span {
     transition: all 1s ease 0s;
 }
 
-.strip-banner a:hover{
+.strip-banner a:hover {
     color: #ffffff;
 }
 
@@ -257,7 +249,7 @@ span {
 .hero-image {
     display: flex;
     flex-direction: column;
-    background-image:  linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)),url("img/acoustic-guitar-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/acoustic-guitar-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
     min-height: 15em;
     height: 50%;
     align-self: center;
@@ -268,15 +260,15 @@ span {
     justify-content: center;
     background-color: #f1f0ec;
 }
-      
+
 .hero-text {
     text-align: center;
-    color: white;
 }
 
-.hero-header{
+.hero-header {
     align-self: center;
-    font-size:50px;
+    font-size: 50px;
+    color: white;
 }
 
 .hero-button {
@@ -286,7 +278,7 @@ span {
     background: #ffffff;
     margin-top: 0;
     margin-bottom: 50px;
-  }
+}
 
 .hero-button_text {
     color: inherit;
@@ -299,6 +291,13 @@ span {
     background: #fcf4f4fd;
     transition: all 0.2s ease 0s;
 }
+
+.hero-button:active {
+    background: #41cfe9;
+    color: #fcf4f4fd;
+    transition: all 0.2s ease 0s;
+}
+
 .main-content-container {
     max-width: 960px;
     margin: 20px auto;
@@ -355,23 +354,34 @@ span {
     border: 1px solid grey;
     border-radius: 2.5px;
 }
-.page-nav-component:hover{
+
+.page-nav-component:hover {
     animation-duration: 0.5s;
     animation-fill-mode: both;
-   animation-name: fadeOut;
+    animation-name: fadeOut;
 }
 
 @keyframes fadeOut {
-    0% { opacity: 1;}
-    100% {opacity: .7;}
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .7;
+    }
 }
-.page-navigation-anchor{
+
+.page-navigation-anchor {
     display: flex;
 }
 
 .page-nav_inner-text {
     background-color: #f4f3f2;
     line-height: 24px;
+}
+
+.page-nav_inner-text h3 {
+    color: #41cfe9;
 }
 
 .lesson-placeholder-image {
@@ -388,53 +398,23 @@ span {
     color: grey;
 }
 
-
 /* basics styles */
 
-
-
-.primary-banner-with-text_basics {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-image: url(img/frets-wall.jpg);
-    background-size: cover;
-    padding: 0;
-    height: 300px;
-    width: 100%;
-    border-bottom: 4px solid gainsboro;
-}
-
-#main-banner-image-basics img {
-    display: grid;
-    grid-column: 2;
+.hero-image-basics {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/final1.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
+    min-height: 15em;
+    height: 70%;
     align-self: center;
-    justify-self: center;
-    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    background-position-y: center;
     width: 100%;
-    max-height: 296px;
-    max-width: 350px;
-}
-
-#main-banner-image-frets {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-image: url(img/frets-wall.jpg);
     background-size: cover;
-    padding: 0;
-    height: 300px;
-    width: 100%;
-    border-bottom: 1px solid gainsboro;
-}
-
-#main-banner-image-frets img {
-    display: grid;
-    grid-column: 2;
-    align-self: center;
-    justify-self: center;
-    height: auto;
-    width: 100%;
-    max-height: 296px;
-    max-width: 350px;
+    ;
 }
 
 /*Main pages content styles*/
@@ -532,27 +512,23 @@ span {
 
 /*anchor point at the bottom of the html, points to the top of page*/
 .anchor {
-    height: 60px;
-    width: 60px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    background-color: #2980c0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .4s;
     bottom: 15px;
     right: 15px;
+    pointer-events: auto;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .up-chevron {
     display: flex;
     position: relative;
-    top: 10px;
-    left: 5px;
+    top: 7px;
+    left: 4px;
+    width: 42px;
+    height: auto;
 }
 
 .anchor.active {
@@ -562,37 +538,60 @@ span {
     opacity: 1;
 }
 
-/*content cards containing images and their content styles*/
-
 /*basic page 1 styles*/
-.information-card {
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: minmax(150px, auto);
-    display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0;
-    grid-gap: 10px;
-    border-radius: 20px;
-    border: 1px solid lightgray;
-    grid-column: 1/7;
+
+/* card blocks */
+.card {
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2.5px 2.5px 2.5px 2.5px;
 }
 
-#card {
-    background-image: url(img/headstock2.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    grid-column: 1/3;
-    grid-row: 1;
-    margin: 20px;
+.card-a {
+    margin: 2.5px 2.5px 2.5px 0 ;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-#info-box {
-    margin-top: -5px;
-    grid-column: 3/7;
-    grid-row: 1;
+.card-c {
+    margin: 2.5px 0 2.5px 2.5px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
+.thumbnail>img {
+    padding: 10px;
+}
+
+.card-content {
+    padding: 1.4em;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: bold;
+}
+
+.card-content p {
+    font-size: 80%;
+}
+
+
+.cards {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* #info-box {
+    display: inline-flex;
+    flex: 0 3 auto;
+    flex-basis: 0;
+    align-self: flex-start;
+} */
+/*
 .information-card2 {
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(150px, auto);
