@@ -18,6 +18,24 @@ $(document).ready(function () {
         }
     };
 
+    // scroll to the top button 
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("scroll-btn").style.display = "block";
+        } else {
+            document.getElementById("scroll-btn").style.display = "none";
+        }
+    };
+
+    var top = document.getElementById("scroll-btn");
+    top.addEventListener("click", toTheTop);
+
+    function toTheTop () {
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
     // Voice command 
 
     if (annyang) {
@@ -109,14 +127,6 @@ $(document).ready(function () {
     $("#skitt-listening-text__instructions").text("say \"open help center\"");
 
 
-    // scroll to the top button 
-    const toTop = document.querySelector(".anchor");
 
-    window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 10) {
-            toTop.classList.add("active");
-        } else {
-            toTop.classList.remove("active");
-        }
-    })
+
 });
