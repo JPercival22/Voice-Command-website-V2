@@ -392,13 +392,7 @@ sup {
     margin: 10px 10px 10px 0;
 }
 
-.outro-index {
-    font-family: 'Roboto';
-    font-style: italic;
-    text-align: right;
-    font-size: 1.5rem;
-    color: grey;
-}
+
 
 /* basics styles */
 
@@ -498,17 +492,6 @@ sup {
 }
 
 
-
-.outro-basics {
-    grid-column: 2/7;
-    grid-row: 4;
-    font-family: 'Roboto';
-    font-style: italic;
-    text-align: right;
-    font-size: 1.5rem;
-    color: grey;
-}
-
 #scroll-btn {
     display: none;
     position: fixed;
@@ -550,9 +533,6 @@ sup {
 /* card blocks */
 .cards-container {
     display: inline-flex;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    padding: 20px;
 }
 
 .card {
