@@ -26,7 +26,7 @@
       <div class="nav-bar">
         <div class="hamburger-menu">
           <button class="burger-button" title="menu icon">
-            <i class="fa fa-bars" title="Edit"></i>
+            <picture class="menu-icon" title="Edit"></picture>
           </button>
         </div>
         <div class="logo">
@@ -35,7 +35,7 @@
               <span>GUITAR LESSONS</span></h2>
           </a>
         </div>
-        <nav class="nav-bar">
+        <nav class="desktop-nav-bar">
           <ul>
             <li> <a href="index.html">Home</a></li>
             <li> <a href="basics.html">Basics</a></li>
@@ -74,23 +74,23 @@
             </div>
             <div class="widget-library">
               <ul>
-                <li><a href="">Centered Header</a></li>
-                <li><a href="">Centered Image Banner with Title</a></li>
-                <li><a href="">General Center Aligned Editorial</a></li>
-                <li><a href="">General Left Aligned Editorial</a></li>
-                <li><a href="">General Page Navigation</a></li>
-                <li><a href="">General Right Aligned Editorial</a></li>
-                <li><a href="">General Social Icon Collection</a></li>
-                <li><a href="">General Strip Banner Widget</a></li>
-                <li><a href="">Primary Banner</a></li>
-                <li><a href="">Six Item Editorial</a></li>
-                <li><a href="">Three Item Editorial</a></li>
+                <li><a href="#data-ch">Centered Header</a></li>
+                <li><a href="#data-cib">Centered Image Banner</a></li>
+                <li><a href="#data-ae">General Aligned Editorials</a></li>
+                <li><a href="#data-lae">General Left Aligned Editorial</a></li>
+                <li><a href="#data-gpn">General Page Navigation</a></li>
+                <li><a href="#data-rae">General Right Aligned Editorial</a></li>
+                <li><a href="#data-sic">General Social Icon Collection</a></li>
+                <li><a href="#data-gsb">General Strip Banner</a></li>
+                <li><a href="#data-pb">Primary Banner</a></li>
+                <li><a href="#data-sie">Six Item Editorial</a></li>
+                <li><a href="#data-tie">Three Item Editorial</a></li>
               </ul>
             </div>
           </section>
 
           <section class="showcase-section">
-            <div class="centered-title">Promotional Strip Banner</div>
+            <div class="centered-title" id="data-gsb">Promotional Strip Banner</div>
             <p class="centered-text_dark">Full width, responsive strip banner used for adding a promotion or further
               information,
               hover over this section to activate it </p>
@@ -100,8 +100,8 @@
             </div>
           </section>
 
-          <section class="showcase-section">
-            <div class="centered-title">Centered Header</div>
+          <section class="showcase-section" id="data-ch">
+            <div class="centered-title" >Centered Header</div>
             <p class="centered-text_dark">Centered Header which holds centered log and top level navigation</p>
             <div class="centeredHeader-Container">
               <div class="centeredHeader-navigation">
@@ -122,12 +122,10 @@
             </div>
           </section>
 
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-pb">
             <div class="centered-title">Primary Banner</div>
             <p class="centered-text_dark"> Primary Banner displaying any image 100% width of the page, Titles and
-              Subtitles
-              can
-              be added anywhere within the banner and any number of CTA buttons </p>
+              Subtitles can be added anywhere within the banner and any number of CTA buttons </p>
             <div class="primaryBanner_container">
               <div class="primaryBanner_contentWrapper">
                 <div class="primaryBanner_textContainer">
@@ -143,7 +141,7 @@
             </div>
           </section>
 
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-cib">
             <div class="centered-title">Centered Image Banner with Title</div>
             <p class="centered-text_dark">Generic Centered Image with Title</p>
             <div class="centeredImage_container">
@@ -153,8 +151,7 @@
             </div>
           </section>
 
-
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-pb">
             <div class="centered-title">General Page Navigation</div>
             <p class="centered-text_dark">General Page Navigation, to increase accessability it is recommended to give
               the user more than one way to do high priority jobs, such as navigation. These navigation cards give the
@@ -173,7 +170,7 @@
             </div>
           </section>
 
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-tia">
             <h2 class="centered-title">Three Item Editorial</h2>
             <p class="centered-text_dark">Three equidistance items containing an image, title and descriptive
               editorial
@@ -221,11 +218,11 @@
             </section>
           </section>
 
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-sie">
             <div class="centered-title">Six Item Editorial</div>
             <p class="centered-text_dark">Six equidistance items containing an image, title and descriptive editorial
             </p>
-            <section class="cards-container-showcase">
+            <section class="cards-container">
               <article class="card-no-left-margin">
                 <picture class="thumbnail">
                   <img class="grayscaleImage-medium" src="img/medium-placeholder.png"
@@ -265,8 +262,6 @@
                     aliquip non esse consequat ad eiusmod aliqua occaecat reprehenderit exercitation.</p>
                 </div>
               </article>
-            </section>
-            <section class="cards-container-showcase">
               <article class="card-no-left-margin">
                 <picture class="thumbnail">
                   <img class="grayscaleImage-medium" src="img/medium-placeholder.png"
@@ -306,10 +301,10 @@
                     aliquip non esse consequat ad eiusmod aliqua occaecat reprehenderit exercitation.</p>
                 </div>
               </article>
-            </section>
+          </section>
           </section>
 
-          <section class="showcase-section">
+          <section class="showcase-section" id="data-sic">
             <div class="centered-title">General Social Icon Collection</div>
             <p class="centered-text_dark">A collection of Social Icon links</p>
             <div class="centered-title">Headline</div>
@@ -374,8 +369,12 @@
             </div>
           </section>
 
-          <section class="showcase-section">
-            <div class="centered-title">General Left Aligned Editorial </div>
+          <section class="showcase-section" id="data-ae">
+            <h1 class="centered-title">Aligned Editorials</h1>
+            <p class="centered-text_dark ">A collection of complimentary aligned text editorials. Titles
+              can be removed if not necessary
+            </p>
+            <h2 class="centered-title" id="data-lae">General Left Aligned Editorial </h2>
             <p class="centered-text_dark">Simple text area fixed to the left of the page, font style can be changed on
               order and does not have to include the title</p>
             <div class="left-title_dark">Headline</div>
@@ -383,8 +382,8 @@
             </div>
           </section>
 
-          <section class="showcase-section">
-            <div class="centered-title">General Centered Editorial </div>
+          <section class="showcase-section" id="data-cae">
+            <h2 class="centered-title">General Centered Editorial </h2>
             <p class="centered-text_dark">Simple Title and Text area fixed to the center of the page</p>
             <div class="centered-title">Headline</div>
             <div class="centered-text_dark">Aute enim irure amet minim labore elit ex quis laboris nisi dolor anim
@@ -392,8 +391,8 @@
             </div>
           </section>
 
-          <section class="showcase-section">
-            <div class="centered-title">General Right Aligned Editorial </div>
+          <section class="showcase-section" id="data-rae">
+            <h2 class="centered-title">General Right Aligned Editorial </h2>
             <p class="centered-text_dark">Simple Title and Text area fixed to the right of the page</p>
             <div class="right-title_dark">Headline</div>
             <div class="right-text_dark">Aute enim irure amet minim labore elit ex quis laboris nisi dolor anim Lorem.
