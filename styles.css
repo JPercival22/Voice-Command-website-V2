@@ -231,7 +231,7 @@ sup {
     margin-bottom: 20px;
 }
 
-.widget-library ul li:hover {
+.widget-library> ul > li:hover {
     text-decoration: underline;
 }
 
@@ -607,11 +607,13 @@ footer {
     position: absolute;
     line-height: 30px;
     border-right: 2px solid lightgrey;
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
+
 }
 
+.menu-icon {
+    background-image: url("img/menu-icon.png");
+    background-color: black;
+}
 .burger-button a:focus {
     outline: none;
 }
@@ -1058,11 +1060,6 @@ footer {
     flex: 0 0 250px;
     align-items: flex-start;
     justify-content: center;
-}
-
-.cards-container-showcase {
-    display: inline-flex;
-    margin: 0 20px 0 20px;
 }
 
 .card {
@@ -1832,7 +1829,7 @@ td {
         margin: 0 20px;
     }
 
-    .nav {
+    .desktop-nav-bar {
         display: none;
     }
 
@@ -1857,6 +1854,7 @@ td {
         margin: 16px;
         line-height: 30px;
         font-size: 28px;
+        fill: black;
     }
 
     #mobile-menu {
