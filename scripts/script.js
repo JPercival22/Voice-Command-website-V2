@@ -2,10 +2,14 @@ $(document).ready(function () {
     var modal = document.getElementById('help-modal');
     var span = document.getElementsByClassName('close')[0];
 
-    $(".burger-button").click(function () { //applies click event to the burger button
-        $(".mobile-navigation,.mobile-navigation ul li ul li").toggle(0); //toggles it on or off
-    });
 
+    $(".toggle").on("click", function () {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+        } else {
+            $(".item").addClass("active");
+        }
+    });
     // Help Center Modal 
 
     span.onclick = function () {
@@ -30,7 +34,7 @@ $(document).ready(function () {
     var top = document.getElementById("scroll-btn");
     top.addEventListener("click", toTheTop);
 
-    function toTheTop () {
+    function toTheTop() {
         document.documentElement.scrollTop = 0;
     }
 
