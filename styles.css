@@ -444,6 +444,7 @@ footer {
     position: relative;
     top: -20px;
     background-clip: text;
+    font-size: 20px;
 }
 
 .light-footer {
@@ -614,6 +615,7 @@ footer {
     background-image: url("img/menu-icon.png");
     background-color: black;
 }
+
 .burger-button a:focus {
     outline: none;
 }
@@ -686,10 +688,10 @@ footer {
     vertical-align: middle;
 }
 
-.logo-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 32px;
-    text-transform: uppercase;
+.logo-image {
+    height: 40px;
+    width: auto;
+    padding: 10px 0;
 }
 
 .logo span {
@@ -697,8 +699,9 @@ footer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    top: -20px;
+    top: -26px;
     background-clip: text;
+    font-size: 20px;
 }
 
 .nav-bar ul {
@@ -1882,9 +1885,6 @@ td {
     .logo {
         text-align: center;
         height: auto;
-        width: 400px;
-        line-height: 41px;
-        font-size: 28px;
     }
 
     .main-banner-image {
