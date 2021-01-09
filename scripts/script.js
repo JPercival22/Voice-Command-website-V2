@@ -8,7 +8,6 @@ $(document).ready(function () {
             $(".item").removeClass("active");
         } else {
             $(".item").addClass("active");
-           
         }
     });
     // Help Center Modal 
