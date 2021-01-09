@@ -778,8 +778,6 @@ footer {
 
     /* general styles  */
 
-
-
     .eastSideFooter-linkColumns {
         flex-direction: row;
     }
@@ -807,19 +805,31 @@ footer {
     .navigation {
         order: 2;
         display: inline-flex;
-        width: 100vw;
-        justify-content: space-evenly;
-        background: rgb(131, 58, 180);
+        justify-content: center;
         background: linear-gradient(117deg, rgba(131, 58, 180, 1) 0%, rgba(29, 253, 243, 1) 50%, rgba(69, 88, 252, 0.6502976190476191) 100%);
         transition: all 0s ease-in-out;
     }
 
     .item {
         order: 1;
+        padding: 20px;
+    }
+
+    .item:hover, .item a:hover {
+        color: #ff33ddce;
+        text-decoration: underline;
+        transition: all .5s ease-in;
     }
 
     .menu li {
-        padding: 15px 10px;
+        padding: 15px;
+        margin: 0;
+        width: 135px;
+        margin: 0 40px;
+    }
+    
+    .menu li:hover {
+        background-color: rgba(153, 198, 237, 0.816);
     }
 
     .menu li a:last-child {
@@ -827,8 +837,12 @@ footer {
     }
 
     nav {
-        padding: 5px 20px;
+        padding: 5px 20px 0 20px;
         height: 100%;
+    }
+    
+    .selected {
+        text-decoration: underline;
     }
 
     .strip-banner {
@@ -840,7 +854,10 @@ footer {
         font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
-        /* outline: 1px solid #40cfe9 */
+    }
+
+    .strip-banner:active {
+        outline: 1px solid #40cfe9
     }
 
     .strip-banner:hover {
@@ -1135,8 +1152,6 @@ footer {
         background-repeat: no-repeat;
         margin: 0 30%;
     }
-
-
 
     /*basics page 2 content cards styles*/
 
