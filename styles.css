@@ -49,35 +49,25 @@ article {
 
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
+    font-size: 26px;
 
 }
 
 h2 {
     font-family: 'Raleway', sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     margin: 10px;
-    padding: 0;
-    color: #B01034;
-    text-align: center;
-    line-height: 3rem;
-    text-transform: capitalize;
 }
 
 
 h3 {
-    font-family: 'Spartan', sans-serif;
-    font-size: 23px;
-    text-align: left;
-    color: #778899;
-    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 h4 {
-    font-size: 22px;
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
+    font-family: 'Raleway';
+    font-size: 18px;
 }
 
 p {
@@ -102,6 +92,7 @@ sup {
 }
 
 .emphasis {
+    margin: 10px 0;
     font-weight: 900;
 }
 
@@ -127,9 +118,8 @@ sup {
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .centered-title_light {
@@ -145,7 +135,6 @@ sup {
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: none;
-    font-size: 16px;
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -155,7 +144,6 @@ sup {
     color: #4d4e4f;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 20px;
     margin-top: 0;
 }
 
@@ -163,7 +151,6 @@ sup {
     text-align: left;
     color: #4d4e4f;
     text-transform: none;
-    font-size: 16px;
     padding: 10px 0;
 }
 
@@ -174,7 +161,6 @@ sup {
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 20px;
     margin-top: 0;
     margin-bottom: 20px;
 }
@@ -183,7 +169,6 @@ sup {
     text-align: right;
     color: #4d4e4f;
     text-transform: none;
-    font-size: 16px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -236,8 +221,6 @@ sup {
     justify-content: center;
     align-items: center;
 }
-
-
 
 .primaryBanner_contentWrapper {
     align-items: center;
@@ -315,6 +298,12 @@ sup {
     filter: brightness(1.5);
     opacity: 0.7;
     border-radius: 2.5px;
+}
+
+.image-medium {
+    width: 100%;
+    height: auto;
+    filter: saturate(1.5);
 }
 
 .centeredImage_container {
@@ -571,7 +560,7 @@ footer {
 .eastSideFooter_logo {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: calc(40% - 32px);
+    flex-basis: calc(46% - 32px);
 }
 
 .eastSide-logo {
@@ -755,15 +744,19 @@ footer {
 /* home page style - small mobile  */
 
 .hero-image {
-    display: flex;
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/acoustic-guitar-header_small-min.jpg);
-    width: 100vw;
+    display: flex;
+    flex-direction: column;
     min-height: 15em;
+    height: 70%;
     align-self: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-attachment: fixed;
     align-items: center;
     justify-content: center;
+    background-position-y: center;
+    width: 100%;
+    background-size: cover;
 }
 
 .hero-text {
@@ -782,8 +775,7 @@ footer {
     border-radius: 3px;
     padding: 15px 20px;
     background: #ffffff;
-    margin-top: 0;
-    margin-bottom: 50px;
+    margin: 0 10px;
 }
 
 .hero-button_text {
@@ -909,6 +901,23 @@ footer {
     display: none;
 }
 
+/* basics styling  */
+
+.hero-image-basics {
+    display: flex;
+    flex-direction: column;
+    min-height: 15em;
+    height: 70%;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    background-position-y: center;
+    width: 100%;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basichero-min.jpg);
+}
 /* large mobile and small tablet view ports */
 
 @media all and (min-width: 464px) {
@@ -1162,7 +1171,7 @@ footer {
     .hero-image-basics {
         display: flex;
         flex-direction: column;
-        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/final1.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
+        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basics-hero-min.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw);
         min-height: 15em;
         height: 70%;
         align-self: center;
