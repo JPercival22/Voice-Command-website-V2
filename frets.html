@@ -1,152 +1,171 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="keywords" content="HTML5, CSS3, JavaScript">
-        <meta name="description"
-            content="University final year project to test the feasibility of integrating a no AI, rules based algorithm, voice command system into a website">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Joseph Percival">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="theme-color" content="#317EFB" />
-        <title>Guitar Tutorial - Frets</title>
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&family=Montserrat&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
-        <script src="scripts/script.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <meta name="description" content="A showcase of different sections globally available in our websites ">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Joseph Percival">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#317EFB" />
+    <title>Global Showcase</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&family=Raleway:wght@400;500&family=Spartan&display=swap"
+      rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </head>
+  <header>
+    <div class="header-container">
+      <nav>
+        <nav class="menu">
 
-    <body>
+          <a class="logo" href="index.html" title="Guitar Lessons">
+            <img class="logo-image" src="img/logo-optimised.svg" alt="Site logo" title="Guitar Lessons">
+            <img class="brand-image" src="img/logo1-min.svg" alt="brand logo" title="brand logo">
+          </a>
 
-        <header>
+          <div class="navigation">
+            <ul>
+              <li class="item"><a href="index.html">Home</a></li>
+              <li class="item selected"><a href="basics.html">Basics</a></li>
+              <li class="item"><a href="frets.html">Frets</a></li>
+              <li class="item"><a href="chords.html">Chords</a></li>
+              <li class="item"><a href="rhythm.html">Rhythm</a></li>
+              <li class="item"><a href="lead.html">Lead</a></li>
+              <li class="toggle"><span class="bars"></span></li>
 
-            <a id="#header-anchor"></a>
-            <div class="header-container">
-                <div class="nav-bar">
-                    <div class="hamburger-menu">
-                        <button class="burger-button" title="menu icon">
-                            <i class="fa fa-bars" title="Edit"></i>
-                        </button>
-                    </div>
-                    <div class="logo">
-                        <a href="index.html" title="Guitar Lessons">
-                            <h2><img class="logo-image" src="img/logo1.png" alt="Just Speak logo">
-                           <span class="dark-text">GUITAR </span><span class="red-text">LESSONS</span></h2>
-                        </a>
-                    </div>
-                    <nav class="nav-bar">
-                        <ul>
-                            <li> <a href="index.html">Home</a></li>
-                            <li> <a href="basics.html">Basics</a></li>
-                            <li> <a href="frets.html">Frets</a></li>
-                            <li> <a href="chords.html">Chords</a></li>
-                            <li> <a href="rhythm.html">Rhythm</a></li>
-                            <li> <a href="lead.html">Lead</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="mobile-navigation">
-                        <a href="index.html">HOME</a>
-                        <a href="basics.html">BASICS</a>
-                        <a href="frets.html">FRETS</a>
-                        <a href="chords.html">CHORDS</a>
-                        <a href="rhythm.html">RHYTHM</a>
-                        <a href="lead.html">LEAD</a>
-                    </nav>
-                </div>
-            </div>
-            <div class="strip-banner" href="#">
-                Click here to see the design process for this site
-            </div>
-        </header>
-      <div id="main-banner-image-frets">
-        <img src="img/nav2.png" alt="Main image and title of the page">
+            </ul>
+          </div>
+        </nav>
+      </nav>
+    </div>
+
+    <div class="strip-banner">
+      <a href="#">
+        Click here to see the design process for this site</a>
+    </div>
+
+    <section class="global-hero-banner-with-button">
+      <div class="hero-image-basics">
+        <div class="hero-text">
+          <h1 class="hero-header">Welcome to Just Speak Guitar Lessons</h1>
+          <button class="hero-button">
+            <div class="hero-button_text">Voice Commands</div>
+          </button>
+        </div>
       </div>
+    </section>
+  </header>
+
+  <body>
+    <main>
       <article>
-        <div id="dialog" class="help-box" title="help-box">
-          <h2>Help Box</h2>
-          <p>Hello, you can call this help box at any time, by saying, "What to say."<br>
-            Below are a list of command's that you can say to go anywhere within this website - Have fun.<br></p>
-          <div class="table">
-            <table>
-              <tr>
-                <th>What to say</th>
-                <th>What happens</th>
-              </tr>
-              <tr>
-                <td>Scroll Up</td>
-                <td>Scroll's the page up</td>
-              </tr>
-              <tr>
-                <td>Scroll Down</td>
-                <td>Scroll's the page down</td>
-              </tr>
-              <tr>
-                <td>Go to the Top</td>
-                <td>Takes you to the top of the page</td>
-              </tr>
-              <tr>
-                <td>Go to the bottom</td>
-                <td>Takes you to the bottom of the page</td>
-              </tr>
-              <tr>
-                <td>Go forward</td>
-                <td>Goes forward a previously visited page</td>
-              </tr>
-              <tr>
-                <td>Go backwards</td>
-                <td>returns to the previously visited page</td>
-              </tr>
-              <tr>
-                <td>Home</td>
-                <td>Takes you to the Home Page</td>
-              </tr>
-              <tr>
-                <td>Open Basics</td>
-                <td>Takes you to the first Basics Lesson</td>
-              </tr>
-              <tr>
-                <td>Open Second Basics Lesson</td>
-                <td>Takes you to the second Basics Lesson</td>
-              </tr>
-              <tr>
-                <td>Open Fret's</td>
-                <td>Takes you to the first Frets Lesson</td>
-              </tr>
-              <tr>
-                <td>Finger positioning</td>
-                <td>Takes you to the second Fret's lesson on Finger positioning.</td>
-              </tr>
-              <tr>
-                <td>Open Chords</td>
-                <td>Takes you to the Chords Lesson</td>
-              </tr>
-              <tr>
-                <td>The Power Chord</td>
-                <td>Takes you to the second Chord's Lesson on Power Chords</td>
-              </tr>
-              <tr>
-                <td>Open Rhythm</td>
-                <td>Takes you to the Rhythm Guitar Lesson</td>
-              <tr>
-                <td>First music lesson</td>
-                <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song</td>
-              </tr>
-              <tr>
-                <td>Open Lead</td>
-                <td>Takes you to the Lead Guitar Lesson</td>
-              </tr>
-              <tr>
-                <td>Reading music</td>
-                <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read music</td>
-              </tr>
-            </table>
+        <!-- command modal  -->
+        <div id="help-modal" class="help-center" title="help-center">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span id="closeModal" class="close">&times;</span>
+              <h1>Help Center</h1>
+            </div>
+            <div class="modal-body">
+              <p>Hello, saying, "Open Help Center," at any time opens the help menu, were you will find
+                list of voice
+                commands
+                to navigate through the site.</p>
+              <div class="table">
+                <table>
+                  <tr>
+                    <th>What to say</th>
+                    <th>What happens</th>
+                  </tr>
+                  <tr>
+                    <td>Scroll Up</td>
+                    <td>Scroll's the page up</td>
+                  </tr>
+                  <tr>
+                    <td>Scroll Down</td>
+                    <td>Scroll's the page down</td>
+                  </tr>
+                  <tr>
+                    <td>Go to the Top</td>
+                    <td>Takes you to the top of the page</td>
+                  </tr>
+                  <tr>
+                    <td>Go to the bottom</td>
+                    <td>Takes you to the bottom of the page</td>
+                  </tr>
+                  <tr>
+                    <td>Go forward</td>
+                    <td>Goes forward a previously visited page</td>
+                  </tr>
+                  <tr>
+                    <td>Go backwards</td>
+                    <td>returns to the previously visited page</td>
+                  </tr>
+                  <tr>
+                    <td>Home</td>
+                    <td>Takes you to the Home Page</td>
+                  </tr>
+                  <tr>
+                    <td>Open Basics</td>
+                    <td>Takes you to the first Basics Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>Open Basics Lesson Two</td>
+                    <td>Takes you to the second Basics Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>Open Fret's</td>
+                    <td>Takes you to the first Frets Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>Open Fret's Lesson Two</td>
+                    <td>Takes you to the second Fret's lesson on Finger positioning.</td>
+                  </tr>
+                  <tr>
+                    <td>Open Chords</td>
+                    <td>Takes you to the Chords Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>The Chord's Lesson Two</td>
+                    <td>Takes you to the second Chord's Lesson on Power Chords</td>
+                  </tr>
+                  <tr>
+                    <td>Open Rhythm</td>
+                    <td>Takes you to the Rhythm Guitar Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>Open Rhythm Lesson Two</td>
+                    <td>Takes you to the second Rhythm Guitar Lesson, where you will learn a song
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Open Lead</td>
+                    <td>Takes you to the Lead Guitar Lesson</td>
+                  </tr>
+                  <tr>
+                    <td>Open Lead Lesson Two</td>
+                    <td>Takes you to the second Lead Guitar Lesson, where you will learn how to read
+                      music
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <h1>Say "close" to close the help center</h1>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="main-content-wrapper">
+
+        <div class="main-content-container">
           <section id="welcomeF1">
             <h1>Frets and Fretting</h1>
             <p>The neck of your guitar has a thin piece of wood running down it, you can easily see the difference as
