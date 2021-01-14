@@ -125,7 +125,7 @@ sup {
 .centered-title_light {
     text-align: center;
     color: #ffffff;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -173,6 +173,12 @@ sup {
     text-transform: none;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.right-text_dark p {
+    font-family: permanent marker;
+    text-transform: none;
+    font-size: 16px;
 }
 
 .widget-library>ul>li:hover {
@@ -792,9 +798,6 @@ footer {
     margin: 10px 10px;
     max-width: 150px;
     width: 100%;
-}
-
-.hero-button_text {
     color: inherit;
     font-family: Raleway;
     text-transform: uppercase;
@@ -949,14 +952,14 @@ footer {
     background-position-y: center;
     width: 100%;
     background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner.jpg);
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
 }
 
 .centeredImage_container-frets {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner.jpg);
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60%;
+    width: 100%;
     max-width: 100%;
     height: 300px;
     text-align: center;
@@ -968,10 +971,10 @@ footer {
 }
 
 .centeredImage_container-fretting {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/Guitar-Fretting.jpg);
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/Guitar-Fretting-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60%;
+    width: 100%;
     max-width: 100%;
     height: 300px;
     text-align: center;
@@ -986,7 +989,7 @@ footer {
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/sound-waves-min.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 60%;
+    width: 100%;
     max-width: 100%;
     height: 300px;
     text-align: center;
@@ -1749,6 +1752,10 @@ footer {
     .page-navigation-anchor:hover {
         text-decoration: none;
     }
+
+    .centeredImage_container-soundWaves, .centeredImage_container-fretting, .centeredImage_container-frets {
+        width: 60%;
+    } 
 }
 
 /*frets2 styling*/
