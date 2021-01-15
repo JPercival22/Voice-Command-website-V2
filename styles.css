@@ -793,7 +793,7 @@ footer {
 .hero-button {
     border: 3px solid #41cfe9;
     border-radius: 3px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     background: #ffffff;
     margin: 10px 10px;
     max-width: 150px;
@@ -802,7 +802,8 @@ footer {
     font-family: Raleway;
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
+    height: 45px;
 }
 
 .hero-button:hover {
@@ -926,16 +927,16 @@ footer {
     display: flex;
     flex-direction: column;
     min-height: 15em;
-    height: 70%;
+    height: 70vh;
     align-self: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     align-items: center;
     justify-content: center;
     background-position-y: center;
     width: 100%;
     background-size: cover;
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basichero-min.jpg);
+    background-attachment: fixed;
 }
 
 /* frets styling  */
@@ -944,7 +945,7 @@ footer {
     display: flex;
     flex-direction: column;
     min-height: 15em;
-    height: 70%;
+    height: 70vh;
     align-self: center;
     background-repeat: no-repeat;
     align-items: center;
@@ -953,52 +954,36 @@ footer {
     width: 100%;
     background-size: cover;
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
+    background-attachment: fixed;
 }
 
-.centeredImage_container-frets {
+.centeredImage_container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 50%;
+    height: 300px;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.frets {
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
 }
 
-.centeredImage_container-fretting {
+.fretting {
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/Guitar-Fretting-min.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
 }
 
-.centeredImage_container-soundWaves {
+.soundWaves {
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/sound-waves-min.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
 }
+
 .centeredImageBanner_title-top {
     position: relative;
     top: -110px;
@@ -1140,7 +1125,7 @@ footer {
         flex-direction: column;
         background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/acoustic-guitar-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
         min-height: 15em;
-        height: 50%;
+        height: 70vh;
         align-self: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -1259,7 +1244,7 @@ footer {
         flex-direction: column;
         background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basics-hero-min.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw);
         min-height: 15em;
-        height: 70%;
+        height: 70vh;
         align-self: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -1743,19 +1728,15 @@ footer {
         align-items: center;
     }
 
-    .hero-image {
-        display: flex;
-        height: 30vh;
-        background-size: cover;
-    }
-
     .page-navigation-anchor:hover {
         text-decoration: none;
     }
 
-    .centeredImage_container-soundWaves, .centeredImage_container-fretting, .centeredImage_container-frets {
+    .centeredImage_container-soundWaves,
+    .centeredImage_container-fretting,
+    .centeredImage_container-frets {
         width: 60%;
-    } 
+    }
 }
 
 /*frets2 styling*/
@@ -2896,9 +2877,10 @@ td {
     .hero-button {
         border: 3px solid #41cfe9;
         border-radius: 3px;
-        padding: 5px 15px;
+        padding: 10px 15px;
         background: #ffffff;
         margin: 10px;
+        height: 45px;
     }
 
     .welcome-content {
