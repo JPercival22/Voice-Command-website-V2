@@ -764,19 +764,16 @@ footer {
 /* home page style - small mobile  */
 
 .hero-image {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/acoustic-guitar-header_small-min.jpg);
+    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/acoustic-guitar_banner-image-min.jpg);
     display: flex;
     flex-direction: column;
-    min-height: 15em;
-    height: 70%;
     align-self: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     align-items: center;
     justify-content: center;
-    background-position-y: center;
+    background-position: center;
     width: 100%;
-    background-size: cover;
 }
 
 .hero-text {
@@ -927,14 +924,11 @@ footer {
     display: flex;
     flex-direction: column;
     min-height: 15em;
-    height: 70vh;
     align-self: center;
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-    background-position-y: center;
     width: 100%;
-    background-size: cover;
     background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basichero-min.jpg);
     background-attachment: fixed;
 }
@@ -1123,16 +1117,25 @@ footer {
     .hero-image {
         display: flex;
         flex-direction: column;
-        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/acoustic-guitar-header.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw");
+        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url("img/acoustic-guitar_banner-image-min.jpg");
         min-height: 15em;
-        height: 70vh;
+        height: 50vh;
         align-self: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-attachment: fixed;
         align-items: center;
         justify-content: center;
         background-color: #f1f0ec;
+    }
+
+    .hero-header {
+        align-self: center;
+        font-size: 50px;
+        color: white;
+        margin-bottom: 20px;
+        font-family: 'Spartan';
+        font-weight: 700;
     }
 
     .main-content-container {
@@ -1364,7 +1367,7 @@ footer {
 
     /*basic page 1 styles*/
     .guitar-components {
-        background-image: url(img/guitar-diagram.png);
+        background-image: url(img/guitar-diagram-min.png);
         background-size: contain;
         height: 300px;
         width: auto;
@@ -1375,7 +1378,7 @@ footer {
     /*basics page 2 content cards styles*/
 
     /* frets 1 styles  */
-
+    /* ######################### Old Grid Code ######################### */
     /*frets page 2 content box styles*/
     #image-information-box {
         background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(img/learn-and-play.png) no-repeat center;
