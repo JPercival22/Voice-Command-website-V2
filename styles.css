@@ -55,14 +55,17 @@ h1 {
 
 h2 {
     font-family: 'Raleway', sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     margin: 10px;
+    text-transform: uppercase;
 }
 
 
 h3 {
     font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 10px;
 }
 
 h4 {
@@ -358,22 +361,17 @@ sup {
     background: white;
     border: 1px solid black;
     border-radius: 2px;
-    margin: 2.5px 2.5px 2.5px 2.5px;
-    width: calc(910px / 3);
+    margin: 5px 0;
 }
 
 .card-no-left-margin {
-    margin: 2.5px 2.5px 2.5px 0;
     border: 1px solid black;
     border-radius: 2px;
-    width: calc(910px / 3);
 }
 
 .card-no-right-margin {
-    margin: 2.5px 0 2.5px 2.5px;
     border: 1px solid black;
     border-radius: 2px;
-    width: calc(910px / 3);
 }
 
 .thumbnail>img {
@@ -1009,6 +1007,36 @@ footer {
     .global-hero-banner-with-button {
         background-size: cover;
     }
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 250px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .card {
+        background: white;
+        border: 1px solid black;
+        border-radius: 2px;
+        margin: 2.5px;
+        width: calc(910px / 3);
+    }
+    
+    .card-no-left-margin {
+        margin: 2.5px 2.5px 2.5px 0;
+        border: 1px solid black;
+        border-radius: 2px;
+        width: calc(910px / 3);
+    }
+    
+    .card-no-right-margin {
+        margin: 2.5px 0 2.5px 2.5px;
+        border: 1px solid black;
+        border-radius: 2px;
+        width: calc(910px / 3);
+    }
 
 }
 
@@ -1376,6 +1404,8 @@ footer {
     }
 
     /*basics page 2 content cards styles*/
+
+    /* strings styles  */
 
     /* frets 1 styles  */
     /* ######################### Old Grid Code ######################### */
