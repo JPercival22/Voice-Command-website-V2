@@ -15,7 +15,7 @@ body {
     font-size: 16px;
     letter-spacing: .5px;
     line-height: 1.5;
-    margin: 0 auto;
+    margin: 0 10px 0 10px;
 }
 
 header {
@@ -458,11 +458,6 @@ sup {
 
 .bars::after {
     top: -5px;
-}
-
-main {
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .header-container {
@@ -1151,8 +1146,9 @@ footer {
 
     .navigation {
         order: 2;
-        display: inline-flex;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         background: linear-gradient(117deg, rgba(131, 58, 180, 1) 0%, rgba(29, 253, 243, 1) 50%, rgba(69, 88, 252, 0.6502976190476191) 100%);
         transition: all 0s ease-in-out;
     }
@@ -2985,7 +2981,16 @@ td {
 
 
 
-@media screen and (min-width:940px) {
+@media screen and (min-width:1000px) {
+
+    .navigation {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: linear-gradient(117deg, rgba(131, 58, 180, 1) 0%, rgba(29, 253, 243, 1) 50%, rgba(69, 88, 252, 0.6502976190476191) 100%);
+        transition: all 0s ease-in-out;
+    }
 
     .video-container {
         display: flex;
