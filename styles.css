@@ -758,25 +758,6 @@ footer {
     padding-bottom: 32px;
 }
 
-.video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .video-container::after {
-    display: block;
-    content: "";
-    padding-top: 56.25%;
-  }
-  
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
 /* home page style - small mobile  */
 
 .hero-image {
@@ -956,7 +937,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
+
 /* frets styling  */
 
 .hero-image-frets {
@@ -1006,6 +988,24 @@ footer {
     position: relative;
     top: -110px;
 }
+
+.video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20%;
+    height: 100%;
+}
+
+.video-container>video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+}
+
 
 /* large mobile and small tablet view ports */
 
@@ -1065,11 +1065,39 @@ footer {
         width: calc(910px / 3);
     }
 
+    .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        align-self: center;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 674px) {
     .video-container {
-        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 36%;
+        height: 100%;
+        align-self: center;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .video-container>video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -1078,13 +1106,27 @@ footer {
 
     /* general styles  */
 
-    .eastSideFooter-linkColumns {
-        flex-direction: row;
+    .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        align-self: center;
+        overflow: hidden;
+        margin: 0 auto;
     }
 
-    .video-container {
-        margin-left: auto;
-        margin-right: auto;
+    .video-container>video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .eastSideFooter-linkColumns {
+        flex-direction: row;
     }
 
     .brand-image {
@@ -2944,6 +2986,17 @@ td {
 
 
 @media screen and (min-width:940px) {
+
+    .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        align-self: center;
+        overflow: hidden;
+        margin: 0 auto;
+    }
 
     .hero-button {
         border: 3px solid #41cfe9;
