@@ -782,27 +782,26 @@ footer {
 }
 
 .hero-button {
-    border: 3px solid #41cfe9;
-    border-radius: 3px;
-    padding: 10px 15px;
-    background: #ffffff;
-    margin: 10px 10px;
-    max-width: 150px;
-    width: 100%;
-    color: inherit;
-    font-family: Raleway;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 12px;
-    height: 45px;
+    background-color: #ffffff;
+    color: #686868;
+    padding: 10px 0px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 33%;
+    align-self: center;
+    border: 1px solid #41cfe9;
 }
 
 .hero-button:hover {
-    background: #41cfe9;
-    color: #fcf4f4fd;
+    color: #6a6a6afd;
     border-color: #fff;
     transition: all 0.2s ease 0s;
     font-weight: 500;
+    text-decoration: none;
 }
 
 .welcome {
@@ -3004,12 +3003,23 @@ td {
     }
 
     .hero-button {
-        border: 3px solid #41cfe9;
-        border-radius: 3px;
-        padding: 10px 15px;
-        background: #ffffff;
+        background-color:
+        #ffffff;
+        color: #686868;
+        padding: 10px 0px;
         margin: 10px;
-        height: 45px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        cursor: pointer;
+        width: 30%;
+        align-self: center;
+        border: 1px solid #41cfe9;
+    }
+
+    .hero-button:hover {
+        text-decoration: none;
     }
 
     .welcome-content {
