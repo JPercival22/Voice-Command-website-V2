@@ -38,7 +38,38 @@ $(document).ready(function () {
         document.documentElement.scrollTop = 0;
     }
 
-
+    // guitar tuner 
+   var string1 = $("#highE")[0];
+   var string2 = $("#B")[0];
+   var string3 = $("#G")[0];
+   var string4 = $("#D")[0];
+   var string5 = $("#A")[0];
+   var string6 = $("#lowE")[0];
+       $(".tuner-E_high")
+       .mouseenter(function() {
+           string1.play();
+       });
+       $(".tuner-B")
+       .mouseenter(function() {
+           string2.play();
+       });
+       $(".tuner-G")
+       .mouseenter(function() {
+           string3.play();
+       });
+       $(".tuner-D")
+       .mouseenter(function() {
+           string4.play();
+       });
+       $(".tuner-A")
+       .mouseenter(function() {
+           string5.play();
+       });
+       $(".tuner-E")
+       .mouseenter(function() {
+           string6.play();
+       });
+   
 
     // Voice command 
 
@@ -129,8 +160,5 @@ $(document).ready(function () {
         SpeechKITT.vroom();
     }
     $("#skitt-listening-text__instructions").text("say \"open help center\"");
-
-
-
 
 });

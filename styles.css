@@ -103,6 +103,42 @@ sup {
     background-color: #f7f7f7;
 }
 
+.red-text {
+    font-weight: 700;
+    color: #dc1a00;
+    text-shadow: 1px 1px 2px black;
+}
+
+.orange-text {
+    font-weight: 700;
+    color: #dfbd00;
+    text-shadow: 1px 1px 2px black;
+}
+
+.lime-text {
+    font-weight: 700;
+    color: #b0dd2a;
+    text-shadow: 1px 1px 2px black;
+}
+
+.cyan-text {
+    font-weight: 700;
+    color: #04c7c7;
+    text-shadow: 1px 1px 2px black;
+}
+
+.violet-text {
+    font-weight: 700;
+    color: #a507a5fd;
+    text-shadow: 1px 1px 2px black;
+}
+
+.red-text {
+    font-weight: 700;
+    color: #d34836;
+    text-shadow: 1px 1px 2px black;
+}
+
 /* General Component styles  */
 
 .showcase-section {
@@ -1481,6 +1517,146 @@ footer {
     /*basics page 2 content cards styles*/
 
     /* strings styles  */
+
+    .acoustic-guitar-tuner {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .tuner-E {
+        position: relative;
+        top: 305px;
+        left: -536px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #d34836;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-A {
+        position: relative;
+        top: 195px;
+        left: -595px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #dfbd00;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-D {
+        position: relative;
+        top: 85px;
+        left: -652px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #b0dd2a;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-G {
+        position: relative;
+        top: 85px;
+        left: -250px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #04c7c7;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-B {
+        position: relative;
+        top: 195px;
+        left: -310px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #a507a5fd;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-E_high {
+        position: relative;
+        top: 305px;
+        left: -370px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+        background-color: #d3d3d391;
+        width: 60px;
+        height: 60px;
+        padding: 24px;
+        font-family: 'Spartan';
+        font-size: 25px;
+        font-weight: 700;
+        color: #d34836;
+        text-shadow: 1px 1px 2px black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .tuner-E:hover, .tuner-A:hover, .tuner-D:hover, .tuner-G:hover, .tuner-B:hover, .tuner-E_high:hover {
+        background-color: #d3d3d3d4;
+    }
+
+    .tuner-E:active, .tuner-A:active, .tuner-D:active, .tuner-G:active, .tuner-B:active,.tuner-E_high:active {
+        background-color: #5dd6eca4;
+    }
 
     /* frets 1 styles  */
     /* ######################### Old Grid Code ######################### */
@@ -3004,7 +3180,7 @@ td {
 
     .hero-button {
         background-color:
-        #ffffff;
+            #ffffff;
         color: #686868;
         padding: 10px 0px;
         margin: 10px;
