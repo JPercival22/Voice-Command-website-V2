@@ -1545,6 +1545,72 @@ footer {
         cursor: pointer;
     }
 
+    .e_note-signifyer {
+        position: absolute;
+        top: 34px;
+        left: 190px;
+        height: 282px;
+    }
+
+    .a_note-signifyer {
+        position: absolute;
+        top: 34px;
+        left: 195px;
+        height: 390px;
+    }
+
+    .d_note-signifyer {
+        position: absolute;
+        top: -89px;
+        left: -36px;
+        height: 622px;
+    }
+
+    .g_note-signifyer {
+        position: absolute;
+        top: -89px;
+        left: -500px;
+        height: 622px;
+    }
+
+    .b_note-signifyer {
+        position: absolute;
+        top: -199px;
+        left: -500px;
+        height: 622px;
+    }
+
+    .high-e_note-signifyer {
+        position: absolute;
+        top: -307px;
+        left: -500px;
+        height: 622px;
+    }
+    .e_note-signifyer, .a_note-signifyer, .d_note-signifyer, .g_note-signifyer, .b_note-signifyer, .high-e_note-signifyer {
+        animation-duration: 7000ms;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 3;
+        animation-name: fadeOutDown;
+        display: none;
+    }
+
+
+    @keyframes fadeOutDown {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+
+        30% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
     .tuner-A {
         position: relative;
         top: 195px;
@@ -1629,7 +1695,7 @@ footer {
         cursor: pointer;
     }
 
-    .tuner-E_high {
+    .tuner-high-E {
         position: relative;
         top: 305px;
         left: -370px;
@@ -1650,11 +1716,21 @@ footer {
         cursor: pointer;
     }
 
-    .tuner-E:hover, .tuner-A:hover, .tuner-D:hover, .tuner-G:hover, .tuner-B:hover, .tuner-E_high:hover {
+    .tuner-E:hover,
+    .tuner-A:hover,
+    .tuner-D:hover,
+    .tuner-G:hover,
+    .tuner-B:hover,
+    .tuner-E_high:hover {
         background-color: #d3d3d3d4;
     }
 
-    .tuner-E:active, .tuner-A:active, .tuner-D:active, .tuner-G:active, .tuner-B:active,.tuner-E_high:active {
+    .tuner-E:active,
+    .tuner-A:active,
+    .tuner-D:active,
+    .tuner-G:active,
+    .tuner-B:active,
+    .tuner-E_high:active {
         background-color: #5dd6eca4;
     }
 

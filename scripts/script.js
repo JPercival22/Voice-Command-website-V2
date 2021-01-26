@@ -39,37 +39,58 @@ $(document).ready(function () {
     }
 
     // guitar tuner 
-   var string1 = $("#highE")[0];
-   var string2 = $("#B")[0];
-   var string3 = $("#G")[0];
-   var string4 = $("#D")[0];
-   var string5 = $("#A")[0];
-   var string6 = $("#lowE")[0];
-       $(".tuner-E_high")
-       .mouseenter(function() {
-           string1.play();
-       });
-       $(".tuner-B")
-       .mouseenter(function() {
-           string2.play();
-       });
-       $(".tuner-G")
-       .mouseenter(function() {
-           string3.play();
-       });
-       $(".tuner-D")
-       .mouseenter(function() {
-           string4.play();
-       });
-       $(".tuner-A")
-       .mouseenter(function() {
-           string5.play();
-       });
-       $(".tuner-E")
-       .mouseenter(function() {
-           string6.play();
-       });
-   
+    var string1 = $("#highE")[0];
+    var string2 = $("#B")[0];
+    var string3 = $("#G")[0];
+    var string4 = $("#D")[0];
+    var string5 = $("#A")[0];
+    var string6 = $("#lowE")[0];
+    var lowE = $(".tuner-E");
+    var lowEImage = $(".e_note-signifyer");
+    var noteA = $(".tuner-A");
+    var noteAImage = $(".a_note-signifyer");
+    var noteD = $(".tuner-D");
+    var noteDImage = $(".d_note-signifyer");
+    var noteG = $(".tuner-G");
+    var noteGImage = $(".g_note-signifyer");
+    var noteB = $(".tuner-B");
+    var noteBImage = $(".b_note-signifyer");
+    var highE = $(".tuner-high-E");
+    var highEImage = $(".high-e_note-signifyer");
+
+
+
+    highE.click(function () {
+        highEImage.show();
+        string1.play();
+        this.reset();
+    });
+    noteB.click(function (e) {
+        noteBImage.show();
+        string2.play();
+        e.stopPropagation();
+    });
+    noteG.click(function (e) {
+        noteGImage.show();
+        string3.play();
+        e.stopPropagation();
+    });
+    noteD.click(function (e) {
+        noteDImage.show();
+        string4.play();
+        e.stopPropagation();
+    });
+    noteA.click(function (e) {
+        noteAImage.show();
+        string5.play();
+        e.stopPropagation();
+    });
+    lowE.click(function (e) {
+        lowEImage.show();
+        string6.play();
+        e.stopPropagation();
+    });
+
 
     // Voice command 
 
@@ -149,6 +170,9 @@ $(document).ready(function () {
                 }, 'easeInOutBack');
 
             },
+            'E': function () {
+                $('tuner-E').click('')
+            }
         };
         annyang.addCommands(commands);
         annyang.start();
