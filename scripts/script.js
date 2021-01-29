@@ -57,38 +57,47 @@ $(document).ready(function () {
     var noteBImage = $(".b_note-signifyer");
     var highE = $(".tuner-high-E");
     var highEImage = $(".high-e_note-signifyer");
-
-
+    var electricLowE = $(".electric-low-e-signifyer");
+    var electricA = $(".electric-a-signifyer");
+    var electricD = $(".electric-d-signifyer");
+    var electricG = $(".electric-g-signifyer");
+    var electricB = $(".electric-b-signifyer");
+    var electricHighE = $(".electric-high-e-signifyer");
 
     highE.click(function () {
         highEImage.show();
+        electricHighE.show();
         string1.play();
-        this.reset();
     });
-    noteB.click(function (e) {
+    noteB.click(function () {
         noteBImage.show();
+        electricB.show();
         string2.play();
-        e.stopPropagation();
+
     });
-    noteG.click(function (e) {
+    noteG.click(function () {
         noteGImage.show();
+        electricG.show();
         string3.play();
-        e.stopPropagation();
+
     });
-    noteD.click(function (e) {
+    noteD.click(function () {
         noteDImage.show();
+        electricD.show();
         string4.play();
-        e.stopPropagation();
+
     });
-    noteA.click(function (e) {
+    noteA.click(function () {
         noteAImage.show();
+        electricA.show();
         string5.play();
-        e.stopPropagation();
+
     });
-    lowE.click(function (e) {
+    lowE.click(function () {
         lowEImage.show();
+        electricLowE.show();
         string6.play();
-        e.stopPropagation();
+
     });
 
 

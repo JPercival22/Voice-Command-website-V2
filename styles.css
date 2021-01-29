@@ -1517,104 +1517,46 @@ footer {
     /*basics page 2 content cards styles*/
 
     /* strings styles  */
+    .tuning-section {
+        display: flex;
+        max-height: 670px;
+    }
 
     .acoustic-guitar-tuner {
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        flex: 0 1 400px;
     }
+
+    .electric-guitar-tuner {
+        flex: 0 1 400px;
+        padding: 40px;
+    }
+
+    /* tuner notes styles  */
 
     .tuner-E {
         position: relative;
-        top: 305px;
-        left: -536px;
+        top: -320px;
+        left: 24px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
         width: 60px;
         height: 60px;
-        padding: 24px;
+        padding: 16px 16px 16px 20px;
         font-family: 'Spartan';
         font-size: 25px;
         font-weight: 700;
         color: #d34836;
         text-shadow: 1px 1px 2px black;
         display: flex;
-        align-items: center;
-        justify-content: center;
         cursor: pointer;
-    }
-
-    .e_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: 190px;
-        height: 282px;
-    }
-
-    .a_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: 195px;
-        height: 390px;
-    }
-
-    .d_note-signifyer {
-        position: absolute;
-        top: -89px;
-        left: -36px;
-        height: 622px;
-    }
-
-    .g_note-signifyer {
-        position: absolute;
-        top: -89px;
-        left: -500px;
-        height: 622px;
-    }
-
-    .b_note-signifyer {
-        position: absolute;
-        top: -199px;
-        left: -500px;
-        height: 622px;
-    }
-
-    .high-e_note-signifyer {
-        position: absolute;
-        top: -307px;
-        left: -500px;
-        height: 622px;
-    }
-    .e_note-signifyer, .a_note-signifyer, .d_note-signifyer, .g_note-signifyer, .b_note-signifyer, .high-e_note-signifyer {
-        animation-duration: 7000ms;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 3;
-        animation-name: fadeOutDown;
-        display: none;
-    }
-
-
-    @keyframes fadeOutDown {
-        0% {
-            opacity: 0;
-            transform: translateY(0);
-        }
-
-        30% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            opacity: 0;
-        }
+        z-index: 99;
     }
 
     .tuner-A {
         position: relative;
-        top: 195px;
-        left: -595px;
+        top: -490px;
+        left: 24px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
@@ -1634,8 +1576,8 @@ footer {
 
     .tuner-D {
         position: relative;
-        top: 85px;
-        left: -652px;
+        top: -655px;
+        left: 24px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
@@ -1655,8 +1597,8 @@ footer {
 
     .tuner-G {
         position: relative;
-        top: 85px;
-        left: -250px;
+        top: -720px;
+        left: 480px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
@@ -1676,8 +1618,8 @@ footer {
 
     .tuner-B {
         position: relative;
-        top: 195px;
-        left: -310px;
+        top: -670px;
+        left: 480px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
@@ -1697,8 +1639,8 @@ footer {
 
     .tuner-high-E {
         position: relative;
-        top: 305px;
-        left: -370px;
+        top: -620px;
+        left: 480px;
         border-radius: 50%;
         border: 1px solid rgb(223, 223, 223);
         background-color: #d3d3d391;
@@ -1721,7 +1663,7 @@ footer {
     .tuner-D:hover,
     .tuner-G:hover,
     .tuner-B:hover,
-    .tuner-E_high:hover {
+    .tuner-high-E:hover {
         background-color: #d3d3d3d4;
     }
 
@@ -1730,9 +1672,145 @@ footer {
     .tuner-D:active,
     .tuner-G:active,
     .tuner-B:active,
-    .tuner-E_high:active {
+    .tuner-high-E:active {
         background-color: #5dd6eca4;
     }
+
+    .tuner-E:focus,
+    .tuner-A:focus,
+    .tuner-D:focus,
+    .tuner-G:focus,
+    .tuner-B:focus,
+    .tuner-high-E:focus {
+        outline: transparent;
+    }
+
+    /* string identifier styles (Acoustic Guitar)  */
+
+    .e_note-signifyer {
+        position: absolute;
+        top: 32px;
+        left: 196px;
+        height: 280px;
+    }
+
+    .a_note-signifyer {
+        position: absolute;
+        top: 34px;
+        left: 204px;
+        height: 388px;
+    }
+
+    .d_note-signifyer {
+        position: absolute;
+        top: 35px;
+        left: 206px;
+        height: 493px;
+    }
+
+    .g_note-signifyer {
+        position: absolute;
+        top: 34px;
+        left: -196px;
+        height: 498px;
+    }
+
+    .b_note-signifyer {
+        position: absolute;
+        top: 37px;
+        left: -176px;
+        height: 385px;
+    }
+
+    .high-e_note-signifyer {
+        position: absolute;
+        top: 34px;
+        left: -157px;
+        height: 278px;
+    }
+
+    /* string identifier styles (Electric Guitar)  */
+    .electric-low-e-signifyer {
+        position: absolute;
+        top: 1603px;
+        right: 648px;
+        height: 218px;
+    }
+
+    .electric-a-signifyer {
+        position: absolute;
+        top: 1548px;
+        height: 275px;
+        left: 1080px;
+    }
+
+    .electric-d-signifyer {
+        position: absolute;
+        top: 1487px;
+        left: 1099px;
+        height: 334px;
+    }
+
+    .electric-g-signifyer {
+        position: absolute;
+        top: 1432px;
+        left: 1118px;
+        height: 391px;
+    }
+
+    .electric-b-signifyer {
+        position: absolute;
+        top: 1378px;
+        left: 1138px;
+        height: 445px;
+    }
+
+    .electric-high-e-signifyer {
+        position: absolute;
+        top: 1317px;
+        left: 1157px;
+        height: 503px;
+    }
+
+    /* string identifier animation styles once triggered by click event */
+    .e_note-signifyer,
+    .a_note-signifyer,
+    .d_note-signifyer,
+    .g_note-signifyer,
+    .b_note-signifyer,
+    .high-e_note-signifyer,
+    .electric-low-e-signifyer,
+    .electric-a-signifyer,
+    .electric-d-signifyer,
+    .electric-g-signifyer,
+    .electric-b-signifyer,
+    .electric-high-e-signifyer 
+    {
+        animation-duration: 7000ms;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-name: fadeOutDown;
+        display: none;
+    }
+
+
+    @keyframes fadeOutDown {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+
+        30% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
 
     /* frets 1 styles  */
     /* ######################### Old Grid Code ######################### */
