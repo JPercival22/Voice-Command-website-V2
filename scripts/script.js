@@ -57,48 +57,37 @@ $(document).ready(function () {
     var noteBImage = $(".b_note-signifyer");
     var highE = $(".tuner-high-E");
     var highEImage = $(".high-e_note-signifyer");
-    var electricLowE = $(".electric-low-e-signifyer");
-    var electricA = $(".electric-a-signifyer");
-    var electricD = $(".electric-d-signifyer");
-    var electricG = $(".electric-g-signifyer");
-    var electricB = $(".electric-b-signifyer");
-    var electricHighE = $(".electric-high-e-signifyer");
 
     highE.click(function () {
         highEImage.show();
-        electricHighE.show();
         string1.play();
     });
     noteB.click(function () {
         noteBImage.show();
-        electricB.show();
         string2.play();
 
     });
     noteG.click(function () {
         noteGImage.show();
-        electricG.show();
         string3.play();
 
     });
     noteD.click(function () {
         noteDImage.show();
-        electricD.show();
         string4.play();
 
     });
     noteA.click(function () {
         noteAImage.show();
-        electricA.show();
         string5.play();
 
     });
-    lowE.click(function () {
-        lowEImage.show();
-        electricLowE.show();
-        string6.play();
+    lowE.innerHTML = "E",
+        lowE.click(function () {
+            lowEImage.show();
+            string6.play();
 
-    });
+        });
 
 
     // Voice command 
