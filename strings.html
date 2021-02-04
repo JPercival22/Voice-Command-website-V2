@@ -11,14 +11,14 @@
     <meta name="theme-color" content="#317EFB" />
     <title>Strings Lesson 1</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link preload rel="stylesheet" type="text/css" href="styles.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&family=Raleway:wght@400;500&family=Spartan&display=swap"
       rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
+    <script defer src="scripts/script.js"></script>
   </head>
   <header>
     <div class="header-container">
@@ -26,19 +26,52 @@
       <nav class="menu">
 
         <a class="logo" href="index.html" title="Guitar Lessons">
-          <img class="logo-image" src="img/logo-optimised.svg" alt="Site logo" title="Guitar Lessons">
-          <img class="brand-image" src="img/logo1-min.svg" alt="brand logo" title="brand logo">
+          <img class="logo-image" src="img/logo-optimised.svg" width="50" height="50"  alt="Site logo" title="Guitar Lessons">
+          <img class="brand-image" src="img/logo1-min.svg"  width="300" height="300" alt="brand logo" title="brand logo">
         </a>
 
         <div class="navigation">
           <ul>
             <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="basics.html">Basics</a></li>
-            <li class="item selected"><a href="string's.html">string's</a></li>
-            <li class="item"><a href="frets.html">Frets</a></li>
-            <li class="item"><a href="chords.html">Chords</a></li>
-            <li class="item"><a href="rhythm.html">Rhythm</a></li>
-            <li class="item"><a href="lead.html">Lead</a></li>
+
+            <li class="item"><a href="#">Basics</a>
+              <ul>
+                <li class="item"><a href="basics.html">Basics Lesson 1</a></li>
+                <li class="item"><a href="basics2.html">Basics Lesson 2</a></li>
+              </ul>
+            </li>
+
+            <li class="item selected"><a href="#">string's</a>
+              <ul>
+                <li class="item"><a href="strings.html">String's - Lesson 1</a></li>
+                <li class="item"><a href="strings2.html">String's - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Frets</a>
+              <ul>
+                <li class="item"><a href="frets.html">Frets - Lesson 1</a></li>
+                <li class="item"><a href="frets2.html">Frets - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Chords</a>
+              <ul>
+                <li class="item"><a href="chords.html">Chords - Lesson 1</a></li>
+                <li class="item"><a href="chords2.html">Chords - Lesson 2</a></li>
+              </ul>
+            </li>
+
+            <li class="item"><a href="#">Rhythm</a>
+              <ul>
+                <li class="item"><a href="rhythm.html">Rhythm - Lesson 1</a></li>
+                <li class="item"><a href="rhythm2.html">Rhythm - Lesson 2</a></li>
+              </ul>
+            </li>
+            <li class="item"><a href="#">Lead</a>
+              <ul>
+                <li class="item"><a href="lead.html">Lead - Lesson 1</a></li>
+                <li class="item"><a href="lead2.html">Lead - Lesson 2</a></li>
+              </ul>
+            </li>
             <li class="toggle"><span class="bars"></span></li>
           </ul>
         </div>
@@ -166,55 +199,79 @@
     </article>
 
     <article class="main-content-container">
-      <h1 class="centered-title">Guitar String types</h1>
+      <h1 class="centered-title">Guitar String's</h1>
+      <p class="left-text_dark">
+        This lesson will cover a lot of things on a Classical, Acoustic an an Electric Guitar ion regards to Strings and
+        actually stringing these types of guitar's,
+        so all of it may not be relevant for you and your guitar. As you can probably gather there is a lot of
+        information to cover here, you are more than welcome
+        to read it all if you are interested but below you will find a handy list of sections that are found on this
+        page.
+      </p>
+      <p class="left-text_dark">
+        You can simply click or Just Speak, select whichever section you wish to view and say what is written and let
+        the website take you there instead.
+      </p>
+      <div class="widget-library">
+        <ul>
+          <li><a href="#data-pas">Which Strings are for my guitar</a></li>
+          <li><a href="#data-pay">How To String a Classical Guitar Bridge</a></li>
+          <li><a href="#data-pad">How To String an Acoustic or Fixed Bridged Guitar</a></li>
+          <li><a href="#data-pal">How To String a Tremolo Bridged Guitar</a></li>
+          <li><a href="#data-paz">How to string a Classical Guitar's Tuning Pegs</a></li>
+          <li><a href="#data-aemh">How to string any Acoustic or an Electric Guitar's Tuning Pegs</a></li>
+        </ul>
+      </div>
       <section class="welcome">
         <div class="welcome-content">
-          <p class="left-text_dark"> In this lesson we will learn about which string's to buy for any 6 stringed Guitar and also how to
+          <h2 class="centered-title" id="data-pas">Which Guitar String's are for my Guitar?</h2>
+          <p class="left-text_dark"> In this lesson we will learn about which string's to buy for any 6 stringed Guitar
+            and also how to
             fit them. On the back of any Guitar String packet you will find instructions on what
             order the strings go onto your guitar. If you are complete beginner, don't worry it is relatively simple
             and if mistakes are made just
             reverse what you have done and try again, its all part of the learning process.
             The next lesson covers Standard Tuning.
           </p>
-          <p class="left-text_dark">The very first thing you need to understand is that Acoustic or electric Guitar and Classical/flamenco
+          <p class="left-text_dark">The very first thing you need to understand is that Acoustic, Electric Guitar and
+            Classical/Flamenco
             Guitars use
             completely different kinds of string's,
             even though these instruments are similar in appearance.
             The construction difference between Acoustic and Classical/flamenco Guitars is the reason why they are
             fitted with different kinds of string's.
             Classical Guitars just aren’t built tough enough to withstand the tension of steel string's.
-            Where as Electric Guitar's have 3 wound steel string's and Acoustic Guitars have 4, Electric Guitars are
-            built more robust and can accommodate this,
-            however, it doesn't produce the signature tone that this type of Guitar was made and is popular for.
           </p>
-          <p class="left-text_dark">There are all sorts of different types of string's available for the Guitar and selecting a type can
+          <p class="left-text_dark">There are all sorts of different types of string's available for the Guitar and
+            selecting a type can
             vary depending on what
             type of Guitar, sound and over all feel you would like to gain from playing the Guitar, this is because
             every string has good qualities and can be perfect for your unique Guitar and playing style. </p>
-          <p class="left-text_dark">Choosing the right string's for your Classical Guitar can have a noteworthy (excuse the pun)
+          <p class="left-text_dark">Choosing the right string's for your Classical Guitar can have a noteworthy (excuse
+            the pun)
             impact
             on your Guitar’s tone, playability
             and even durability.
           </p>
-          <p class="left-text_dark">If you have been playing for a while now, you will know which string's are right for you. If you
+          <p class="left-text_dark">If you have been playing for a while now, you will know which string's are right for
+            you. If you
             are a complete beginner,
             here is quick guide to get you started.
           </p>
 
-          
           <div class="centered-text_dark">
             <p class="emphasis">For all voice
-                commands for this website, just say, "Open Voice Commands," at any time to open the Help Box.</b>
+              commands for this website, just say, "Open Voice Commands," at any time to open the Help Box.</b>
             </p>
           </div>
 
         </div>
       </section>
-      <h2 class="centered-title">Which Guitar String's are for my Guitar?</h2>
+
       <section class="cards-container">
         <article class="card-no-left-margin">
           <picture class="thumbnail">
-            <img class="image-medium" src="img/nylon-Strings-min.jpg" alt="Image of a set of Nylon string's"
+            <img class="image-medium" src="img/nylon-Strings-min.jpg" width="300" height="300" alt="Image of a set of Nylon string's"
               title="Nylon Classical Guitar string's">
           </picture>
           <div class="card-content">
@@ -240,7 +297,7 @@
 
         <article class="card">
           <picture class="thumbnail">
-            <img class="image-medium" src="img/acoustic-strings-min.jpg" alt="Steel Acoustic Guitar string's"
+            <img class="image-medium" src="img/acoustic-strings-min.jpg"  width="300" height="300" alt="Steel Acoustic Guitar string's"
               title="Acoustic Guitar string's">
           </picture>
           <div class="card-content">
@@ -260,7 +317,7 @@
 
         <article class="card-no-right-margin">
           <picture class="thumbnail">
-            <img class="image-medium" src="img/electric-guitar-strings-min.jpg" alt="Electric Guitar string's Image"
+            <img class="image-medium" src="img/Electric-guitar-strings-min.jpg"  width="300" height="300" alt="Electric Guitar string's Image"
               title="Electric Guitar string's"></picture>
           <div class="card-content">
             <h2 class="centered-title">Electric Guitar string's</h2>
@@ -277,22 +334,45 @@
         </article>
       </section>
       <section>
-        <div class="centered-title">
+        <div class="centered-title" id="data-pay">
           <h1>How to re-string your Guitar</h1>
         </div>
-        <div class="left-text_dark">
-          <p>
-            In this section we will learn how to re-string any of the Guitars already mentioned. These sections are
-            quite lengthy
-            and if not relevant to you then feel free to scroll down until you get to your type of Guitar.
-          </p>
-          <p>
-            After selecting your string the next stage is to string, or if you are replacing your string's, then
-            keep
-            reading as this is
-            relevant if you are restringing your instrument too.
-          </p>
-        </div>
+        <h2 class="centered-title">Setting up your String Order</h2>
+        <section class="welcome">
+          <div class="welcome-content">
+            <p>Tuning your guitar correctly is so important before playing any song. To help this then you ust set up
+              the strings in the correct order. </p>
+            <p> For the majority of songs, Standard Tuning is used and this means running left to right on a Right
+              handed guitar, the strings must go in this order:
+            </p>
+            <p class="centered-text_dark">
+              <span class="red-text">E,</span>
+              <span class="orange-text">A, </span>
+              <span class="lime-text">D, </span>
+              <span class="cyan-text">G, </span>
+              <span class="violet-text">B, </span>
+              <span class="red-text">E. </span>
+            </p>
+            <p>
+              A good way to remember this
+              is to remember the phrase, "
+              <span class="red-text">E</span>very
+              <span class="orange-text">A</span>mateur
+              <span class="lime-text">D</span>oes
+              <span class="cyan-text">G</span>et
+              <span class="violet-text">B</span>etter
+              <span class="red-text">E</span>ventually."
+            </p>
+            <p>If you don't know which note goes with which string, then look on the strings packet or look on the back
+              of the box,
+              a lot of companies identify each string with a colour too, to make this job much simpler. Usually it is
+              the colour
+              identified here, but please check as different String manufacturer's do have their own identifying
+              colours.
+            </p>
+          </div>
+        </section>
+
         <section>
           <div class="centered-title">
             <h2>Stringing a Classical Guitar</h2>
@@ -311,12 +391,13 @@
           <div class="left-text_dark">
             <p>The bass string's on a Classical Guitar need less tension on the knot as
               opposed to the three remaining Nylon string's.
-              This is because the bass strings are generally wound in steel don't become stretched, they're also wound to produce
+              This is because the bass strings are generally wound in steel don't become stretched, they're also wound
+              to produce
               a heavier, more deeper sound.</p>
           </div>
 
           <div class="video-container">
-            <video loop controls>
+            <video loop controls title="How to fix the bass strings to a Spanish guitar">
               <source src="videos/Change-Classical-Guitar-Bass-Strings.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -331,14 +412,15 @@
             <h3>Step 2 - The Treble (Nylon) string's.</h3>
           </div>
           <div class="left-text_dark">
-            <p class="left-text_dark">The Treble string's on a Classical Guitar are made of Nylon and need more tension so a double or triple knot is
+            <p class="left-text_dark">The Treble string's on a Classical Guitar are made of Nylon and need more tension
+              so a double or triple knot is
               required on all the remaining strings.
               This is because, Nylon string's stretch a lot over time. They eventually become, "dead," and
               un-tunable - this is when you know when to change
               your string's.</p>
           </div>
           <div class="video-container">
-            <video loop controls>
+            <video loop controls title="How to fix the Nylon strings to a Spanish guitar" >
               <source src="videos/Change-Classical-Guitar-Treble-Strings.mp4" type="video/mp4">
               Your browser does not support the video tag.</video>
           </div>
@@ -351,9 +433,9 @@
           </div>
         </section>
 
-        <section>
+        <section id="data-pad">
           <div class="centered-title">
-            <h2>Stringing Fixed Bridged Guitars</h2>
+            <h2>Stringing Acoustic and Fixed Bridged Guitars</h2>
           </div>
           <div class="left-text_dark">
             <p> Stringing an Acoustic Guitar and some Electric Guitars with fixed Bridge's. These sort of Bridge's
@@ -370,38 +452,38 @@
           <section class="cards-container">
             <article class="card">
               <picture class="thumbnail">
-                <img class="image-medium" src="img/Bridge-min.jpg" alt="Acoustic Guitar Bridge"
+                <img class="image-medium" src="img/Bridge-min.jpg"  width="300" height="300"  alt="Acoustic Guitar Bridge"
                   title="Acoustic Guitar Standard Bridge">
               </picture>
               <div class="card-content">
                 <h2 class="centered-title">Acoustic Guitar Bridge</h2>
-                <p>Below the Sound hole of an Acoustic Guitar's you will find the Bridge. The string's are pushed
+                <p>Below the Sound hole of an Acoustic Guitar you will find the Bridge. The string's are pushed
                   into
-                  holes within the Bridge - loop end first and then held into
+                  holes within the Bridge - Ring end first and then held into
                   place with pegs. These are easily identifiable in the image above as the holding peg's here have
                   a metallic
                   finish to them here, although they can come in wood, plastic or metal.
                 </p>
                 <p>
-                  The Guitar string's are then fed up through designated string notches in the Saddle (white Nylon
-                  as seen the image above)
-                  , along the Fret Board and into the tuning pegs found in the Guitar's Headstock.
+                  The Guitar string's are then fed up through designated string gu8des in the Saddle (white Nylon
+                  as seen the image above), along the Fret Board along the designated places in the nut and into the
+                  tuning pegs found in the Guitar's Headstock.
                 </p>
               </div>
             </article>
             <article class="card">
               <picture class="thumbnail">
-                <img class="image-medium" src="img/front-feeder-electric-Bridge-min.jpg"
-                  alt="Standard Electric Guitar Bridge" title="Gibson's,'Tune-O-Matic.' Bridge">
+                <img class="image-medium" src="img/front-feeder-Electric-Bridge-min.jpg"
+                  alt="Standard Electric Guitar Bridge"  width="300" height="300" title="Gibson's,'Tune-O-Matic.' Bridge">
               </picture>
               <div class="card-content">
                 <h2 class="centered-title">Fixed Electric Guitar Bridge</h2>
-                <p>Fixed Electric Guitar Bridges are typically made of steel, and are housed below the Saddle and
+                <p>Fixed Electric Guitar Bridges are typically made of Steel, and are housed below the Saddle and
                   below the bottom pickup. The Bridge in
-                  the image above is a standard Bridge type, the string's are posted through the base of the
+                  the image above is a standard Fixed Bridge, the string's are posted through the base of the
                   Bridge
-                  (loop last) and pulled tightly. If sone correctly, the loop of the
-                  Guitar string is fixed snug in the Bridge. </p>
+                  (Ring last) and pulled tightly. If done correctly, the ring of the
+                  Guitar string fixes snug on the base of the Bridge. </p>
                 <p>The string is then fed over its designated place in the Saddle
                   (typically made from steel as opposed to Nylon an Acoustic guitar)
                   and fed upto the tuning pegs in the Headstock.
@@ -410,15 +492,21 @@
             </article>
           </section>
 
-          <section>
+          <section id="data-pal">
             <div class="centered-title">
               <h2>Stringing a Tremolo Bridged Guitar</h2>
             </div>
             <div class="left-text_dark">
               <p> Stringing an Electric Guitar with a Tremolo Bridge, seems more difficult but it really isn't. The
                 guitar string's are fed in (loop last),
-                through a specially designed plate at the back of the guitar. The order of the strings are left to
-                right are <span class="emphasis">E, A, D, G, B and higher E.</span>
+                through a specially designed plate at the back of the guitar. The order of the string's from left to
+                right
+                <span class="red-text">E,</span>
+                <span class="orange-text">A, </span>
+                <span class="lime-text">D, </span>
+                <span class="cyan-text">G, </span>
+                <span class="violet-text">B, </span>
+                <span class="red-text">E. </span>
                 If you are complete beginner, don't worry it is relatively
                 simple and if mistakes are made just
                 reverse what you have done and try again, its all part of the learning process.
@@ -428,20 +516,156 @@
                 grooves on the bridge
                 (see above image) along the fretboard, though the corresponding groove on the nut (previously
                 described in the basics lessons)
-                and onto the head stock to the designated tuning pegs more on this in Lesson 2 - Tuning your
-                guitar.
+                and onto the head stock to the designated tuning pegs.
               </p>
             </div>
 
             <div class="video-container">
-              <video loop controls>
-                <source src="videos/fender-style-string-change_optimised.mp4" type="video/mp4">
+              <video loop controls title="How to feed Electric Guitar strings through the back of the guitar">
+                <source src="videos/fender-style-string-change_optimised.mp4" type="video/mp4" >
                 Your browser does not support the video tag.
               </video>
             </div>
-
+            <div class="left-text_dark">
+              <p>
+                Once the strings have been threaded through the bottom of your guitar, up the fretboard and through
+                each designated groove in the top nut, its time to feed each of the strings through the Machine Heads or
+                you can call them tuning pegs if you wish to.
+              </p>
           </section>
 
+        </section>
+        <section>
+          <div class="centered-title">
+            <h2>Stringing The Machine heads (Tuning Pegs)</h2>
+          </div>
+          <p>
+            We should know now that <b>every</b> guitar is differently built, they even have
+            different
+            strings and guess what? - Tuning Peg's are also different too ! It is only slightly different for a
+            Classical Guitar
+            compared to an Acoustic or an Electric Guitar's Tuning Pegs, so it isn't that bad. Below is the difference
+            between
+            an Acoustic Guitar and a Spanish Guitars headstock.
+          </p>
+          <h2 class="centered-title">Acoustic and Spanish Guitar Headstock</h2>
+          <section class="welcome">
+            <div class="welcome-content">
+              <div class="guitar-components_strings"  width="300" height="300" title="Image of an Acoustic and a Spanish guitar's Headstock"></div>
+            </div>
+          </section>
+
+          </div>
+          <section id="data-paz">
+            <div class="centered-title">
+              <h2>Restringing Classical Guitar Machine Heads.</h2>
+            </div>
+            <p>
+              Restringing you Classical Guitar Machine Head is tricky at first but it needn't be challenging if you follow the steps below.
+              You might think that the strings can be tied any way but they can not, they have to be tied a specific way or 
+              else they will become loose and in some cases can cause the string to snap. <br> <b>Don't</b>
+              just tie any of the string's around the tuning peg any old way on <em>any</em> guitar because it will not stay in tune.
+            </p>
+          </section>
+          <section class="cards-container">
+            <article class="card-no-left-margin">
+              <picture class="thumbnail">
+                <img class="image-medium" src="img/restring-spanish-HS-2-min.jpg" width="300" height="300"  alt="Image of a set of Nylon string's"
+                  title="Nylon Classical Guitar string's">
+              </picture>
+              <div class="card-content">
+                <h2 class="centered-title">Step 1</h2>
+                <p>
+                  Once the string is threaded up the fret board and past the Nut, the next step is to pass the string over the tuning peg that its
+                  going to be attached to, then loop it under and through the string hole , leaving approximately 15cm of string at the end.
+                </p>
+              </div>
+            </article>
+    
+            <article class="card">
+              <picture class="thumbnail">
+                <img class="image-medium" src="img/restring-Spanish-HS-3-min.jpg" width="300" height="300"  alt="Steel Acoustic Guitar string's"
+                  title="Acoustic Guitar string's">
+              </picture>
+              <div class="card-content">
+                <h2 class="centered-title">Step 2</h2>
+                <p>Make a kink about half way down from the end of the string, then loop it over the string and back into the hole and out the other side.
+                  You should have gathered by now that once the end of string is passed through and pulled tightly, it locks the string in place.
+                </p>
+              </div>
+            </article>
+    
+            <article class="card-no-right-margin">
+              <picture class="thumbnail">
+                <img class="image-medium" src="img/restring-Spanish-HS-4-min.jpg"  width="300" height="300" alt="Electric Guitar string's Image"
+                  title="Electric Guitar string's"></picture>
+              <div class="card-content">
+                <h2 class="centered-title">Step 3</h2>
+                <p>Now that you have locked the string in place it is now time to make this more of a permanent knot, so that once tuned it tightens upon 
+                  itself and won't come out of tune. This is done by simply pulling the string down the fret board as displayed in the image above.
+                </p>
+              </div>
+            </article>
+            <p>If done correctly then all that is left to do is hold down the string on the fret board tightly and wind the Tuning Handle anti clockwise until the string is fully wound around
+              the tuning peg and there is no slack - Do not make the strings too tight as they still need to be tuned - more on this in Lesson 2.
+            </p>
+          </section>
+         
+
+
+        <section id="data-aemh">
+          <div class="centered-title">
+            <h2>Restringing Both Acoustic and Electric Guitar Machine heads.</h2>
+          </div>
+          <p>
+            Restringing your Acoustic or any Electric Guitar needn't be challenging either! The good news is that these type of guitar Machine Heads,
+            are universal standard. Which means, they all use the same machine head. You will find that from time to time different Guitar Manufacturers
+            will have a slightly different feel and design to them but they all have the same mechanics inside of them. So you can just use this lesson 
+            to restring your Machine heads no matter which guitar you happened to have.
+          </p>
+        </section>
+
+
+        <section class="cards-container">
+          <article class="card-no-left-margin">
+            <picture class="thumbnail">
+              <img class="image-medium" src="img/restring-guitar-HS-1-min.jpg" width="300" height="300"  alt="Image of a set of Nylon string's"
+                title="Nylon Classical Guitar string's">
+            </picture>
+            <div class="card-content">
+              <h2 class="centered-title">Step 1</h2>
+              <p>
+                Once the string is guided through the Nut, thread the string through the whole in the Machine Head you want to restring.
+              </p>
+            </div>
+          </article>
+  
+          <article class="card">
+            <picture class="thumbnail">
+              <img class="image-medium" src="img/restring-guitar-HS-2-min.jpg" width="300" height="300"  alt="Steel Acoustic Guitar string's"
+                title="Acoustic Guitar string's">
+            </picture>
+            <div class="card-content">
+              <h2 class="centered-title">Step 2</h2>
+              <p>Hold the end of the string and loop it around and under the string coming from the fret board, make sure you go under this string and not over it.
+              </p>
+            </div>
+          </article>
+  
+          <article class="card-no-right-margin">
+            <picture class="thumbnail">
+              <img class="image-medium" src="img/restring-guitar-HS-3-min.jpg"  width="300" height="300" alt="Electric Guitar string's Image"
+                title="Electric Guitar string's"></picture>
+            <div class="card-content">
+              <h2 class="centered-title">Step 3</h2>
+              <p>Now pull the end of the string close to where you first entered the Machine Head in step 1 and pull around the machine head.
+              </p>
+            </div>
+          </article>
+          <p>If all of these steps are done correctly, all you have to do is keep winding the string by turning the Tuning Handle in an anti clockwise direction to pick up the slack.
+            Don't wind the strings up until they're tight, it still needs to be tuned - more on that in Lesson 2. Once the string's are tight enough to pick up the slack
+            re-align the strings into their designated places in the Nut.
+          </p>
         </section>
         <!-- end of main section  -->
       </section>
@@ -450,21 +674,21 @@
         <div class="right-text_dark">
           <p>The fretboard is an important component on most stringed instruments. It is a thin, long strip of
             wood,
-            that is laminated to the front of the neck of a string instrument. The string's run over the
+            that is laminated to the front of the neck of a stringed instrument. The string's run over the
             fingerboard,
             between the nut and the Bridge.</p>
         </div>
       </section>
 
 
-      <section class="toTheTopBtn">
-        <button id="scroll-btn" title="Go to top">
-          <svg class="up-chevron" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 500 500">
-            <polygon xmlns="http://www.w3.org/2000/svg" style="fill:#ffffff;"
-              points="207.248,96.856 386.258,275.283 414.496,246.953 207.248,40.379 0,246.953 28.238,275.283" />
-          </svg>
-        </button>
-      </section>
+        <section class="toTheTopBtn">
+          <button id="scroll-btn" title="Go to top">
+            <svg class="up-chevron" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewbox="0 0 500 500">
+              <polygon xmlns="http://www.w3.org/2000/svg" style="fill:#ffffff;"
+                points="207.248,96.856 386.258,275.283 414.496,246.953 207.248,40.379 0,246.953 28.238,275.283" />
+            </svg>
+          </button>
+        </section>
 
     </article>
 
@@ -473,7 +697,7 @@
         <div class="eastSideFooter-top-row_container">
           <div class="eastSideFooter_logo">
             <a class="eastSide-logo" href="index.html" title="Guitar Lessons">
-              <img class="logo-image" src="img/logo-optimised.svg" alt="Site logo" title="Guitar Lessons">
+              <img class="logo-image" src="img/logo-optimised.svg" width="300" height="300"  alt="Site logo" title="Guitar Lessons">
             </a>
           </div>
 
@@ -616,7 +840,7 @@
             <div class="eastSideFooter-logo">
               <div class="logo">
                 <a href="index.html" title="Guitar Lessons">
-                  <img src="img/logo1-min.svg" alt="Just Speak logo" title="Brand Logo">
+                  <img src="img/logo1-min.svg" alt="Just Speak logo" width="100" height="100"  title="Brand Logo">
                   <p class="eastSideFooter-logo_text">2021 &#169; JUST SPEAK</p>
                 </a>
               </div>
