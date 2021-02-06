@@ -2498,7 +2498,6 @@ footer {
     .scroller-item {
         min-width: 100%;
         min-height: 500px;
-        /* To start with */
         background-color: inherit;
         scroll-snap-align: center;
         margin-bottom: 10px;
