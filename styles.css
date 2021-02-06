@@ -1404,11 +1404,12 @@ footer {
         height: 30px;
         width: 30px;
         border-radius: 15px;
-        background-color: rgba(95, 106, 117, 0.3);
+        background-color: white;
+        border:3px solid #5bffff;
         z-index: 1;
         line-height: 30px;
         text-align: center;
-        color: white;
+        color: #5bffff;
         font-weight: bold;
     }
 
@@ -1419,6 +1420,9 @@ footer {
 
     .open-chord-carousel .btn.next {
         right: 15px;
+        background-color: white;
+        border:3px solid #5bffff;
+        color: #5bffff;
     }
 
     .open-chord-carousel .btn.prev {
@@ -2460,13 +2464,15 @@ footer {
         margin-top: 20px;
         height: 30px;
         width: 30px;
-        border-radius: 15px;
-        background-color: rgba(95, 106, 117, 0.3);
+        border: 1px solid #5bffff;
+        border-radius: 50% 50%;
+        background-color: #ffffff;
         z-index: 1;
         line-height: 30px;
         text-align: center;
-        color: white;
+        color: #5bffff;
         font-weight: bold;
+        font-size: 22px;
     }
 
     .open-chord-carousel .btn:hover {
