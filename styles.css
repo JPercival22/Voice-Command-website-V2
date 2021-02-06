@@ -1386,6 +1386,85 @@ footer {
 
 }
 
+@media screen and (max-width: 480px) {
+    .open-chord-carousel {
+        max-width: 400px;
+        margin: auto;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        border: 1px solid grey;
+        border-radius: 5px;
+    }
+
+    .open-chord-carousel .btn {
+        position: absolute;
+        top: 50%;
+        margin-top: 20px;
+        height: 30px;
+        width: 30px;
+        border-radius: 15px;
+        background-color: white;
+        border:3px solid #5bffff;
+        z-index: 1;
+        line-height: 30px;
+        text-align: center;
+        color: #5bffff;
+        font-weight: bold;
+    }
+
+    .open-chord-carousel .btn:hover {
+        background-color: rgba(95, 106, 117, 0.5);
+        cursor: pointer;
+    }
+
+    .open-chord-carousel .btn.next {
+        right: 15px;
+        background-color: white;
+        border:3px solid #5bffff;
+        color: #5bffff;
+    }
+
+    .open-chord-carousel .btn.prev {
+        left: 15px;
+    }
+
+    .scroller {
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: column;
+        scroll-snap-type: x mandatory;
+        overflow-x: hidden;
+    }
+
+    .scroller-item {
+        min-width: 50%;
+        min-height: 200px;
+        background-color: inherit;
+        scroll-snap-align: center;
+        margin-bottom: 10px;
+        padding: 0 50px;
+    }
+
+    .scroller-img {
+        margin: 15px auto -60px;
+        width: 120px;
+        height: 120px;
+        border: solid 4px #ffffff;
+        border-radius: 60px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .scroller-item p {
+        font-style: italic;
+        line-height: 1.6;
+    }
+    .scroller-item {
+        padding: 0 30px;
+    }
+}
+
 @media screen and (min-width: 674px) {
     .video-container {
         display: flex;
@@ -2347,6 +2426,7 @@ footer {
 
 
 
+    /*chords page content box styles*/
 
     /*Fret Styling*/
 
@@ -2367,10 +2447,78 @@ footer {
     }
 
     /*Chords2 Styles*/
+    .open-chord-carousel {
+        max-width: 800px;
+        margin: auto;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        border: 1px solid grey;
+        border-radius: 5px;
+    }
 
+    .open-chord-carousel .btn {
+        position: absolute;
+        top: 50%;
+        margin-top: 20px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #5bffff;
+        border-radius: 50% 50%;
+        background-color: #ffffff;
+        z-index: 1;
+        line-height: 30px;
+        text-align: center;
+        color: #5bffff;
+        font-weight: bold;
+        font-size: 22px;
+    }
+
+    .open-chord-carousel .btn:hover {
+        background-color: rgba(95, 106, 117, 0.5);
+        cursor: pointer;
+    }
+
+    .open-chord-carousel .btn.next {
+        right: 15px;
+    }
+
+    .open-chord-carousel .btn.prev {
+        left: 15px;
+    }
+
+    .scroller {
+        overflow-x: scroll;
+        display: flex;
+        scroll-snap-type: x mandatory;
+        overflow-x: hidden;
+    }
+
+    .scroller-item {
+        min-width: 100%;
+        min-height: 500px;
+        background-color: inherit;
+        scroll-snap-align: center;
+        margin-bottom: 10px;
+        padding: 0 50px;
+    }
+
+    .scroller-img {
+        margin: 15px auto -60px;
+        width: 120px;
+        height: 120px;
+        border: solid 4px #ffffff;
+        border-radius: 60px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+    }
+
+    .scroller-item p {
+        font-style: italic;
+        line-height: 1.6;
+    }
 
     /*
-
     /*Rhythm page content styles*/
 
 
