@@ -12,31 +12,31 @@ $(document).ready(function () {
     });
     // Help Center Modal 
 
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
+    // span.onclick = function () {
+    //     modal.style.display = "none";
+    // }
 
-    window.onclick = function (e) {
-        if (e.target == modal || span) {
-            modal.style.display = "none";
-        }
-    };
+    // window.onclick = function (e) {
+    //     if (e.target == modal || span) {
+    //         modal.style.display = "none";
+    //     }
+    // };
 
     // scroll to the top button 
-    window.onscroll = function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("scroll-btn").style.display = "block";
-        } else {
-            document.getElementById("scroll-btn").style.display = "none";
-        }
-    };
+    // window.onscroll = function () {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //         document.getElementById("scroll-btn").style.display = "block";
+    //     } else {
+    //         document.getElementById("scroll-btn").style.display = "none";
+    //     }
+    // };
 
-    var top = document.getElementById("scroll-btn");
-    top.addEventListener("click", toTheTop);
+    // var top = document.getElementById("scroll-btn");
+    // top.addEventListener("click", toTheTop);
 
-    function toTheTop() {
-        document.documentElement.scrollTop = 0;
-    }
+    // function toTheTop() {
+    //     document.documentElement.scrollTop = 0;
+    // }
 
     // guitar tuner 
     var string1 = $("#highE")[0];
@@ -89,6 +89,49 @@ $(document).ready(function () {
 
         });
 
+    // carousel functionality 
+    const testimonials = document.querySelector('.open-chord-carousel');
+    const scroller = testimonials.querySelector('.scroller');
+    const nextBtn = testimonials.querySelector('.btn.next');
+    const prevBtn = testimonials.querySelector('.btn.prev');
+    const itemWidth = testimonials.querySelector('.scroller-item').clientWidth;
+
+    nextBtn.addEventListener('click', scrollToNextItem);
+    prevBtn.addEventListener('click', scrollToPrevItem);
+
+    function scrollToNextItem() {
+        if (scroller.scrollLeft < (scroller.scrollWidth - itemWidth))
+            // The scroll position is not at the beginning of last item
+            scroller.scrollBy({
+                left: itemWidth,
+                top: 0,
+                behavior: 'smooth'
+            });
+        else
+            // Last item reached. Go back to first item by setting scroll position to 0
+            scroller.scrollTo({
+                left: 0,
+                top: 0,
+                behavior: 'smooth'
+            });
+    }
+
+    function scrollToPrevItem() {
+        if (scroller.scrollLeft != 0)
+            // The scroll position is not at the beginning of first item
+            scroller.scrollBy({
+                left: -itemWidth,
+                top: 0,
+                behavior: 'smooth'
+            });
+        else
+            // This is the first item. Go to last item by setting scroll position to scroller width
+            scroller.scrollTo({
+                left: scroller.scrollWidth,
+                top: 0,
+                behavior: 'smooth'
+            });
+    }
 
     // Voice command 
 
