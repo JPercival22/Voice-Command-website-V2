@@ -1,4 +1,12 @@
+function toggleMenu() {
+    const e = document.getElementById("navMenu");
+    e.classList.toggle("show")
+}
 $(document).ready(function () {
+   
+    
+
+
     var modal = document.getElementById('help-modal');
     var span = document.getElementsByClassName('close')[0];
 
