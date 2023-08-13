@@ -9,138 +9,75 @@
     <meta name="author" content="Joseph Percival">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#317EFB" />
-    <title>Strings Lesson 1</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Home</title>
+    <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
     <link preload rel="stylesheet" type="text/css" href="styles.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat&family=Permanent+Marker&family=Raleway:wght@400;500&family=Spartan&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
     <script defer src="scripts/script.js"></script>
 </head>
-<!-- 
 
-      <nav class="menu">
-
-        <a class="logo" href="index.html" title="Guitar Lessons">
-          <img class="logo-image" src="img/logo-optimised.svg" width="50" height="50"  alt="Site logo" title="Guitar Lessons">
-          <img class="brand-image" src="img/logo1-min.svg"  width="300" height="300" alt="brand logo" title="brand logo">
-        </a>
-
-        <div class="navigation">
-          <ul>
-            <li class="item"><a href="index.html">Home</a></li>
-
-            <li class="item"><a href="#">Basics</a>
-              <ul>
-                <li class="item"><a href="basics.html">Basics Lesson 1</a></li>
-                <li class="item"><a href="basics2.html">Basics Lesson 2</a></li>
-              </ul>
-            </li>
-
-            <li class="item selected"><a href="#">string's</a>
-              <ul>
-                <li class="item"><a href="strings.html">String's - Lesson 1</a></li>
-                <li class="item"><a href="strings2.html">String's - Lesson 2</a></li>
-              </ul>
-            </li>
-            <li class="item"><a href="#">Frets</a>
-              <ul>
-                <li class="item"><a href="frets.html">Frets - Lesson 1</a></li>
-                <li class="item"><a href="frets2.html">Frets - Lesson 2</a></li>
-              </ul>
-            </li>
-            <li class="item"><a href="#">Chords</a>
-              <ul>
-                <li class="item"><a href="chords.html">Chords - Lesson 1</a></li>
-                <li class="item"><a href="chords2.html">Chords - Lesson 2</a></li>
-              </ul>
-            </li>
-
-            <li class="item"><a href="#">Rhythm</a>
-              <ul>
-                <li class="item"><a href="rhythm.html">Rhythm - Lesson 1</a></li>
-                <li class="item"><a href="rhythm2.html">Rhythm - Lesson 2</a></li>
-              </ul>
-            </li>
-            <li class="item"><a href="#">Lead</a>
-              <ul>
-                <li class="item"><a href="lead.html">Lead - Lesson 1</a></li>
-                <li class="item"><a href="lead2.html">Lead - Lesson 2</a></li>
-              </ul>
-            </li>
-            <li class="toggle"><span class="bars"></span></li>
-          </ul>
-        </div>
-
-      </nav>
-
-    </div>
-
-        <div class="strip-banner">
-            <a href="#">
-                Click here to see the design process for this site</a>
-        </div>
-
-    <div class="header-container">
-        <section class="global-hero-banner-with-button">
-            <div class="hero-image">
-                <div class="hero-text">
-                    <h1 class="hero-header">Welcome to Just Speak Guitar Lessons</h1>
-                    <a href="#" class="hero-button"> Voice Commands </a>
-                </div>
+<header>
+    <nav id="navbar">
+        <div class="navbar-container">
+            <div class="home-link">
+                <a href="/index.html" class="navbar-logo" alt="">
+                    <div class="logo-container" title="logo and home button">
+                        <img src="/assets/img/badge.svg" width="40" height="40" alt="company logo">
+                        <div class="logo-name"><h3>Guitar <span>Lessons</span></h3></div>
+                    </div>
+                </a>
             </div>
-        </section>
-    </header> -->
-    <header>
-<nav id="navbar">
-    <div class="navbar-container">
-        <div class="home-link">
-            <a href="/index.html" class="navbar-logo" alt="">
-                <img src="assets/images/index/jp-LOGO.svg" width="40" height="40" alt="company logo">
-                <div class="logo-container" title="Authors name and profession">
-                    <div class="logo-name">Guitar Lessons</div>
-                </div>
-            </a>
-        </div>
 
-        <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
-            <!-- <span class="icon-bar"> -->
-            <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-                <path
-                    d="M150-240q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-300h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-240H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-510h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-450H150Zm0-210q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T150-720h660q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T810-660H150Z" />
-            </svg>
-            <!-- </span> -->
-        </button>
-        <ul id="navMenu" class="nav-menu">
-            <li class="navbar-link navbar-item">
-                <a href="/index.html" title="Link to the Home Page">Home</a>
-            </li>
-            <li class="navbar-link navbar-item">
-                <a href="/about-me.html" title="Link to the About Us page">About</a>
-            </li>
-            <li class="navbar-link navbar-item">
-                <a href="/contact-form.html" title="Link to the Contact Us page">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<section class="global-hero-banner-with-button">
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1 class="hero-header">Welcome to Just Speak Guitar Lessons</h1>
-            <a href="#" class="hero-button"> Voice Commands </a>
+            <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
+               
+                <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z"/></svg>
+                
+            </button>
+            <ul id="navMenu" class="nav-menu">
+                <li class="navbar-link navbar-item">
+                    <a href="/basics.html" title="Link to the basics Page">Basics</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/strings.html" title="Link to the strings page">Strings</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/frets.html" title="Link to the tuner page">Frets</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/chords.html" title="Link to the tuner page">Chords</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
+                </li>
+                <li class="navbar-link navbar-item">
+                    <a href="/lead.html" title="Link to the tuner page">Lead</a>
+                </li>
+            </ul>
         </div>
-    </div>
-</section>
-</header> 
+    </nav>
+    <section class="global-hero-banner-with-button">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h2 class="hero-header">Welcome to Just Speak Guitar Lessons</h2>
+                <a href="#" class="hero-button"> Voice Commands </a>
+            </div>
+        </div>
+    </section>
+</header>
+
 <body>
     <main>
-        <article>
+        <!-- <article> -->
             <!-- command modal  -->
-            <div id="help-modal" class="help-center" title="help-center">
+            <!-- <div id="help-modal" class="help-center" title="help-center">
                 <div class="modal-content">
                     <div class="modal-header">
                         <span id="closeModal" class="close">&times;</span>
@@ -236,19 +173,14 @@
                     </div>
                 </div>
             </div>
-        </article>
+        </article> -->
         <article>
             <div class="main-content-container">
                 <section class="welcome">
-                    <div class="profile">
-                        <img class="animated-profile" src="img/me-min.jpg" alt="profile image of the author"
-                            title="Joseph Percival">
-                        <sub class="profile-caption">Joseph Percival BSc.(hons)<br>First Class.<br>Web Design and
-                            Development</sub>
-                    </div>
+
                     <div class="welcome-content">
                         <div class="left-title_dark">
-                            <h1>Hello</h1>
+                            <h3>Hello</h3>
                         </div>
                         <p class="left-text_dark"> Hi, my name is Joey, and welcome to, Just Speak Guitar Lessons,
                             a voice controlled Guitar tutorial website.

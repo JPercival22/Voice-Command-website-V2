@@ -11,8 +11,7 @@ This meant redesigning and accommodating some elements of the pages into compone
 (2)The Survey found that the Voice Command Modal was hard to follow, so the text was reduced, color was found to be an issue and following some User Testing, it
 was found the users wanted a more neutral color throughout for this component, with the background blurred to highlight the hierarchy of the modal. A decision was made to make the background clickable as well as the modal accessible to all users not just to those using the voice command.
 
-(3)The Users' tested, suggested cutting down on the Acdemic language, to increase the readability for the lower skilled students, this was understood and carried out to 
-increase the readability, more so the retain ability and focus for the student.
+(3)The Users' tested, suggested cutting down on the Academic language, to increase the readability for the lower skilled students, this was understood and carried out.
 
 (4)It was suggested that videos would be useful, this will be a future implementation to the site.
 
