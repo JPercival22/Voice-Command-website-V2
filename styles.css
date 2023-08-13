@@ -96,21 +96,14 @@ h2 {
 h3 {
     font-family: var(--body-copy);
     font-size: 28px;
-    font-weight: 500; 
+    font-weight: 500;
     text-transform: capitalize;
     color: var(--primary-text-color-1);
 }
 
-h4 {
-    font-family: var(--body-copy);
-    font-size: 19px; 
-    font-weight: 600; 
-    text-transform: capitalize;
-}
-
 p {
     font-family: var(--body-copy);
-    font-size: 16px; 
+    font-size: 16px;
     font-weight: 500;
     line-height: 24pt;
 }
@@ -167,81 +160,6 @@ sup {
 
 /* General Component styles  */
 
-.showcase-section {
-    padding: 20px 0;
-    border-bottom: 1px solid lightgrey;
-}
-
-.showcase-section:last-of-type {
-    border-bottom: none;
-}
-
-.centered-title {
-    text-align: center;
-    text-transform: capitalize;
-    font-weight: 700;
-    padding-top: 10px;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.centered-title_light {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-    letter-spacing: 5px;
-}
-
-.centered-text_dark {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-transform: none;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.left-title_dark {
-    text-align: left;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin-top: 0;
-}
-
-.left-text_dark {
-    text-align: left;
-    text-transform: none;
-    margin: 10px 0;
-}
-
-.right-title_dark {
-    text-align: right;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.right-text_dark {
-    text-align: right;
-    text-transform: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.right-text_dark p {
-    text-transform: none;
-    font-size: 16px;
-}
-
-.widget-library>ul>li:hover {
-    text-decoration: underline;
-}
-
-
 #navbar {
     display: flex;
     flex-direction: row;
@@ -295,7 +213,7 @@ sup {
 }
 
 .logo-name {
-    font-size: 30px;
+    font-size: 22px;
     line-height: 5pt;
     padding-left: 10px;
     text-transform: uppercase;
@@ -349,71 +267,7 @@ sup {
     width: 100%;
     padding: 20px;
     font-size: 20px;
-    color: var(--primary-text-color-1)
-}
-
-
-.primaryBanner_container {
-    background-color: #d3d3d3;
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    /*overflow: hidden;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.primaryBanner_contentWrapper {
-    align-items: center;
-    text-align: center;
-}
-
-.primaryBanner_textContainer {
-    width: 100%;
-}
-
-.primaryBanner_headlineContainer {
-    margin-top: 0;
-}
-
-.primaryBanner_headline-light {
-    text-transform: none;
-}
-
-.primaryBanner_subtitle-light {
-    font-size: 16px;
-    letter-spacing: .5px;
-    line-height: 1.5;
-    text-transform: none;
-    margin-bottom: 40px;
-}
-
-.primaryBanner_ctaContainer {
-    box-sizing: border-box;
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-    max-width: 100%;
-    width: auto;
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    margin-left: 0;
-    margin-right: 0;
-    display: block;
-}
-
-.primaryBanner_cta-light {
-    border-color: #333;
-    border-width: 1px;
-    border-radius: 0;
-    padding: 10px 15px;
+    color: var(--navbar-bg-color);
 }
 
 .grayscale-image {
@@ -438,35 +292,6 @@ sup {
     filter: brightness(1.5);
     opacity: 0.7;
     border-radius: 2.5px;
-}
-
-.centeredImage_container {
-    width: 60%;
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
-    /*overflow: hidden;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px auto;
-}
-
-.centered-image-container {
-    width: 60%;
-    max-width: 100%;
-    height: 300px;
-    text-align: center;
-    /*overflow: hidden;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px auto;
-}
-
-.centeredImageBanner_title-top {
-    position: relative;
-    top: -110px;
 }
 
 /* card blocks */
@@ -511,24 +336,6 @@ sup {
 
 .card-content p {
     font-size: 80%;
-}
-
-.header-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-basis: 70%;
-    flex-shrink: 0;
-    flex-grow: 1;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 16px;
-    padding-right: 16px;
-    margin-top: 0;
-    border-bottom-width: 0;
-    box-sizing: border-box;
-    background-color: var(--brand-color-white);
-    height: auto;
 }
 
 /* footer styles  */
@@ -699,14 +506,6 @@ footer {
     display: none;
 }
 
-.display-name {
-    color: #4d4e4f;
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
 .eastSideFooter-levelTwo-first {
     width: 50%;
 }
@@ -793,6 +592,7 @@ footer {
     color: var(--primary-text-color-1);
     padding: 160px 0;
 }
+
 .hero-content {
     font-size: 2.5rem;
     margin: 20px;
@@ -822,32 +622,13 @@ footer {
     justify-content: center;
     margin: var(--side-margins-576px);
 }
+
 .flex-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 1em;
-}
-
-.profile {
-    height: fit-content;
-    padding: 20px;
-}
-
-.profile-caption {
-    display: block;
-    margin: 20px 0;
-    font-family: 'Raleway';
-    font-size: 12px;
-}
-
-.animated-profile {
-    border-radius: 12%;
-}
-
-.animated-profile:hover {
-    transform: rotate(-6deg)
 }
 
 /* home page -inner course navigation  */
@@ -1310,36 +1091,6 @@ footer {
 /* large mobile and small tablet view ports */
 
 @media all and (min-width: 576px) {
-    .acoustic-desktop {
-        display: none;
-    }
-
-    .acoustic-small {
-        display: flex;
-    }
-
-    .menu {
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .logo {
-        flex: 1;
-    }
-
-    .brand-logo {
-        position: absolute;
-        width: 60px;
-        height: auto;
-    }
-
-    .logo-image {
-        width: 240px;
-        height: auto;
-    }
-
-  
-
     .cards-container {
         display: flex;
         flex-wrap: wrap;
@@ -1488,8 +1239,6 @@ footer {
     }
 }
 
-
-
 @media screen and (min-width: 768px) {
     .video-container {
         display: flex;
@@ -1517,19 +1266,9 @@ footer {
         width: calc(910px / 1.5);
         margin: 10px 0;
     }
-
 }
 
-/* desktop */
 @media screen and (min-width: 992px) {
-
-
-    .left-text_dark {
-        text-align: left;
-        color: #4d4e4f;
-        text-transform: none;
-        margin: 20px 0;
-    }
 
     /*basics page 2 content cards styles*/
     .acoustic-desktop {
@@ -1759,7 +1498,6 @@ footer {
         display: none;
     }
 
-
     @keyframes fadeOutDown {
         0% {
             opacity: 0;
@@ -1775,8 +1513,6 @@ footer {
             opacity: 0;
         }
     }
-
-    /* general styles  */
 
     .video-container {
         display: flex;
@@ -1860,11 +1596,6 @@ footer {
         padding-right: 0;
     }
 
-    nav {
-        padding: 5px 20px 0 20px;
-        height: 100%;
-    }
-
     .selected {
         text-decoration: underline;
     }
@@ -1880,56 +1611,14 @@ footer {
         cursor: pointer;
     }
 
-    .strip-banner:active {
-        outline: 1px solid #40cfe9
-    }
-
-    .strip-banner:hover {
-        background-color: #40cfe9;
-        transition: all 1s ease 0s;
-    }
-
-    .strip-banner a:hover {
-        color: #ffffff;
-    }
-
     /*Index Styles*/
 
-.hero-content {
-    max-width: 650px;
-}
+    .hero-content {
+        max-width: 650px;
+    }
 
     .main-content-container {
         margin: var(--side-margins-992px);
-    }
-
-    .welcome {
-        flex: 1;
-        display: flex;
-        flex-direction: row;
-        flex-flow: row wrap;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .profile {
-        height: fit-content;
-        padding: 20px;
-    }
-
-    .profile-caption {
-        display: block;
-        margin: 20px 0;
-        font-family: 'Raleway';
-        font-size: 12px;
-    }
-
-    .animated-profile {
-        border-radius: 12%;
-    }
-
-    .animated-profile:hover {
-        transform: rotate(-6deg)
     }
 
     .page-nav-container {
@@ -2416,15 +2105,6 @@ footer {
 
     /* frets 1 styles  */
 
-    /*frets page 2 content box styles*/
-
-
-
-
-    /*chords page content box styles*/
-
-    /*Fret Styling*/
-
     .left-column,
     .right-column {
         display: flex;
@@ -2442,8 +2122,6 @@ footer {
     }
 
     /*Chords2 Styles*/
-
-
     .yak {
         display: block;
     }
@@ -2452,11 +2130,9 @@ footer {
         display: block;
     }
 
-    /*
     /*Rhythm page content styles*/
 
-
-    /* #lower-section-imageR1 {
+ #lower-section-imageR1 {
     background-image: url(img/acoustic-mic-studio.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2494,12 +2170,9 @@ footer {
     font-size: 1.5rem;
     color: lightgray;
 }
-
- */
-
     /*Rhythm Page 2 styling*/
 
-    /* .introduction {
+   .introduction {
     grid-column: 1/-1;
     grid-row: 1;
     text-align: center;
@@ -2593,11 +2266,10 @@ td {
     text-align: right;
     font-size: 1.5rem;
     color: grey;
-} */
-
+} 
     /*lead styles*/
 
-    /* .higher-section-image-lead {
+ .higher-section-image-lead {
     background-image: url(img/lead-guitar-image.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -2634,10 +2306,9 @@ td {
     font-family: 'Secular+One', 'sans-serif';
     text-align: center;
 
-} */
-
+} 
     /*lead 2 styles*/
-    /* .thankyou {
+ .thankyou {
     grid-column: 1/7;
     grid-row: 1;
     margin: 0;
@@ -2674,16 +2345,12 @@ td {
     text-align: center;
 }
 
-
-
 .outro {
     text-align: right;
     font-style: italic;
     grid-column: 3/7;
     grid-row: 6;
 }
-
-
 
 .fact {
     width: 100%;
@@ -2705,7 +2372,6 @@ td {
 .hamburger-menu {
     display: none;
 }
-} */
 
     /* 
 @media only screen and (max-width: 963px) {
@@ -3292,7 +2958,7 @@ td {
         margin: 20px auto;
     }
 
-   
+
     .left-column,
     .right-column {
         display: flex;
@@ -3366,6 +3032,7 @@ td {
         width: 82%;
         height: 53px;
     }
+
     .hero-content {
         margin: var(--side-margins-1400px);
     }
