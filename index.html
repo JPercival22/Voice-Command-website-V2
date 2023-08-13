@@ -12,9 +12,11 @@
     <title>Home</title>
     <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
     <link preload rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-index.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script>
@@ -28,13 +30,17 @@
                 <a href="/index.html" class="navbar-logo" alt="">
                     <div class="logo-container" title="logo and home button">
                         <img src="/assets/img/badge.svg" width="40" height="40" alt="company logo">
-                        <div class="logo-name"><h3>Guitar <span>Lessons</span></h3></div>
+                            <h3  class="logo-name">Guitar <span>Lessons</span></h3>
                     </div>
                 </a>
             </div>
 
             <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
-                <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z"/></svg>
+                <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
+                    width="40">
+                    <path
+                        d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
+                </svg>
             </button>
             <ul id="navMenu" class="nav-menu">
                 <li class="navbar-link navbar-item">
@@ -63,8 +69,8 @@
     </nav>
     <section class="global-hero-banner-with-button">
         <div class="hero-content">
-                <h2 class="hero-header">Welcome to Just Speak Guitar Lessons</h2>
-                <a href="#" class="hero-button"> Voice Commands </a>
+            <h2 class="hero-header">Welcome to Just Speak Guitar Lessons</h2>
+            <a href="#" class="hero-button"> Voice Commands </a>
         </div>
     </section>
 </header>
@@ -72,8 +78,8 @@
 <body>
     <main>
         <!-- <article> -->
-            <!-- command modal  -->
-            <!-- <div id="help-modal" class="help-center" title="help-center">
+        <!-- command modal  -->
+        <!-- <div id="help-modal" class="help-center" title="help-center">
                 <div class="modal-content">
                     <div class="modal-header">
                         <span id="closeModal" class="close">&times;</span>
@@ -171,24 +177,32 @@
             </div>
         </article> -->
         <article>
-            <div class="main-content-container">
-                <section class="welcome">
-
-                    <div class="welcome-content">
-                        <div class="left-title_dark">
-                            <h3>Hello</h3>
-                        </div>
-                        <p class="left-text_dark"> Hi, my name is Joey, and welcome to, Just Speak Guitar Lessons,
-                            a voice controlled Guitar tutorial website.
+                <section>
+                    <div class="main-content-container">
+                        <h3>Hello</h3>
+                        <p>
+                            Welcome to Just Speak Guitar Lessons the
+                            voice controlled Guitar Lessons website. To help you get started this site provides you
+                            with an assistant called Connie. Connie is not a magician but can help you to look around
+                            the site, by using
+                            certain things to say her, just like the prompt below!
+                            We hope you have fun learning and please do enjoy - Thank You!
                         </p>
-                        <p class="left-text_dark emphasis">
-                            Just say, "Open Help Center" at any time to open the voice command menu.</p>
+                        <div class="flex-row">
+                            <img src="/assets/img/badge.svg" alt="company logo" width="40" height="40">
+                            <p class="left-text_dark emphasis">
+                                To open the Voice Commands, just say, "Connie, Open the Help Center."
+                            </p>
+                        </div>
                         <p class="left-text_dark">
-                            This website can be controlled both vocally or manually and
-                            below are the links to the main pages for this tutorial, if a lesson has a second part,
-                            then this will be shown at the bottom of the page, if it doesn't have one,
-                            then just select a lesson from the navigation above, or Just Speak!<sup>TM</sup><br>
-                            Please enjoy...</p>
+                            Don't worry if you can't get used to the Voice Controls, this website can be controlled both
+                            vocally
+                            and manually (using your fingers or your computer).
+                            Below and at the top are the navigation links to the Lessons. You can enter by selecting the
+                            links or "<span class="emphasis">Just Speak.</span>"
+                            <br>
+                            Have fun!
+                        </p>
                     </div>
                 </section>
 
@@ -334,7 +348,7 @@
                         </svg>
                     </button>
                 </section>
-            </div>
+          
         </article>
     </main>
     <footer>
