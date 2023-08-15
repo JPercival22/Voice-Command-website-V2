@@ -2,6 +2,13 @@ function toggleMenu() {
     const e = document.getElementById("navMenu");
     e.classList.toggle("show")
 }
+
+function toggleModal() {
+    const e = document.getElementById("modal");
+    e.classList.toggle("show"); 
+}
+
+
 // $(document).ready(function () {
    
     
