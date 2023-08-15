@@ -1415,7 +1415,7 @@ footer {
     /*Index Styles*/
 
     .hero-content {
-        max-width: 650px;
+        max-width: 500px;
     }
 
     .main-content-container {
@@ -1424,7 +1424,7 @@ footer {
 
     .primary-button,
     .secondary-button {
-        width: 40%;
+        width: 42%;
     }
 
     .page-nav-container {
@@ -2751,11 +2751,6 @@ footer {
         margin: var(--side-margins-1400px);
     }
 
-    .primary-button,
-    .secondary-button {
-        width: 35%;
-    }
-
     .main-content-container {
         margin: var(--side-margins-1400px);
     }
@@ -2765,11 +2760,6 @@ footer {
 }
 
 @media only screen and (min-width:1800px) {
-
-    .primary-button,
-    .secondary-button {
-        width: 40%;
-    }
 
     .navbar-container {
         margin: var(--side-margins-1800px);
