@@ -3,12 +3,25 @@ function toggleMenu() {
     e.classList.toggle("show")
 }
 
-function toggleModal() {
-    const e = document.getElementById("modal");
-    e.classList.toggle("show"); 
-}
+const openModalButton = document.getElementById("openModal");
+const closeModalButton = document.getElementById("closeModal");
+const modal = document.getElementById("modal");
 
+openModalButton.addEventListener("click", () => {
+    modal.style.display = "flex";
+    // modal.style.paddingTop = "20px";
+    // Move modal to the top
+    setTimeout(() => {
+        modal.style.bottom = "-65px";// Hide modal after animation
+    }, 700); // Match the transition duration
+});
 
+closeModalButton.addEventListener("click", () => {
+    modal.style.bottom = "-100%"; // Move modal back down
+    setTimeout(() => {
+        modal.style.display = "none"; // Hide modal after animation
+    }, 500); // Match the transition duration
+});
 // $(document).ready(function () {
    
     
