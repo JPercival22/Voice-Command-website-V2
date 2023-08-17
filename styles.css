@@ -2694,18 +2694,18 @@ footer {
         margin: 0;
         padding: 0;
         transition: border-bottom 0.3s ease;
-    }
+    } 
 
     .nav-menu .navbar-link a {
         font-size: 1rem;
         color: var(--primary-text-color-1);
         margin-bottom: 0;
+        transition: all .5s ease-in-out;
     }
 
-    .nav-menu .navbar-link:hover {
-        color: var(--brand-color);
-        transition: all .5s ease-in-out;
-        border-bottom: 1px solid var(--brand-color);
+    .nav-menu .navbar-link a:hover {
+        color: (--brand-color-d-blue);
+        text-decoration: underline;
     }
 
     .primary-button:hover {
