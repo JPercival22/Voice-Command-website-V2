@@ -38,6 +38,7 @@
     --navbar-height: 70px;
     --navbar-bg-color: #ffffff;
     /* side margins  */
+    --side-margins-sm-device: 0 10px;
     --side-margins-576px: 0 16px;
     --side-margins-768px: 0 20px;
     --side-margins-992px: 0 24px;
@@ -342,6 +343,10 @@ sup {
     border-radius: 2.5px;
 }
 
+.main-content-container {
+    margin: var(--side-margins-sm-device);
+}
+
 /* hero sections  */
 .global-hero-banner-with-button {
     background-image: url(/assets/img/hero-index.webp);
@@ -387,6 +392,7 @@ sup {
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
+    transition: all 0.8s cubic-bezier(0.1, 1, 1, 0.9);
     display: none;
 }
 
@@ -396,7 +402,7 @@ sup {
     justify-content: flex-start;
     background-color: white;
     padding: 10px;
-    height: 100%;
+    height: 111%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -408,7 +414,7 @@ sup {
 }
 
 .modal-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 5px;
 }
 
@@ -428,14 +434,75 @@ sup {
 
 .modal-body p {
     display: flex;
-    line-height: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 0.94rem;
+    line-height: 30px;
 }
 
-.modal>.table {
-    display: contents;
-
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 99%;
+    flex-direction: row;
 }
+
+.tab-button {
+    font-family: var(--body-copy);
+    font-size: 0.98rem;
+    letter-spacing: 1px;
+    background-color: #809ee1;
+    color: var(--brand-color-black);
+    width: 50%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab-button.active {
+    color: var(--brand-color-white);
+    background-color: var(--brand-color-purple);
+    border: 1px solid var(--brand-color-d-blue);
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid var(--blue-grey-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 99%
+}
+
+.tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tab-content th {
+    font-family: var(--body-copy);
+    font-size: 0.98rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px;
+    text-align: left;
+    background-color: #6e7bdb;
+    color: var(--brand-color-black);
+}
+
+.tab-content td {
+    font-family: var(--body-copy);
+    font-size: 0.96rem;
+    padding: 8px;
+    text-align: left;
+}
+
+.tab-content tr:nth-child(odd) td {
+    background-color: #f8f7ff;
+}
+
 
 .flex-row {
     display: flex;
@@ -487,7 +554,7 @@ sup {
 
 .btt-button {
     position: fixed;
-    bottom: 2rem;
+    bottom: -0.75rem;
     right: 0.5rem;
     display: inline-flex;
     align-items: center;
@@ -587,7 +654,7 @@ footer {
     align-items: flex-start;
     border-bottom: 1px solid var(--blue-grey-1);
     padding: 1em 0;
-    margin: var(--side-margins-992px);
+    margin: var(--side-margins-sm-device);
 }
 
 .no-border {
@@ -1040,6 +1107,10 @@ footer {
 
 @media all and (min-width: 576px) {
 
+    .main-content-container {
+        margin: var(--side-margins-576px);
+    }
+
     /* index-styles  */
     .emphasis-logo {
         width: 80px;
@@ -1153,6 +1224,11 @@ footer {
         display: block;
     }
 
+    .modal::after {
+        top: 60%;
+        /* Adjust this value as needed */
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1174,6 +1250,10 @@ footer {
         max-height: 250px;
     }
 
+    .main-content-container {
+        margin: var(--side-margins-768px);
+    }
+
     .video-container {
         display: flex;
         align-items: center;
@@ -1182,9 +1262,10 @@ footer {
         width: 36%;
         height: 100%;
         align-self: center;
-        /*overflow: hidden;*/
         margin: 0 auto;
     }
+
+
 
     .video-container>video {
         position: absolute;
@@ -1200,6 +1281,49 @@ footer {
         width: calc(910px / 1.5);
         margin: 10px 0;
     }
+
+    .modal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .modal-content {
+        width: 75%;
+        height: 86%;
+        position: relative;
+        left: 12%;
+        top: 4%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .modal-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+    }
+
+    .modal-body {
+        max-height: 100%;
+        overflow-y: revert;
+    }
+
+    .tabs, .tab-content {
+    width: -webkit-fill-available;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -1458,7 +1582,6 @@ footer {
         position: relative;
         height: 100%;
         align-self: center;
-        /*overflow: hidden;*/
         margin: 20px auto;
     }
 
@@ -2690,6 +2813,7 @@ footer {
 }
 
 @media only screen and (min-width: 1200px) {
+
     #navbar {
         margin: 0;
         padding: 0;
@@ -2730,6 +2854,12 @@ footer {
 
     .main-content-container {
         margin: var(--side-margins-1200px);
+    }
+
+    .modal-content {
+        width: 60%;
+        height: 86%;
+        left: 20%;
     }
 
     .page-nav-container {
@@ -2834,6 +2964,16 @@ footer {
 
     .main-content-container {
         margin: var(--side-margins-1800px);
+    }
+
+    .modal{
+        top: 55px;
+    }
+
+    .modal-content {
+        width: 40%;
+        height: 86%;
+        left: 30%;
     }
 
     .footer-row {
