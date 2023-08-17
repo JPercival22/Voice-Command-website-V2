@@ -2,26 +2,94 @@ function toggleMenu() {
     const e = document.getElementById("navMenu");
     e.classList.toggle("show")
 }
+// voice command modal 
+// const openModalButton = document.getElementById("openModal");
+// const closeModalButton = document.getElementById("closeModal");
+// const modal = document.getElementById("modal");
 
-const openModalButton = document.getElementById("openModal");
-const closeModalButton = document.getElementById("closeModal");
-const modal = document.getElementById("modal");
+// openModalButton.addEventListener("click", () => {
+//     modal.style.display = "flex";
+//     setTimeout(() => {
+//         modal.style.bottom = "-65px";// Hide modal after animation
+//     }, 800); // Match the transition duration
+// });
 
-openModalButton.addEventListener("click", () => {
-    modal.style.display = "flex";
-    // modal.style.paddingTop = "20px";
-    // Move modal to the top
-    setTimeout(() => {
-        modal.style.bottom = "-65px";// Hide modal after animation
-    }, 700); // Match the transition duration
+// closeModalButton.addEventListener("click", () => {
+//     modal.style.bottom = "-100%"; // Move modal back down
+//     setTimeout(() => {
+//         modal.style.display = "none"; // Hide modal after animation
+//     }, 800); // Match the transition duration
+// });
+
+
+const openModalBtn = document.getElementById('openModal');
+const closeModalBtn = document.getElementById('closeModal');
+const modal = document.getElementById('modal');
+const modalOverlay = document.querySelector('.modal-overlay'); // Add this line
+
+function openModal() {
+  modal.style.display = 'flex';
+
+  if (window.innerWidth >= 768) {
+    modal.style.top = '60px';
+    modal.style.left = '50%'; 
+    modal.style.height = 'webkit-fill-available'; // Center horizontally
+    modal.style.transform = 'translate(-50%, 1%)'; /* Center the modal */
+    
+    // Remove the sliding animation by setting transition to none
+    modal.style.transition = 'none';
+  } else {
+    const desiredTop = calculateModalTop();
+    modal.style.top = `${desiredTop}px`;
+  }
+
+  // Add this event listener to close the modal on overlay click
+  // modalOverlay.addEventListener('click', closeModal);
+}
+
+function closeModal() {
+  modal.style.top = '100%';
+  modal.style.left = '0'; // Reset left position
+  modal.style.transform = 'none'; /* Reset transform when closing modal */
+  modal.style.transition = 'top 0.3s ease-in-out'; // Restore transition
+  modal.style.display = 'none'; // Simplified this line
+
+  // Remove the event listener after closing the modal
+  modalOverlay.removeEventListener('click', closeModal);
+}
+
+function calculateModalTop() {
+  const viewportHeight = window.innerHeight;
+  const desiredPercentage = 4; /* Adjust this percentage as needed */
+  return (viewportHeight * desiredPercentage) / 100;
+}
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+
+
+// modal tab section 
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+
+        tabButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        tabContents.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        button.classList.add('active');
+        document.getElementById(tabId).style.display = 'flex';
+    });
 });
 
-closeModalButton.addEventListener("click", () => {
-    modal.style.bottom = "-100%"; // Move modal back down
-    setTimeout(() => {
-        modal.style.display = "none"; // Hide modal after animation
-    }, 500); // Match the transition duration
-});
+// Initialize the first tab as active
+tabButtons[0].click();
 // $(document).ready(function () {
    
     
