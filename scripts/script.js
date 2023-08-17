@@ -1,26 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 function toggleMenu() {
     const e = document.getElementById("navMenu");
     e.classList.toggle("show")
 }
-// voice command modal 
-// const openModalButton = document.getElementById("openModal");
-// const closeModalButton = document.getElementById("closeModal");
-// const modal = document.getElementById("modal");
-
-// openModalButton.addEventListener("click", () => {
-//     modal.style.display = "flex";
-//     setTimeout(() => {
-//         modal.style.bottom = "-65px";// Hide modal after animation
-//     }, 800); // Match the transition duration
-// });
-
-// closeModalButton.addEventListener("click", () => {
-//     modal.style.bottom = "-100%"; // Move modal back down
-//     setTimeout(() => {
-//         modal.style.display = "none"; // Hide modal after animation
-//     }, 800); // Match the transition duration
-// });
-
 
 const openModalBtn = document.getElementById('openModal');
 const closeModalBtn = document.getElementById('closeModal');
@@ -90,6 +73,7 @@ tabButtons.forEach(button => {
 
 // Initialize the first tab as active
 tabButtons[0].click();
+});
 // $(document).ready(function () {
    
     
