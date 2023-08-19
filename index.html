@@ -16,14 +16,9 @@
         <link rel="stylesheet" href="/styles.css">
     </noscript>
     <link rel="preload" fetchpriority="high" as="image" href="assets/img/hero-index.webp" type="image/webp">
-    <link href="https://fonts.googleapis.com">
-    <link  href="https://fonts.gstatic.com" crossorigin >
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
-            rel="stylesheet" type="text/css" />
-    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
@@ -42,14 +37,15 @@
                 </a>
             </div>
 
-            <button type="button" class="menu-toggle" onclick="toggleMenu()" aria-label="main navigation menu button">
+            <button type="button" class="hamburger-menu" id="hamburger-menu"
+                aria-label="main navigation menu button">
                 <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                     width="40">
                     <path
                         d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
                 </svg>
             </button>
-            <ul id="navMenu" class="nav-menu">
+            <ul id="nav-menu" class="nav-menu">
                 <li class="navbar-link navbar-item">
                     <a href="/basics.html" title="Link to the basics Page">Basics</a>
                 </li>
@@ -74,9 +70,9 @@
             </ul>
         </div>
     </nav>
-    <section id="top" class="global-hero-banner-with-button">
+    <section id="top" class="global-hero-banner-with-button index">
         <div class="hero-content">
-            <h2>Welcome to Just Speak Guitar Lessons</h2>
+            <h2 class="title blue">Welcome to Just Speak Guitar Lessons</h2>
             <div class="hero-button-container">
                 <a href="#" class="primary-button" id="openModal">Command Hub </a>
             </div>
@@ -85,11 +81,6 @@
 </header>
 
 <body>
-
-    <!-- #####TO-DO######
-    2.Match spec.
-    3.Make responsive.
-    ########## -->
     <main>
         <article>
             <div class="main-content-container">
@@ -246,7 +237,8 @@
                                     to learn, in your first lesson we discover how to hold, stand and sit
                                     with your guitar. </p>
                                 <div class="button-container">
-                                    <a href="/basics.html" class="primary-button" title="Link to the basics Lessons">Start Lesson</a>
+                                    <a href="/basics.html" class="primary-button"
+                                        title="Link to the basics Lessons">Start Lesson</a>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +247,8 @@
                             <div class="card-image strings"></div>
                             <div class="card-content">
                                 <h3 class="card-title">Lesson 2: The Strings.</h3>
-                                <p class="card-text">In lesson two we learn which strings to choose and re-string any 6 Stringed
+                                <p class="card-text">In lesson two we learn which strings to choose and re-string any 6
+                                    Stringed
                                     Guitar,
                                     whether you play Classical, Acoustic or Electric Guitar.
                                 </p>
@@ -271,10 +264,10 @@
                                 <h3 class="card-title"> Lesson 3: Tuning.</h3>
                                 <p class="card-text">
                                     Tuning the guitar can be difficult for a beginner. We have provided an
-                                        interactive guitar tuner, using your devices microphone. A quick turn of your
-                                        tuning
-                                        pegs, you'll
-                                        be playing again in no time!
+                                    interactive guitar tuner, using your devices microphone. A quick turn of your
+                                    tuning
+                                    pegs, you'll
+                                    be playing again in no time!
                                 </p>
                                 <div class="button-container">
                                     <a href="/tuner.html" class="primary-button">Start Lesson</a>
@@ -369,15 +362,15 @@
                         <h1 class="logo-name">Guitar <span>Lessons</span></h1>
                     </a>
                 </div>
-    
+
                 <div class="footer-column">
                     <p class="emphasis">Connect with us</p>
-    
-    
+
+
                     <ul aria-label="Connect with us" class="footer-list-row">
                         <li>
                             <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
-    
+
                                 <svg class="facebook" aria-label="facebook icon" xmlns="http://www.w3.org/2000/svg"
                                     width="54" height="54" viewbox="0 0 30 30">
                                     <a href="http://www.facebook.com" aria-label="icon link to the Facebook website">
@@ -388,13 +381,13 @@
                                 </svg>
                             </a>
                         </li>
-    
+
                         <li>
-                            <svg class="linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54"
-                                height="54" viewbox="0 0 30 30">
+                            <svg class="linkedin" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg"
+                                width="54" height="54" viewbox="0 0 30 30">
                                 <a href="https://www.linkedin.com/in/joseph-percival/"
                                     aria-label="Link to the Author's Linked In account">
-    
+
                                     <path class="fill"
                                         d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z">
                                     </path>
@@ -402,7 +395,7 @@
                             </svg>
                         </li>
                         <li>
-    
+
                             <svg class="twitter" aria-label="twitter icon" xmlns="http://www.w3.org/2000/svg" width="54"
                                 height="54" viewbox="0 0 30 30">
                                 <a href="https://twitter.com/percival_joseph"
@@ -416,7 +409,7 @@
                     </ul>
                 </div>
             </div>
-    
+
             <div class="footer-row">
                 <div class="footer-column">
                     <p class="emphasis">
@@ -434,7 +427,7 @@
                                 </p>
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="help-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
@@ -444,7 +437,7 @@
                                 <div class="span">Help Center</div>
                             </a>
                         </li>
-    
+
                         <li>
                             <a href="#" class="help-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
@@ -508,7 +501,11 @@
             </div>
         </footer>
     </main>
-    <script defer="true" src="scripts/script.js"></script>   
+    <script>
+
+ 
+    </script>
+    <script defer="true" src="scripts/script.js"></script>
 </body>
 
 </html>

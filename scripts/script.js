@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-function toggleMenu() {
-    const e = document.getElementById("navMenu");
-    e.classList.toggle("show")
-}
+
+  const navToggle = document.querySelector(".hamburger-menu");
+  const links = document.querySelector(".nav-menu");
+  
+  navToggle.addEventListener('click', function(){
+      links.classList.toggle("show");
+  })
+
 
 const openModalBtn = document.getElementById('openModal');
 const closeModalBtn = document.getElementById('closeModal');

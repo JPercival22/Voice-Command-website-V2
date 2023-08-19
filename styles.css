@@ -121,7 +121,6 @@ p {
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.78;
-    margin-bottom: 24px;
 }
 
 a {
@@ -245,7 +244,7 @@ a {
     color: var(--brand-color-purple);
 }
 
-.menu-toggle {
+#hamburger-menu {
     border: none;
     cursor: pointer;
     height: 50px;
@@ -257,7 +256,7 @@ a {
     background-color: transparent;
 }
 
-.menu-toggle .icon-bar {
+#hamburger-menu .icon-bar {
     fill: var(--brand-color-purple);
 }
 
@@ -267,14 +266,14 @@ a {
     display: none;
 }
 
-.nav-menu.show {
+#nav-menu.show {
     position: fixed;
     top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     width: 100vw;
+    height: 100vh;
     background-color: var(--brand-color-purple);
     left: 0;
     margin: 0;
@@ -287,8 +286,8 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 20px;
-    font-size: 20px;
+    padding: 0.6rem;
+    font-size: 1.2rem;
     color: var(--navbar-bg-color);
 }
 
@@ -305,23 +304,41 @@ a {
     margin: var(--side-margins-sm-device);
 }
 
-/* hero sections  */
 .global-hero-banner-with-button {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+padding: 100px 10px 40px 10px;
+}
+
+/* hero sections  */
+.global-hero-banner-with-button.index {
     background-image: url(/assets/img/hero-index.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: var(--primary-text-color-1);
-    padding: 160px 0;
+}
+
+.global-hero-banner-with-button.basics {
+    background-image: url(/assets/img/guitar-basics-lg.webp);
 }
 
 .hero-content {
-    margin: 20px;
-    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+    width: 100%;
 }
 
-.hero-content h2 {
-    font-size: 2.1rem;
+.hero-content .title.white {
+    color: var(--brand-color-white);
+}
+
+.hero-content .title.blue {
+    color: var(--brand-color-d-blue);
 }
 
 .hero-button-container {
@@ -329,8 +346,8 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1em;
     margin-top: 1em;
+    width: 100%;
 }
 
 /* modal styles  */
@@ -549,6 +566,92 @@ a {
     margin-top: 1em;
 }
 
+.flex-col_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.flex-col_centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.flex-col_centered .full-width-image {
+    width: 100%;
+    height: auto;
+}
+
+/* editorial section  */
+.main-editorial {
+    display: flex;
+    flex-direction: inherit;
+}
+
+.main-editorial .image-section {
+    width: 100vw;
+    height: auto;
+}
+
+/* generic card layout  */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* Default to a single column */
+    grid-gap: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Card styles */
+.grid-container .card {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container .card img {
+    width: 100%;
+    height: 250px;
+}
+
+.grid-container .card .card-content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.grid-container .card .card-content .card-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.grid-container .card .card-content .card-text {
+    font-size: 1rem;
+}
+
+.page-nav-showcase {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+}
+
+.grayscaleImage-medium {
+    width: 100%;
+    height: auto;
+    filter: brightness(1.5);
+    opacity: 0.7;
+    border-radius: 2.5px;
+}
+
 .btt-button {
     position: fixed;
     bottom: -0.75rem;
@@ -568,64 +671,6 @@ a {
     fill: var(--brand-color-white);
     transition: 0.2s ease-out;
 }
-
-/* basics styling  */
-
-
-.page-nav-showcase {
-    margin-bottom: 20px;
-    padding: 0 10px;
-    border: 1px solid grey;
-    border-radius: 2.5px;
-}
-
-.grayscaleImage-medium {
-    width: 100%;
-    height: auto;
-    filter: brightness(1.5);
-    opacity: 0.7;
-    border-radius: 2.5px;
-}
-
-/* card blocks */
-/* .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 0 250px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card {
-    border: 1px solid var(--blue-grey-1);
-    border-radius: var(--br-sm);
-    margin: 5px 0;
-}
-
-.card-no-left-margin {
-    border: 1px solid var(--blue-grey-1);
-    border-radius: var(--br-sm);
-}
-
-.card-no-right-margin {
-    border: 1px solid var(--blue-grey-1);
-    border-radius: var(--br-sm);
-}
-
-.thumbnail>img {
-    padding: 5px;
-}
-
-.card-content {
-    padding: 1.4em;
-}
-
-.card-content h2 {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: bold;
-} */
 
 /* footer styles  */
 
@@ -712,55 +757,6 @@ footer {
     fill: #4eb3ec;
 }
 
-
-.hero-image-basics {
-    display: flex;
-    flex-direction: column;
-    min-height: 15em;
-    align-self: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basichero-min.jpg);
-    background-attachment: fixed;
-}
-
-/* strings  */
-.hero-image-strings {
-    display: flex;
-    flex-direction: column;
-    min-height: 15em;
-    height: 70vh;
-    align-self: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    background-position-y: center;
-    width: 100%;
-    background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/tuning-hero-min.jpg);
-    background-attachment: fixed;
-}
-
-/* frets styling  */
-
-.hero-image-frets {
-    display: flex;
-    flex-direction: column;
-    min-height: 15em;
-    height: 70vh;
-    align-self: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    background-position-y: center;
-    width: 100%;
-    background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
-    background-attachment: fixed;
-}
-
 .centeredImage_container {
     background-repeat: no-repeat;
     background-size: cover;
@@ -775,17 +771,7 @@ footer {
     border-radius: 3px;
 }
 
-.frets {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/frets-banner-min.jpg);
-}
 
-.fretting {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/Guitar-Fretting-min.jpg);
-}
-
-.soundWaves {
-    background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/sound-waves-min.jpg);
-}
 
 .chord {
     background-image: url(/img/eminor-min.png);
@@ -1090,39 +1076,17 @@ footer {
     .main-content-container {
         margin: var(--side-margins-576px);
     }
-
+    .global-hero-banner-with-button_basics {
+        align-items: flex-start;
+    }
+    .hero-content {
+        max-width: 400px;
+        width: 100%;
+    }
     /* index-styles  */
     .emphasis-logo {
         width: 80px;
         height: 80px;
-    }
-
-    .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 0 0 250px;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    /* .card {
-        background: white;
-        border: 1px solid black;
-        border-radius: 2px;
-        margin: 10px 0;
-    } */
-
-    .card-no-left-margin {
-        margin: 10px 0;
-        border: 1px solid black;
-        border-radius: 2px;
-    }
-
-    .card-no-right-margin {
-        margin: 10px 0;
-        border: 1px solid black;
-        border-radius: 2px;
     }
 
     .video-container {
@@ -1146,7 +1110,6 @@ footer {
         max-width: 50%;
         height: 300px;
         text-align: center;
-        /*overflow: hidden;*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1296,279 +1259,48 @@ footer {
         width: -webkit-fill-available;
     }
 
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+    }
+
+    .flex-col_centered .full-width-image {
+        width: 80%;
+        height: auto;
+    }
+
 }
 
 @media screen and (min-width: 992px) {
     section {
-        align-items: center;
-    }
-
-    /*basics page 2 content cards styles*/
-    .acoustic-desktop {
         display: flex;
-    }
-
-    /* strings styles  */
-    .tuning-section {
-        display: flex;
-        max-height: 670px;
-    }
-
-    .acoustic-guitar-tuner {
-        flex: 0 1 400px;
-    }
-
-    /* tuner notes styles  */
-
-    .tuner-E {
-        position: relative;
-        top: -320px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 16px 16px 16px 20px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #d34836;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        cursor: pointer;
-        z-index: 99;
-    }
-
-    .tuner-A {
-        position: relative;
-        top: -490px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #dfbd00;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
         justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-D {
-        position: relative;
-        top: -655px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #b0dd2a;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
         align-items: center;
-        justify-content: center;
-        cursor: pointer;
     }
 
-    .tuner-G {
-        position: relative;
-        top: -720px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #04c7c7;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
+    /* layout-styles  */
+    .flex-col_left {
         align-items: center;
-        justify-content: center;
-        cursor: pointer;
     }
 
-    .tuner-B {
-        position: relative;
-        top: -670px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #a507a5fd;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+    .flex-col_left p {
+        align-self: flex-start;
     }
 
-    .tuner-high-E {
-        position: relative;
-        top: -620px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #d34836;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
+    .flex-col_centered img {
+        max-width: 500px;
     }
-
-    .tuner-E:hover,
-    .tuner-A:hover,
-    .tuner-D:hover,
-    .tuner-G:hover,
-    .tuner-B:hover,
-    .tuner-high-E:hover {
-        background-color: #d3d3d3d4;
-    }
-
-    .tuner-E:active,
-    .tuner-A:active,
-    .tuner-D:active,
-    .tuner-G:active,
-    .tuner-B:active,
-    .tuner-high-E:active {
-        background-color: #5dd6eca4;
-    }
-
-    .tuner-E:focus,
-    .tuner-A:focus,
-    .tuner-D:focus,
-    .tuner-G:focus,
-    .tuner-B:focus,
-    .tuner-high-E:focus {
-        outline: transparent;
-    }
-
-    /* string identifier styles (Acoustic Guitar)  */
-
-    .e_note-signifyer {
-        position: absolute;
-        top: 32px;
-        left: 196px;
-        height: 280px;
-    }
-
-    .a_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: 204px;
-        height: 388px;
-    }
-
-    .d_note-signifyer {
-        position: absolute;
-        top: 35px;
-        left: 206px;
-        height: 493px;
-    }
-
-    .g_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: -196px;
-        height: 498px;
-    }
-
-    .b_note-signifyer {
-        position: absolute;
-        top: 37px;
-        left: -176px;
-        height: 385px;
-    }
-
-    .high-e_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: -157px;
-        height: 278px;
-    }
-
-    /* string identifier animation styles once triggered by click event */
-
-    .e_note-signifyer,
-    .a_note-signifyer,
-    .d_note-signifyer,
-    .g_note-signifyer,
-    .b_note-signifyer,
-    .high-e_note-signifyer {
-        animation-duration: 7000ms;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-name: fadeOutDown;
-        display: none;
-    }
-
-    @keyframes fadeOutDown {
-        0% {
-            opacity: 0;
-            transform: translateY(0);
-        }
-
-        30% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-    .video-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 100%;
-        align-self: center;
-        margin: 20px auto;
-    }
-
-    .video-container>video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    /*Index Styles*/
 
     .hero-content {
         max-width: 500px;
+    }
+
+    .hero-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
     }
 
     .main-content-container {
@@ -1582,6 +1314,7 @@ footer {
 
     .page-nav-container {
         justify-content: center;
+        gap: 3em;
     }
 
     .page-nav-container .card {
@@ -1595,1121 +1328,15 @@ footer {
     }
 
     /* basics styles */
-
-    .hero-image-basics {
-        display: flex;
-        flex-direction: column;
-        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/basics-hero-min.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=100vw);
-        min-height: 15em;
-        height: 70vh;
-        align-self: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        align-items: center;
-        justify-content: center;
-        background-position-y: center;
-        width: 100%;
-        background-size: cover;
-    }
-
-    .card,
-    .card-no-left-margin,
-    .card-no-right-margin {
-        width: calc(910px / 3);
-    }
-
-    .card {
-        margin: 20px 15px;
-        padding: 0;
-    }
-
-    .hero-image-chords {
-        display: flex;
-        flex-direction: column;
-        min-height: 15em;
-        height: 70vh;
-        align-self: center;
-        background-repeat: no-repeat;
-        align-items: center;
-        justify-content: center;
-        background-position-y: center;
-        width: 100%;
-        background-size: cover;
-        background-image: linear-gradient(to bottom, rgba(100, 100, 100, 0.52), rgba(10, 0, 3, 0.3)), url(img/chords-banner.jpg);
-        background-attachment: fixed;
-        filter: brightness(125%);
-    }
-
-    /*Main pages content styles*/
-
-
-    @keyframes animatetop {
-        from {
-            top: -300px;
-            opacity: 0
-        }
-
-        to {
-            top: 0;
-            opacity: 1
-        }
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-
-    /* .modal {
-   
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-        display: none;
-    }
-    
-    .modal-content {
-        background-color: white;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        max-width: 80%;
-        text-align: center;
-    }
-    
-    .close-modal {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 24px;
-        cursor: pointer;
-    } */
-
-
-
-    /*basic page 1 styles*/
-    .guitar-components_basics {
-        background-image: url(img/guitar-diagram-min.png);
-        background-size: contain;
-        height: 300px;
-        width: auto;
-        background-repeat: no-repeat;
-        margin: 0 30%;
-    }
-
-    /*basics page 2 content cards styles*/
-
-    /* strings styles  */
-
-    .acoustic-small {
-        display: none;
-    }
-
-    .tuning-section {
-        display: flex;
-        max-height: 670px;
-        align-items: baseline;
-    }
-
-    .acoustic-guitar-tuner {
-        flex: 0 1 400px;
-    }
-
-    /* tuner notes styles  */
-
-    .tuner-E {
-        position: relative;
-        top: -320px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 16px 16px 16px 20px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #d34836;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        cursor: pointer;
-        z-index: 99;
-    }
-
-    .tuner-A {
-        position: relative;
-        top: -490px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #dfbd00;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-D {
-        position: relative;
-        top: -655px;
-        left: 24px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #b0dd2a;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-G {
-        position: relative;
-        top: -720px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #04c7c7;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-B {
-        position: relative;
-        top: -670px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #a507a5fd;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-high-E {
-        position: relative;
-        top: -620px;
-        left: 480px;
-        border-radius: 50%;
-        border: 1px solid rgb(223, 223, 223);
-        background-color: #d3d3d391;
-        width: 60px;
-        height: 60px;
-        padding: 24px;
-        font-family: 'Spartan';
-        font-size: 25px;
-        font-weight: 700;
-        color: #d34836;
-        text-shadow: 1px 1px 2px black;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .tuner-E:hover,
-    .tuner-A:hover,
-    .tuner-D:hover,
-    .tuner-G:hover,
-    .tuner-B:hover,
-    .tuner-high-E:hover {
-        background-color: #d3d3d3d4;
-    }
-
-    .tuner-E:active,
-    .tuner-A:active,
-    .tuner-D:active,
-    .tuner-G:active,
-    .tuner-B:active,
-    .tuner-high-E:active {
-        background-color: #5dd6eca4;
-    }
-
-    .tuner-E:focus,
-    .tuner-A:focus,
-    .tuner-D:focus,
-    .tuner-G:focus,
-    .tuner-B:focus,
-    .tuner-high-E:focus {
-        outline: transparent;
-    }
-
-    /* string identifier styles (Acoustic Guitar)  */
-
-    .e_note-signifyer {
-        position: absolute;
-        top: 32px;
-        left: 196px;
-        height: 280px;
-    }
-
-    .a_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: 204px;
-        height: 388px;
-    }
-
-    .d_note-signifyer {
-        position: absolute;
-        top: 35px;
-        left: 206px;
-        height: 493px;
-    }
-
-    .g_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: -196px;
-        height: 498px;
-    }
-
-    .b_note-signifyer {
-        position: absolute;
-        top: 37px;
-        left: -176px;
-        height: 385px;
-    }
-
-    .high-e_note-signifyer {
-        position: absolute;
-        top: 34px;
-        left: -157px;
-        height: 278px;
-    }
-
-    /* string identifier animation styles once triggered by click event */
-    .e_note-signifyer,
-    .a_note-signifyer,
-    .d_note-signifyer,
-    .g_note-signifyer,
-    .b_note-signifyer,
-    .high-e_note-signifyer {
-        animation-duration: 7000ms;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        animation-name: fadeOutDown;
-        display: none;
-    }
-
-
-    @keyframes fadeOutDown {
-        0% {
-            opacity: 0;
-            transform: translateY(0);
-        }
-
-        30% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
-
-    /* strings */
-
-    .guitar-components_strings {
-        background-image: url(img/acoustic-versus-spanish.png);
-        background-size: contain;
-        height: 235px;
-        width: 100%;
-        background-repeat: no-repeat;
-        margin: 0 30%;
-    }
-
-    /* frets 1 styles  */
-
-    .left-column,
-    .right-column {
-        display: flex;
-        align-items: center;
-    }
-
-    .page-navigation-anchor:hover {
-        text-decoration: none;
-    }
-
-    .centeredImage_container-soundWaves,
-    .centeredImage_container-fretting,
-    .centeredImage_container-frets {
-        width: 60%;
-    }
-
-    /*Chords2 Styles*/
-    .yak {
-        display: block;
-    }
-
-    .yik {
-        display: block;
-    }
-
-    /*Rhythm page content styles*/
-
-    #lower-section-imageR1 {
-        background-image: url(img/acoustic-mic-studio.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        max-height: 400px;
-        grid-column: 2/6;
-        grid-row: 2/4;
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
         margin: 0;
-        padding: 0;
-        border-radius: 10px;
-    }
-
-    #lower-sectionR1 {
-        grid-column: 1/7;
-        grid-row: 4;
-        text-align: center;
-        margin-top: 0;
-        padding-top: 0;
-
-    }
-
-    #lower-section-image2R1 {
-        background-image: url(img/metronome.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        grid-column: 2/6;
-        grid-row: 5/7;
-    }
-
-    .outroR1 {
-        grid-column: 3/7;
-        grid-row: 7;
-        font-family: 'Roboto';
-        font-style: italic;
-        text-align: right;
-        font-size: 1.5rem;
-        color: lightgray;
-    }
-
-    /*Rhythm Page 2 styling*/
-
-    .introduction {
-        grid-column: 1/-1;
-        grid-row: 1;
-        text-align: center;
-        margin-top: 0
-    }
-
-    .story {
-        grid-column: 1/7;
-        grid-row: 2;
-        margin-top: 0;
-    }
-
-    .story img {
-        height: auto;
+        max-width: 900px;
         width: 100%;
-        max-width: 360px;
-        margin: 0 10px 5px 10px;
-        float: left;
-        border-radius: 10px
     }
 
-    #head-banner-content-rhythm2>.chord-section1 {
-        grid-column: 1/7;
-        grid-row: 4;
-    }
-
-    .chord-section1 img {
-        height: auto;
-        width: 100%;
-        max-width: 258px;
-        margin: 15px 10px 0px 10px;
-        float: left;
-        border-radius: 10px
-    }
-
-    .chord-section1a {
-        grid-column: 1/7;
-        grid-row: 5;
-    }
-
-    .chord-section1a img {
-        float: right;
-        height: 300px;
-        width: 200px;
-    }
-
-    .chord-section2 {
-        grid-column: 1/-1;
-        grid-row: 3;
-        text-align: center;
-    }
-
-    /* .table {
-        grid-column: 1/-1;
-        grid-row: 7;
-    }
-
-    .table>table {
-        height: auto;
-        width: 100%;
-        font-family: 'Roboto';
-        font-size: 1.5rem;
-    }
-
-    th {
-        background-color: bisque;
-    }
-
-    td {
-        background-color: aliceblue;
-        text-align: center;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid #111;
-        border-collapse: collapse;
-    }
-
-    th,
-    td {
-        padding: 5px;
-    } */
-
-    .outro {
-        grid-column: 1/7;
-        grid-row: 3;
-        font-family: 'Roboto';
-        font-style: italic;
-        text-align: right;
-        font-size: 1.5rem;
-        color: grey;
-    }
-
-    /*lead styles*/
-
-    .higher-section-image-lead {
-        background-image: url(img/lead-guitar-image.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        transform: rotate(340deg);
-        grid-column: 3/5;
-        grid-row: 2
-    }
-
-    .higher-section-l1 {
-        grid-column: 1/7;
-        grid-row: 3;
-        text-align: center
-    }
-
-    .lower-section-lead {
-        grid-column: 1/7;
-        grid-row: 5
-    }
-
-    #lesson-two-lead {
-        grid-column: 1/6;
-        grid-row: 7;
-        border: 2px solid lightgray;
-        border-radius: 10px;
-    }
-
-    #lesson-two-lead h1 {
-        font-family: 'Courgette', 'sans-serif';
-        font-size: 40px;
-
-    }
-
-    #lesson-two-lead p {
-        font-family: 'Secular+One', 'sans-serif';
-        text-align: center;
-
-    }
-
-    /*lead 2 styles*/
-    .thankyou {
-        grid-column: 1/7;
-        grid-row: 1;
-        margin: 0;
-        text-align: center
-    }
-
-    .tablature-lesson-introduction {
-        grid-column: 1/7;
-        grid-row: 2;
-        text-align: center;
-        margin: 0;
-    }
-
-    #tablature-placeholder {
-        background-image: url(img/Tablature.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        border-radius: 15px;
-        grid-column: 2/6;
-        margin: 20px 0;
-        grid-row: 3/5;
-    }
-
-    .tablature-description {
-        grid-column: 1/7;
-        grid-row: 5;
-        text-align: center;
-        margin: 0
-    }
-
-    .disclaimer {
-        grid-column: 2/6;
-        grid-row: auto;
-        text-align: center;
-    }
-
-    /* 
-@media only screen and (max-width: 963px) {
-
-    article {
-        margin: 0 20px;
-    }
-
-    .desktop-nav-bar {
-        display: none;
-    }
-
-    header {
-        border-bottom: 1px solid grey;
-    }
-
-    #lesson-two-basics,
-    #lesson-two-lead,
-    #lesson-two-chords,
-    #lesson-two-frets {
-        grid-column: 1/7;
-        margin-bottom: 20px;
-        grid-row: auto;
-    }
-
-    /*Mobile nav stylings*/
-    /* .burger-button {
-        display: block;
-        float: left;
-        margin: 16px;
-        line-height: 30px;
-        font-size: 28px;
-        fill: black;
-    }
-
-    #mobile-menu {
-        overflow: auto;
-        position: absolute;
-        z-index: 999999;
-        width: 100%;
-        float: left;
-        margin-top: 60px
-    }
-
-    #mobile-menu a {
-        width: 100%;
-        float: left;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        background-color: lightgrey;
-        color: #ffffff;
-        text-align: center;
-        padding-left: 16px;
-        text-decoration: none;
-        border-bottom: 1px solid #0065d1;
-    }
-
-    .logo {
-        text-align: center;
-        height: auto;
-    }
-
-    .main-banner-image {
-        height: 250px;
-    }
-
-    .banner-message {
-        font-size: 1rem;
-        grid-column: 1/5;
-        grid-row: 1;
-        margin: 10px 0 10px 10px;
-    } */
-
-    /*basics styling*/
-    /* #card-bridge {
-        grid-row: 1;
-        max-height: 200px;
-        align-items: end;
-        border: none;
-    }
-
-    #cardB1 {
-        grid-column: 3/4;
-        width: 219px;
-        margin-left: 50px;
-    }
-
-    .info-boxB1 {
-        grid-column: 1/7;
-        grid-row: 2;
-        text-align: center;
-    }
-
-    #cardB2 {
-        grid-column: 3/5;
-        width: 300px;
-        margin-left: 0;
-    }
-
-    #cardB3 {
-        grid-column: 2/5;
-        height: 148px;
-        margin: 50px 0 0 106px;
-    } */
-
-    /*frets styles*/
-    /* .contentF2 img {
-        height: 262px;
-        max-width: 300px;
-    }
-
-    .content2F2 img {
-        height: auto;
-        width: 100%;
-        max-width: 500px;
-    }
-
-    /*Rhythm 1 styles*/
-    /* #lower-section-imageR1 {
-        background-size: contain;
-    }
-
-    #lower-section-image2R1 {
-        background-size: contain;
-    } */
-
-    /*Chord Styles*/
-    /* .info-box-power {
-        grid-column: 1/-1;
-        grid-row: 2;
-        padding: 0;
-        margin: 0;
-    }
-
-    .card-power1 {
-        grid-column: 3;
-        grid-row: 2;
-        width: 300px;
-        height: 300px;
-        margin: 0 0 0 5em;
-        padding: 0;
-    }
-
-    .info-box-power p {
-        grid-row: 3;
-    }
-
-    .info-box2-power {
-        grid-column: 1/-1;
-        grid-row: 3;
-    }
-
-    .card2-power {
-        grid-column: 3;
-        grid-row: 2;
-        width: 300px;
-        height: 300px;
-        margin: 0 0 0 5em;
-        padding: 0;
-    }
-
-    .info-box2-power p {
-        grid-row: 3;
-    }
-
-    .info-box2-power {
-        grid-column: 1/-1;
-        grid-row: 3;
-    }
-
-    .outro-power {
-        grid-row: 5;
-    } */
-
-    /*lead*/
-    /* .higher-section-image-lead {
-        grid-column: 3/5;
-        transform: rotate(310deg);
-    }
-
-    #tablature-placeholder {
-        grid-row: 3;
-        grid-column: 3/6;
-    }
-
-    .tablature-description {
-        grid-row: 4;
-    }
-
-    .guitar-on-tab-placeholder {
-        background-size: contain;
-        grid-row: 5/8;
-        margin-bottom: 2em;
-    }
-
-    .outro-lead-final {
-        grid-row: 5/8;
-        margin-bottom: 2em;
-    }
-
-
-} */
-
-    /* @media only screen and (max-width: 730px) {
-    section {
-        margin: 0;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .mobile-navigation ul,
-    .mobile-navigation li,
-    .mob-sub-level {
-        margin-left: 5px;
-        font-size: 22px;
-        line-height: 25px;
-    }
-
-    .logo h2 {
-        text-align: center;
-        height: 50px;
-        width: 430px;
-        line-height: 50px;
-        font-size: 28px;
-    }
-
-    #touch-nav-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #main-banner-image-basics img {
-        width: 400px;
-    }
-
-    #main-banner-image-frets img {
-        max-width: 400px;
-    }
-
-    .lower-section-lead {
-        margin: 10px 0 10px 0;
-    }
-
-    .lower-section-lead p {
-        text-align: center;
-    }
-
-    .mobile-navigation {
-        width: 90vw;
-        margin-top: 3.8em;
-    }
-
-    /*basics styling*/
-    /* #card,
-    #card-bridge {
-        grid-column: 3/5;
-        grid-row: 1;
-    }
-
-    #info-box,
-    #info-box2 {
-        grid-column: 1/7;
-        grid-row: 2;
-    }
-
-    #cardB1,
-    #cardB2,
-    #cardB3 {
-        grid-column: 2/4;
-        width: 200px;
-        margin: 6em 0 0 0;
-    } */
-
-
-
-    /*Chords
-
-    #horizontal-card-topC2 {
-        padding: 0;
-        height: 700px;
-    }
-
-
-    /*Rhythm*/
-    /* .introduction {
-        grid-column: 1/7;
-    } */
-
-    /*lead*/
-    /* .higher-section-image-lead {
-        transform: rotate(0deg);
-        grid-column: 2/6;
-    }
-
-    .lower-information-box-lead#information-box-lead {
-        height: 500px
-    }
-
-    #information-box-lead.lower-information-box-lead h4 {
-        margin-top: 5em;
-        font-size: 22px;
-    }
-
-    .banner-message h1 {
-        font-size: 1.3rem;
-    }
-
-    #contact-info-detail {
-        grid-column: 1/6;
-        grid-row: 5/8;
-        margin: 0;
-    } */
-
-    /*    lead2*/
-    /* #contact-info-detail.contact-info {
-        grid-column: 1/7;
-        grid-row: auto;
-        margin: 2em 0;
-        height: 650px;
-    }
-
-    .contact-information-box,
-    #contact-box-lead2 {
-        background-size: contain;
-        grid-column: 1/7;
-        grid-row: 7;
-        margin: 2em 0 9em;
-        border-radius: 10px;
-    } */
-    /* } */
-
-
-    /*Rhythm Styles*/
-    /* #main-banner-image-frets img {
-        grid-column: 1/4;
-    }
-
-    #lower-section-imageR1 {
-        background-size: contain;
-        grid-column: 2/6;
-        grid-row: 2;
-    }
-
-    #lower-sectionR1 {
-        grid-row: 3;
-    }
-
-    #lower-section-image2R1 {
-        background-size: contain;
-        grid-row: 4;
-    }
-
-    .outroR1 {
-        grid-row: 5;
-    } */
-
-    /*rhythm2*/
-    /* .chord-section1 {
-        grid-row: 4;
-    }
-
-    .chord-section1 p {
-        width: 90vw;
-        margin: 10px 10px;
-    }
-
-    .chord-section1 img {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-    }
-
-    .chord-section1a {
-        grid-row: 5;
-        margin: 0;
-        padding: 0;
-    }
-
-    .chord-section1a img {
-        height: 250px;
-        width: 80vw;
-    }
-
-    .chord-section2 {
-        grid-row: 6;
-        margin: 0;
-    } */
-
-    /*chords*/
-    /* .chord-section1a {
-        display: grid;
-    }
-
-    .chord-section1a img {
-        grid-column: 2/6;
-        grid-row: 3;
-    }
-
-    .chord-section1a p,
-    h2 {
-        grid-column: 1/7;
-        grid-row: 1;
-    }
-
-    .story {
-        display: grid;
-    }
-
-    .story img {
-        grid-column: 1/7;
-        grid-row: 2;
-    }
-
-    .story p {
-        grid-column: 1/7;
-        grid-row: 3;
-    }
-
-    .chord-section1 {
-        display: grid;
-    }
-
-    .chord-section1 img {
-        grid-column: 1/7;
-        margin-left: 3em;
-        grid-row: 2;
-    }
-
-    .chord-section1 p {
-        grid-column: 1/6;
-        grid-row: 3;
-    }
-
-
-
-    #lesson-two-chords {
-        grid-row: 6;
-    } */
-
-    /*
-
-    /*chords 2*/
-    /* .welcome-chords2 {
-        grid-row: 1/2;
-    }
-
-    .card-power1 {
-        margin: 0 0 0 30px;
-    }
-
-    .card2-power {
-        margin: 0 0 0 30px;
-    }
-
-    .outro-power {
-        grid-column: 2/7;
-        grid-row: 4;
-    } */
-
-    /*lead*/
-    /* #main-banner-image-frets img {
-        grid-column: 1/5;
-        width: 300px;
-    }
-
-    #information-box-lead.lower-information-box-lead h4 {
-        margin-top: 2em;
-        font-size: 22px;
-    }
-
-    #tablature-placeholder {
-        grid-column: 1/7;
-    }
-
-    .card-power1,
-    .card2-power {
-        margin: 0;
-    } */
-
-    /*
-} */
-
-
-    .video-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 100%;
-        align-self: center;
-        /*overflow: hidden;*/
-        margin: 20px auto;
+    .grid-container .card .card-content {
+        height: 460px;
     }
 
     footer {
@@ -2726,10 +1353,6 @@ footer {
         border-bottom: 1px solid var(--blue-grey-1);
         padding: 1em 0;
         margin: var(--side-margins-992px);
-    }
-
-    .no-border {
-        border: none;
     }
 
     .footer-column {
@@ -2802,7 +1425,7 @@ footer {
         height: var(--navbar-height);
     }
 
-    .menu-toggle {
+    #hamburger-menu {
         display: none;
     }
 
@@ -2824,6 +1447,21 @@ footer {
 
     .nav-menu .navbar-link:hover {
         border-bottom: 1px solid var(--brand-color-purple);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hero-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
     }
 
     .main-content-container {
@@ -2880,25 +1518,46 @@ footer {
         box-shadow: var(--br-dark-shadow);
     }
 
-    .page-nav-container .card .card-content  .button-container .primary-button {
+    .page-nav-container .card .card-content .button-container .primary-button {
         background-color: var(--primary-hover);
         box-shadow: none;
+    }
+
+    .grid-container {
+        max-width: 1163px;
+    }
+    .grid-container .card .card-content {
+        height: 350px;
+    }
+    .grid-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 @media only screen and (min-width: 1400px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .navbar-container {
         margin: var(--side-margins-1400px);
         width: 84%;
     }
 
-    .hero-content {
+    .main-content-container {
         margin: var(--side-margins-1400px);
     }
 
-    .main-content-container {
-        margin: var(--side-margins-1400px);
+    .main-editorial .image-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2em;
     }
 
     .footer-row {
@@ -2930,10 +1589,6 @@ footer {
         color: var(--brand-color);
         transition: all .5s ease-in-out;
         border-bottom: 1px solid var(--brand-color);
-    }
-
-    .hero-content {
-        margin: var(--side-margins-1800px);
     }
 
     .main-content-container {
