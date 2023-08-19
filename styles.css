@@ -324,6 +324,10 @@ padding: 100px 10px 40px 10px;
     background-image: url(/assets/img/basics-hero.webp);
 }
 
+.global-hero-banner-with-button.strings {
+    background-image: url(/assets/img/strings-hero.webp);
+}
+
 .hero-content {
     display: flex;
     flex-direction: column;
@@ -707,6 +711,17 @@ padding: 100px 10px 40px 10px;
     background-image: url(/assets/img/basics-imgs/standing.webp);
 }
 
+.classical-guitar {
+    background-image: url(/assets/img/classical-guitar.webp);
+}
+
+.acoustic-guitar {
+    background-image: url(/assets/img/acoustic-guitar.webp);
+}
+
+.electric-guitar {
+    background-image: url(/assets/img/electric-guitar.webp);
+}
 
 .grid-container .card .card-content {
     padding: 20px;
@@ -722,11 +737,19 @@ padding: 100px 10px 40px 10px;
     font-size: 1rem;
 }
 
-.page-nav-showcase {
-    margin-bottom: 20px;
-    padding: 0 10px;
-    border: 1px solid grey;
-    border-radius: 2.5px;
+.grid-container .card .video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio (height / width) */
+}
+
+.grid-container .card .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .btt-button {
@@ -852,22 +875,6 @@ footer {
     background-image: url(/img/eminor-min.png);
 }
 
-.video-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    padding-bottom: 20%;
-    height: 100%;
-}
-
-.video-container>video {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 250px;
-}
 
 /*basics page 2 content cards styles*/
 
@@ -1156,18 +1163,6 @@ footer {
         height: 80px;
     }
 
-    .video-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        align-self: center;
-        /*overflow: hidden;*/
-        margin: 0 auto;
-    }
-
     /* frets1 styles  */
 
     .centeredImage_container {
@@ -1262,25 +1257,6 @@ footer {
 
     .main-content-container {
         margin: var(--side-margins-768px);
-    }
-
-    .video-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        width: 36%;
-        height: 100%;
-        align-self: center;
-        margin: 0 auto;
-    }
-
-    .video-container>video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
     }
 
     .modal {
