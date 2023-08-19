@@ -655,6 +655,54 @@ padding: 100px 10px 40px 10px;
     background-image: url(/assets/img/basics-imgs/bridge-min.webp);
 }
 
+.sitting {
+    background-image: url(/assets/img/basics-imgs/sitting.webp);
+}
+
+.shoulders {
+    background-image: url(/assets/img/basics-imgs/shoulders-level.webp);
+}
+
+.take-time {
+    background-image: url(/assets/img/basics-imgs/take-a-break.webp);
+}
+
+.chair {
+    background-image: url(/assets/img/basics-imgs/chair.webp);
+}
+
+.no-slouching {
+    background-image: url(/assets/img/basics-imgs/avoid-slouching.webp);
+}
+
+.foot-position {
+    background-image: url(/assets/img/basics-imgs/feet-planted.webp);
+}
+
+.classical {
+    background-image: url(/assets/img/basics-imgs/classical-position.webp);
+}
+
+.regular {
+    background-image: url(/assets/img/basics-imgs/regular-acoustic-position.webp);
+}
+
+.regular-resting {
+    background-image: url(/assets/img/basics-imgs/rest-forearm.webp);
+}
+
+.strap {
+    background-image: url(/assets/img/basics-imgs/strap.webp);
+}
+
+.strap-adjusting {
+    background-image: url(/assets/img/basics-imgs/strap-adjust.webp);
+}
+
+.standing {
+    background-image: url(/assets/img/basics-imgs/standing.webp);
+}
+
 
 .grid-container .card .card-content {
     padding: 20px;
@@ -1370,7 +1418,7 @@ footer {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         margin: 0;
-        max-width: 900px;
+        max-width: 944px;
         width: 100%;
     }
 
