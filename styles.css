@@ -329,8 +329,12 @@ padding: 100px 10px 40px 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 320px;
+    max-width: 393px;
     width: 100%;
+    background-color: #a9a9a963;
+    padding: 20px 20px 10px 20px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
 .hero-content .title.dark {
