@@ -11,14 +11,17 @@
     <meta name="theme-color" content="#317EFB" />
     <title>Home</title>
     <link rel="icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
-    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" fetchpriority="high" as="image" href="/assets/img/guitar-basics-lg.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+            rel="stylesheet" type="text/css" />
     </noscript>
-    <link rel="preload" fetchpriority="high" as="image" href="assets/img/guitar-basics-lg.webp" type="image/webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
@@ -37,8 +40,7 @@
                 </a>
             </div>
 
-            <button type="button" class="hamburger-menu" id="hamburger-menu"
-                aria-label="main navigation menu button">
+            <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
                 <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960"
                     width="40">
                     <path
@@ -71,13 +73,13 @@
         </div>
     </nav>
     <section id="top" class="global-hero-banner-with-button basics">
-            <div class="hero-content">
-                <h2 class="title white">Welcome To The Guitar Basics Lessons.</h2>
-                <div class="hero-button-container">
-                    <a href="#" class="primary-button" id="openModal">Command Hub</a>
-                    <a href="/basics2.html" class="secondary-button"> Lesson 2 </a>
-                </div>
+        <div class="hero-content">
+            <h2 class="title dark">Welcome To The Guitar Basics Lessons.</h2>
+            <div class="hero-button-container">
+                <a href="#" class="primary-button" id="openModal">Command Hub</a>
+                <a href="/basics2.html" class="secondary-button"> Lesson 2 </a>
             </div>
+        </div>
     </section>
 </header>
 
@@ -201,9 +203,8 @@
                     <div class="flex-col_left">
                         <h3>The Basic Components</h3>
                         <div class="flex-col_centered">
-                            <img class="full-width-image" src="/assets/img/guitar-diagram-min.png" width="300"
-                                height="300" alt="image of different guitars and identifying components.">
-                            <caption>Guitar components.</caption>
+                            <div class="guitar-comp-image">
+                            </div>
                         </div>
                         <div class="flex-col_left">
                             <p>Starting off can be tough! For this lesson we will learn the fundamentals of the
@@ -231,7 +232,7 @@
                     <div class="grid-container">
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/headstock.png" alt="Card Image 1">
+                                <div class="card-image-section headstock"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">The Head Stock</h3>
                                     <p class="card-text">
@@ -247,7 +248,7 @@
 
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/tuning-image-sm.webp" alt="Tuning pegs ">
+                                <div class="card-image-section tuning"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">Tuner Heads</h3>
                                     <p class="card-text">
@@ -259,11 +260,9 @@
                             </div>
                         </div>
 
-
-
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/nut-min.jpg" alt="Card Image 1">
+                                <div class="card-image-section nut"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">The Nut</h3>
                                     <p class="card-text">
@@ -277,14 +276,14 @@
 
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/frets-image.webp" alt="Card Image 1">
+                                <div class="card-image-section fretboard"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">Fret Board</h3>
                                     <p class="card-text">
                                         The Fret Board is the long thin strip of wood that runs from the headstock
                                         down and past the body of the guitar.
-                                        A Classical guitar will have a flat fingerboard, an acoustic will have a 
-                                        slight bezel to it and an electric guitar has a highly 
+                                        A Classical guitar will have a flat fingerboard, an acoustic will have a
+                                        slight bezel to it and an electric guitar has a highly
                                         lacquered finish to it.
                                     </p>
                                 </div>
@@ -293,13 +292,13 @@
 
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/frets-placeholder-min.jpg" alt="Card Image 1">
+                                <div class="card-image-section frets"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">The Frets</h3>
                                     <p class="card-text">
                                         Frets are the metal strips that cross the Fret board, their
                                         purpose is to add different pitches to any string once it is played.
-                                        Pushing down between any two frets is the correct way to play and this is 
+                                        Pushing down between any two frets is the correct way to play and this is
                                         called fretting (visit the Frets lesson for more information).</p>
                                 </div>
                             </div>
@@ -307,12 +306,12 @@
 
                         <div class="grid-item">
                             <div class="card">
-                                <img src="/assets/img/bridge-min.jpg" alt="Card Image 1">
+                                <div class="card-image-section bridge"></div>
                                 <div class="card-content">
                                     <h3 class="card-title">The Bridge</h3>
                                     <p class="card-text">
-                                        The Bridge can always be found below the sound hole on an acoustic guitar, or 
-                                        below the pick ups, on an electric guitar. It's purpose is to fix the 
+                                        The Bridge can always be found below the sound hole on an acoustic guitar, or
+                                        below the pick ups, on an electric guitar. It's purpose is to fix the
                                         strings in place. You will only interact with this when restringing your guitar
                                         (visit the strings lesson for more information).
                                     </p>
@@ -355,7 +354,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <p class="emphasis">Connect with us</p>
+                    <h2 class="emphasis">Connect with us</h2>
 
 
                     <ul aria-label="Connect with us" class="footer-list-row">
@@ -403,9 +402,9 @@
 
             <div class="footer-row">
                 <div class="footer-column">
-                    <p class="emphasis">
+                    <h3 class="emphasis">
                         Help and Information
-                    </p>
+                    </h3>
                     <ul>
                         <li>
                             <a href="#" class="help-link">
@@ -441,9 +440,9 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <p class="emphasis">
+                    <h3 class="emphasis">
                         How To Contact Us
-                    </p>
+                    </h3>
                     <ul class="footer-list">
                         <li>
                             <a href="#" class="help-link">
