@@ -321,7 +321,7 @@ padding: 100px 10px 40px 10px;
 }
 
 .global-hero-banner-with-button.basics {
-    background-image: url(/assets/img/guitar-basics-lg.webp);
+    background-image: url(/assets/img/basics-hero.webp);
 }
 
 .hero-content {
@@ -522,7 +522,7 @@ padding: 100px 10px 40px 10px;
 }
 
 .page-nav-container .card-image.basics {
-    background-image: url(/assets/img/guitar-basics-sm.webp);
+    background-image: url(/assets/img/basics-thumbnail.webp);
 }
 
 .page-nav-container .card-image.strings {

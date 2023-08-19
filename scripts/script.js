@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
   const navToggle = document.querySelector(".hamburger-menu");
   const links = document.querySelector(".nav-menu");
   
@@ -29,9 +28,6 @@ function openModal() {
     const desiredTop = calculateModalTop();
     modal.style.top = `${desiredTop}px`;
   }
-
-  // Add this event listener to close the modal on overlay click
-  // modalOverlay.addEventListener('click', closeModal);
 }
 
 function closeModal() {
@@ -78,49 +74,12 @@ tabButtons.forEach(button => {
 // Initialize the first tab as active
 tabButtons[0].click();
 });
-// $(document).ready(function () {
-   
-    
 
+function goBack() {
+  window.history.back();
+}
 
-    // var modal = document.getElementById('help-modal');
-    // var span = document.getElementsByClassName('close')[0];
-
-
-    // $(".toggle").on("click", function () {
-    //     if ($(".item").hasClass("active")) {
-    //         $(".item").removeClass("active");
-    //     } else {
-    //         $(".item").addClass("active");
-    //     }
-    // });
-    // Help Center Modal 
-
-    // span.onclick = function () {
-    //     modal.style.display = "none";
-    // }
-
-    // window.onclick = function (e) {
-    //     if (e.target == modal || span) {
-    //         modal.style.display = "none";
-    //     }
-    // };
-
-    // scroll to the top button 
-    // window.onscroll = function () {
-    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //         document.getElementById("scroll-btn").style.display = "block";
-    //     } else {
-    //         document.getElementById("scroll-btn").style.display = "none";
-    //     }
-    // };
-
-    // var top = document.getElementById("scroll-btn");
-    // top.addEventListener("click", toTheTop);
-
-    // function toTheTop() {
-    //     document.documentElement.scrollTop = 0;
-    // }
+// 
 
     // guitar tuner 
     // var string1 = $("#highE")[0];
