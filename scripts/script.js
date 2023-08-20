@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
       links.classList.toggle("show");
   })
 
-
+  function goBack() {
+    window.history.back();
+  }
+  
 const openModalBtn = document.getElementById('openModal');
 const closeModalBtn = document.getElementById('closeModal');
 const modal = document.getElementById('modal');
@@ -75,9 +78,7 @@ tabButtons.forEach(button => {
 tabButtons[0].click();
 });
 
-function goBack() {
-  window.history.back();
-}
+
 
 
 // 

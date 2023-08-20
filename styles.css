@@ -350,6 +350,10 @@ padding: 100px 10px 40px 10px;
     color: var(--brand-color-d-blue);
 }
 
+.hero-content .title.white {
+    color: var(--brand-color-white);
+}
+
 .hero-button-container {
     display: flex;
     flex-direction: column;
