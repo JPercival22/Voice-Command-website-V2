@@ -1492,10 +1492,56 @@ color: #fff;
         grid-template-columns: repeat(2, 1fr);
         /* Two columns */
     }
+    .flex-col_centered {
+        margin-bottom: 1em;
+    }
 
     .flex-col_centered .full-width-image {
         width: 80%;
         height: auto;
+    }
+
+
+    .flex-col_centered .container .circle {
+        top: 54%;
+        left: 50%;
+        width: 66vw;
+        height: 50vh;
+    }
+
+    .container>span {
+        top: calc((50vh / 4) - 130px);
+    }
+
+    .circle>span:nth-child(2) {
+        top: 210px;
+        left: -16px;
+    }
+
+    .circle>span:nth-child(3) {
+        top: 210px;
+        right: -20px;
+    }
+
+    .dial {
+        top: 10%;
+        height: 200px;
+    }
+
+    .center-circle {
+        transform: translate(-50%, 425%);
+    }
+
+    .Tune {
+        margin-top: 250px;
+    }
+
+    #startStopButton {
+        margin-top: 2em;
+    }
+
+    .primary-button {
+        width: 70%;
     }
 
 }
