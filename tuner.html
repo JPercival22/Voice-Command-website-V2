@@ -3,9 +3,8 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <meta name="description" content="Description on how to string an array of six stringed guitars">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
+  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
   <meta name="author" content="Joseph Percival">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#317EFB">
@@ -15,121 +14,11 @@
   <!-- <link rel="preload" fetchpriority="high" as="image" href="/assets/img/hero-imgs/tuning-hero.webp" type="image/webp"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
+    rel="stylesheet">
   <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
-  <style>
-    .tuner-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .tuner-container .chromatic-dial {
-      display: inherit;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 400px;
-      height: 400px;
-      border: 2px solid black;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-
-    .tuner-container .chromatic-dial .dial-center {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .tuner-container .needle-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .tuner-container .needle-container .needle {
-      width: 2px;
-      height: 100px;
-      background-color: red;
-      position: absolute;
-      top: -223px;
-      left: 200px;
-      transform: rotate(0deg);
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .tuner-container button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    .note {
-      font-size: 22px;
-      color: #333;
-      position: absolute;
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-
-    .A {
-      transform: rotate(0deg) translateY(-180px);
-    }
-
-
-    .B-fl {
-      transform: rotate(30deg) translateY(-180px);
-    }
-
-    .B {
-      transform: rotate(60deg) translateY(-180px);
-    }
-
-    .C {
-      transform: rotate(90deg) translateY(-180px);
-    }
-
-    .C-sh {
-      transform: rotate(120deg)translateY(-180px);
-    }
-
-    .D {
-      transform: rotate(150deg) translateY(-180px);
-    }
-
-    .E-fl {
-      transform: rotate(180deg) translateY(-180px);
-    }
-
-    .E {
-      transform: rotate(210deg) translateY(-180px);
-    }
-
-    .F {
-      transform: rotate(240deg) translateY(-180px);
-    }
-
-    .F-sh {
-      transform: rotate(270deg) translateY(-180px);
-    }
-
-    .G {
-      transform: rotate(300deg) translateY(-180px);
-    }
-
-    .G-sh {
-      transform: rotate(330deg) translateY(-180px);
-    }
-  </style>
 </head>
 
 <body>
@@ -141,7 +30,7 @@
             <div class="logo-container" title="logo and home button">
               <img src="/assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
               <div class="logo-name">
-              <h1 >Guitar <span>Lessons</span></h1>
+                <h1>Guitar <span>Lessons</span></h1>
               </div>
             </div>
           </a>
@@ -309,8 +198,16 @@
           <div class="flex-col_left">
             <h3>Standard Tuning</h3>
             <div class="flex-col_left">
-              <p>Starting off can be tough! For this lesson we will learn the fundamentals of the
-                guitar.
+              <p>It is super important to keep your guitar in tune. Most music is tuned using Standard Tuning.
+                This is where you tune your guitar string from your bass string to your lightest strings to notes
+                <strong>E</strong>, <strong>A</strong>, <strong>D</strong>, <strong>G</strong>, <strong>B</strong> and
+                <strong>E</strong> .
+              </p>
+              <p>
+                A really easy way to remember this order of notes is by remembering the phrase that,
+                <strong>E</strong>very <strong>A</strong>mateur <strong>M</strong>usician <strong>D</strong>oes
+                <strong>G</strong>et <strong>B</strong>etter <strong>E</strong>ventually.
+                Each first letter from every word in the phrase is the Standard Tuning note order.
               </p>
               <p>To start with we will take a look at the components of the guitar so that you can
                 familiarize
@@ -333,57 +230,43 @@
         <section>
           <div class="flex-col_centered">
             <h3>Online Microphone Tuner</h3>
+            <p>This tuner uses your devices microphone, once you click the Start button below, your
+              browser will ask to access your microphone. <br>
+              Please press ok or the tuner will not work. If you accidentally select no, please refresh your browser to
+              start again. <br>
+              Once you play any of your strings the tuner will tell you what note is detected. If the note is out of
+              tune, the tuner will turn red the needle will rotate to the left or to the right.
+              <br>
+              Left means your string is Flat and you need to tighten that strings Machine head. <br>
+              Right means your string is Sharp and you need to loosen that strings Machine head. <br>
+              Try to aim and tune it to so the needle rotates to the center and the tuner turns green.
+            </p>
+            <!-- <div class="flex-row"> -->
+            <div class="flex-col_centered">
+              <img src="/assets/img/tuner-imgs/standard-tuning.png" alt="">
+            </div>
+            <div class="flex-col_centered">
+              <div class="container">
+                <span class="natural">
+                  <p>&#9838;</p>
+                </span>
 
+                <div class="circle ">
+                  <div class="dial ">
+                    <div class="center-circle"></div>
+                  </div>
 
-            <div class="container">
-              <span class="natural">
-                <p>&#9838;</p>
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-                  <path
-                    d="m378-332 363-363q9.067-9 21.533-9Q775-704 784-694.947q9 9.052 9 21.5Q793-661 784-652L399-267q-9 9-21 9t-21-9L175-449q-9-9.067-8.5-21.533Q167-483 176.053-492q9.052-9 21.5-9Q210-501 219-492l159 160Z" />
-                </svg> -->
-              </span>
+                  <span class="flat">&#9837;</span>
 
-              <div class="circle ">
-                <div class="dial ">
-                  <div class="center-circle"></div>
+                  <span class="sharp">&#9839;</span>
                 </div>
 
-                <span class="flat">&#9837;
-                 
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-                    <defs>
-                      <image width="16" height="40" id="img1"
-                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAoCAMAAADABIqTAAAAAXNSR0IB2cksfwAAAQVQTFRFIyMjIyMjIiIiAAAAIyMjIyMjISEhISEhICAgISEhISEhIiIiIiIiIyMjIyMjIyMjIyMjIyMjISEhICAgIiIiIyMjIyMjIiIiIyMjIyMjIyMjIiIiISEhIyMjIyMjIyMjIyMjIyMjIyMjIyMjICAgICAgIyMjIyMjIyMjICAgIiIiIiIiIyMjICAgIyMjIyMjIyMjIyMjIyMjIiIiIyMjIiIiIiIiIyMjIyMjIiIiIiIiIyMjIyMjISEhIyMjIyMjIiIiGRkZIyMjIiIiIyMjIyMjISEhIiIiIyMjHh4eIyMjIiIhIyMjIyMjIiIiIyMjIyMjHx8fIyMjIyMiIyMjIyMjIiIix85r7QAAAFd0Uk5Tk88JALbxFhcGGxQGaMT4/+F2AwJT1Z0KkP3+TSu8+eDyot9kCQRg8H0DOWPBAZWwkoOqROMMPa7rFjD7dQnIzQcAmDZ7awR4/AGbGssGZ/dlAdE+mblddH8fkQAAAOpJREFUeJzNkXtXAVEUxS9zqYiN8rgX03gWhVLyplLyKil8/49imsGc+QDWcv6657fOWXefvRlzOBVajLvcRwJODrhyeuYhK95znx8IBEPmxMVlGGZFvP8T0ZjY9pBxHSSS+ku90gySYtyfBsKZrJLLX+uAMw6Im4LxT1GYQL3dabgzgMyUdqAMVBjXLOn3wINNehV4tIE0nmoUPANB27V1NJoUtNqyQ8/v9tB/IeD1DWJADCq8t+UHcWz4OUJqbIHuROjeWK5PZ5CTLyuGbxfmP4u962pP4vePxADMl1Gai1wNbEGV1wvaKxu7jRx+nPYRYgAAAABJRU5ErkJggg==" />
-                    </defs>
-                    <use href="#img1" x="12" y="0" />
-                  </svg> -->
-                </span>
-
-                <span class="sharp">&#9839;
-                  <!-- <p></p> -->
-                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 40" width="39" height="40">
-                    <defs>
-                      <image width="33" height="40" id="img2"
-                        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAoCAMAAABHNWOVAAAAAXNSR0IB2cksfwAAAkxQTFRFAAAA////lZWVfHx8jY2NdnZ2e3t739/fS0tLPj4+TU1NnZ2dQEBAQEBAa2trVVVVMzMzNTU1RUVFaWlpVlZWUlJSMjIyY2NjYWFhYGBgb29vW1tbfn5+VlZWhoaGUlJS0tLSc3Nzg4ODlZWVMTExS0tLSkpKPDw8Nzc3Y2NjycnJbW1tYGBgWVlZU1NT39/ff39/Z2dnSkpKREREOzs7NTU1QEBAbGxsPDw8WVlZRUVFPT09S0tLXFxcYWFhjY2NjIyMYWFhQ0NDQkJCSEhI5eXlb29vS0tLRkZGQUFBS0tLVVVVjo6O09PTOjo6QkJCOjo6QkJCSkpKjIyM2dnZNjY2Q0NDODg4ODg4NjY2aWlptra24ODgMzMzY2NjTExMU1NTYGBgZ2dnVlZW5ubmMTEx6+vrODg4NjY26+vrOTk5T09Pj4+PX19fUFBQUlJSlJSUuLi4Ojo6RUVFPDw8XFxcoqKiaWlpW1tbTExMQUFBNDQ0VlZW6+vrgICASEhIPz8/ODg4UVFRbW1tODg4S0tLPT09PT09Y2Njg4OD09PTgYGBUFBQT09POTk5NjY2R0dHR0dHT09PdXV1SEhIPDw8Q0NDVVVVh4eHQ0NDTExMNTU1Q0NDT09PX19fg4ODRERESkpKREREQUFBNzc3x8fHRkZGR0dHbGxsTU1NUFBQeHh4u7u7SEhIRUVFSkpKQkJCTExMQEBATk5OPj4+UVFRREREUlJSU1NTVFRUWlpaTk5OQkJCSkpKf39/WlpagICAVlZWUVFRV1dXJefb5AAAAMR0Uk5TAFUEKAkZHAJ//KUV6/FC0v/VK4DVK/+AK4ArgCuAK4ARRDkr/83K+/9WBCFZrZ0FIFqXz/X/6jfql9P05pFHFSdl6viQAjmd5e+8dTkrgOD63aVcK4D0/PrfKQglgFzdwGcu1xeAC/+ECP+dF1qXlxUM//X/pQwra67e/7oEWKXg+MIb8Lvz7WMdBDd5ufj/5aKqStr0yJEz/6r7zpJWIP+qrvfYBP+qF31/PQf/qv+q/6r/q/+y/8f/1anF4hlZJ0OcL2iasRgAAAGhSURBVHicY2AgABgJKYCpYGJmgQuxsrFjUcHByQUT4ebh5cOigl9AECYiJCAgjEWFCEKFqJiAOH4VEmICkvhVSIkJSONXISMmIItfhZyYgDyDgqISbhXKKgKqauoCGprYVWhp6+iKCYCBHqYKfQNDI2MTiLSAqZk5ugoLSytrqG4BMRtbO3sUdzg4OgnAgJizgICLK4pf3Nw94LKeXt4+vmICfqi+9YdKBwQGBYNEQgQEQlFVhAFlwyMEIqOiISIxpgKxqCri4hMSk5IR4ZGiIZCKP0zT0gUy8KvIzBLIzsnNyy/AqaKwSKC4BOi2UqwqysorKquqIX6rwVRRW1ff0AgLGo2mZnQVLa1t8HBtd+/oRHZpV3dPbx9Msn/CxBKBSah+mTwFarFA9dRp02cwMMwUmIWqYhpEevacufPmg4UWCCxEVbEIGGOLwwSWLIUJLRNYjqpixcpVq9cghQfDWoF1+MOUYb3ABgIqNgpsIqBis8AWAiq2CmwjoGK7wA4CKnYK7MKiYrfAHrjQXoEELCr27T8AFzp46DAWFXgAESoAg/db29nL3vkAAAAASUVORK5CYII=" />
-                    </defs>
-                    <use href="#img2" x="7" y="0" />
-                  </svg> -->
-                </span>
+                <div class="Tune">
+                  <h3 class="NoteValue">--</h3>
+                </div>
+                
               </div>
-
-              <div class="Tune">
-                <h3 class="NoteValue">--</h3>
-              </div>
-            </div>
-            <button id="startStopButton">Start Tuner</button>
-            <div class="discription">
-              <p>
-                <strong>MUST ALLOW MICROPHONE ACCESS ON YOUR WEB BROWSER.</strong> The quality of microphone is very
-                important in this project. YOU MAY PICKUP SOME NOISE FREQUENCIES. The distance
-                from sound source is also matter. Environmental noise will effect the sound quality.
-              </p>
-              <p><b>Time to complete this project:</b> 50-80 hours</p>
+              <button id="startStopButton" class="primary-button">Start Tuner</button>
             </div>
           </div>
         </section>
@@ -391,11 +274,7 @@
         <div>
           <div class="italic-text">
             <p>
-              Playing the guitar is really healthy, it can help to manage your stress, enhance
-              your
-              memory,
-              improve motor skills and will help you feel more able to cope with performing in
-              life!
+              Remembering the Standard Tuning note order is simple, just remember the phrase: Every Amateur Does Get Better Eventually.
             </p>
           </div>
         </div>
@@ -418,7 +297,7 @@
               title="Guitar Lessons">
             <div class="logo-name">
               Guitar <span>Lessons</span>
-              </div>
+            </div>
           </a>
         </div>
 
