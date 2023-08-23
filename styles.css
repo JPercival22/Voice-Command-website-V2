@@ -883,22 +883,17 @@ footer {
     background-image: url(/img/eminor-min.png);
 }
 
-
-/*basics page 2 content cards styles*/
-
-/* strings styles  */
-.tuning-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.acoustic-guitar-tuner {
-    height: 500px;
-}
-
 /* dynamic tuner  */
-/* guitar tuner   */
+.flex-row-lg {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col_centered .guitar-headstock_tuning {
+    width: 100%;
+    height: auto;
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -919,9 +914,9 @@ footer {
     border-radius: 50%;
 }
 
-.container>span {
+.container>.natural {
     position: absolute;
-    top: calc((50vh / 4) - 100px);
+    top: calc((50vh / 4) - 97px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -929,6 +924,11 @@ footer {
     background: #fff;
 }
 
+.container>.natural .hidden {
+    display: none;
+}
+
+.container>.natural p,
 .container>span p {
     display: flex;
     color: black;
@@ -989,7 +989,6 @@ footer {
     position: absolute;
     top: 50%;
     left: calc(100% + -4px);
-    /* Adjust the distance from the dial */
     width: 20px;
     height: 20px;
     background-color: var(--blue-grey-1);
@@ -1012,8 +1011,6 @@ footer {
     border-top: 3px solid rgb(6, 245, 6);
 }
 
-/* .dial.active, */
-/* .Tune.active, */
 .natural.active {
     background: rgb(6, 245, 6);
     color: #fff;
@@ -1074,145 +1071,29 @@ footer {
     font-size: 16px;
 }
 
+.flex-row-lg .flex-col_centered .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-row-lg .flex-col_centered .button-container p {
+    margin-top: 1em;
+}
+
 /* tuner notes styles  */
-
-.tuner-E {
+.interactive-notes .col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -234px;
-    left: 42px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    color: #d34836;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
+    justify-content: space-around;
+    gap: 1em;
 }
-
-
-.tuner-A {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -358px;
-    left: 42px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    color: #dfbd00;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
+.interactive-notes button {
+    padding: 20px;
+    border: 1px solid var(--brand-color-blue);
     border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
-}
-
-.tuner-D {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -482px;
-    left: 42px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
-    color: #b0dd2a;
-}
-
-.tuner-G {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -528px;
-    left: 314px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
-    color: #04c7c7;
-}
-
-.tuner-B {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -493px;
-    left: 314px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
-    color: #a507a5fd;
-}
-
-.tuner-high-E {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-    top: -460px;
-    left: 314px;
-    width: 45px;
-    height: 45px;
-    font-family: 'Spartan';
-    font-size: 26px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid rgb(223, 223, 223);
-    background-color: #d3d3d391;
-    cursor: pointer;
-    padding-bottom: 5px;
-    color: #d34836;
 }
 
 .tuner-E:hover,
@@ -1242,92 +1123,6 @@ footer {
     outline: transparent;
 }
 
-/* string identifier styles (Acoustic Guitar)  */
-.e_note-signifyer {
-    position: absolute;
-    top: 20px;
-    left: 114px;
-    height: 205px;
-}
-
-.a_note-signifyer {
-    position: absolute;
-    top: 20px;
-    left: 118px;
-    height: 284px;
-}
-
-.d_note-signifyer {
-    position: absolute;
-    top: 24px;
-    left: 118px;
-    height: 360px;
-}
-
-.g_note-signifyer {
-    position: absolute;
-    top: 22px;
-    left: -114px;
-    height: 362px;
-}
-
-.b_note-signifyer {
-    position: absolute;
-    top: 26px;
-    left: -100px;
-    height: 279px;
-}
-
-.high-e_note-signifyer {
-    position: absolute;
-    top: 30px;
-    left: -86px;
-    height: 196px;
-}
-
-/* string identifier animation styles once triggered by click event */
-.e_note-signifyer,
-.a_note-signifyer,
-.d_note-signifyer,
-.g_note-signifyer,
-.b_note-signifyer,
-.high-e_note-signifyer {
-    animation-duration: 7000ms;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-name: fadeOutDown;
-    display: none;
-}
-
-
-
-@keyframes fadeOutDown {
-    0% {
-        opacity: 0;
-        transform: translateY(0);
-    }
-
-    30% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-
-.yak {
-    display: none;
-}
-
-.prev,
-.next {
-    display: none;
-}
-
-/* large mobile and small tablet view ports */
 
 @media all and (min-width: 576px) {
 
@@ -1508,11 +1303,6 @@ footer {
 
     .flex-col_centered .full-width-image {
         width: 80%;
-        height: auto;
-    }
-
-    .flex-col_centered .guitar-headstock_tuning {
-        width: 500px;
         height: auto;
     }
 

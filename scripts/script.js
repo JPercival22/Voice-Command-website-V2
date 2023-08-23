@@ -78,61 +78,13 @@ tabButtons.forEach(button => {
 tabButtons[0].click();
 });
 
+function play(sound) {
+  var audio = document.getElementById("audio");
+  audio.setAttribute('src', sound);
+  audio.play();
+}
 
 
-
-// 
-
-    // guitar tuner 
-    // var string1 = $("#highE")[0];
-    // var string2 = $("#B")[0];
-    // var string3 = $("#G")[0];
-    // var string4 = $("#D")[0];
-    // var string5 = $("#A")[0];
-    // var string6 = $("#lowE")[0];
-    // var lowE = $(".tuner-E");
-    // var lowEImage = $(".e_note-signifyer");
-    // var noteA = $(".tuner-A");
-    // var noteAImage = $(".a_note-signifyer");
-    // var noteD = $(".tuner-D");
-    // var noteDImage = $(".d_note-signifyer");
-    // var noteG = $(".tuner-G");
-    // var noteGImage = $(".g_note-signifyer");
-    // var noteB = $(".tuner-B");
-    // var noteBImage = $(".b_note-signifyer");
-    // var highE = $(".tuner-high-E");
-    // var highEImage = $(".high-e_note-signifyer");
-
-    // highE.click(function () {
-    //     highEImage.show();
-    //     string1.play();
-    // });
-    // noteB.click(function () {
-    //     noteBImage.show();
-    //     string2.play();
-
-    // });
-    // noteG.click(function () {
-    //     noteGImage.show();
-    //     string3.play();
-
-    // });
-    // noteD.click(function () {
-    //     noteDImage.show();
-    //     string4.play();
-
-    // });
-    // noteA.click(function () {
-    //     noteAImage.show();
-    //     string5.play();
-
-    // });
-    // lowE.innerHTML = "E",
-    //     lowE.click(function () {
-    //         lowEImage.show();
-    //         string6.play();
-
-    //     });
 
     // carousel functionality 
     // const testimonials = document.querySelector('.open-chord-carousel');
