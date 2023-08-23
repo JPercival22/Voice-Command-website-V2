@@ -2,87 +2,81 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="keywords" content="HTML5, CSS3, JavaScript">
-  <meta name="description" content="Description on how to string an array of six stringed guitars">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Joseph Percival">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#317EFB" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="HTML5, CSS3, JavaScript, Online Guitar Tuner, Voice Controlled Website.">
+  <meta name="description" content="Description on how to tune your guitar using online guitar tuner.">
+  <meta name="author" content="Joseph Percival">
+  <meta name="theme-color" content="#317EFB">
   <title>Basics Lesson 2</title>
   <link rel="icon" href="/assets/img/global-imgs/badge.png" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <link rel="preload" fetchpriority="high" as="image" href="/assets/img/basics-hero.webp" type="image/webp">
-  <link href="https://fonts.googleapis.com">
-  <link href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" as="style"
-    onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet" type="text/css" />
-  </noscript>
+  <!-- <link rel="preload" fetchpriority="high" as="image" href="/assets/img/hero-imgs/tuning-hero.webp" type="image/webp"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,600&display=swap"
+    rel="stylesheet">
   <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.4.0/annyang.min.js"></script>
     <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
-
 </head>
 
-<header>
-  <nav id="navbar">
-    <div class="navbar-container">
-      <div class="home-link">
-        <a href="/index.html" class="navbar-logo">
-          <div class="logo-container" title="logo and home button">
-            <img src="/assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
-            <h1 class="logo-name">Guitar <span>Lessons</span></h1>
-          </div>
-        </a>
-      </div>
-
-      <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
-        <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
-          <path
-            d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
-        </svg>
-      </button>
-      <ul id="nav-menu" class="nav-menu">
-        <li class="navbar-link navbar-item">
-          <a href="/basics.html" title="Link to the basics Page">Basics</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/strings.html" title="Link to the strings page">Strings</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/frets.html" title="Link to the tuner page">Frets</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/chords.html" title="Link to the tuner page">Chords</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
-        </li>
-        <li class="navbar-link navbar-item">
-          <a href="/lead.html" title="Link to the tuner page">Lead</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <section id="top" class="global-hero-banner-with-button basics">
-    <div class="hero-content">
-      <h2 class="title white">Welcome To The Guitar Basics Lessons.</h2>
-      <div class="hero-button-container">
-        <a href="#" class="primary-button" id="openModal">Command Hub</a>
-        <a onclick="goBack()" class="secondary-button"> Go Back </a>
-      </div>
-    </div>
-  </section>
-</header>
-
 <body>
+  <header>
+    <nav id="navbar">
+      <div class="navbar-container">
+        <div class="home-link">
+          <a href="/index.html" class="navbar-logo">
+            <div class="logo-container" title="logo and home button">
+              <img src="/assets/img/global-imgs/badge.svg" width="40" height="40" alt="company logo">
+              <div class="logo-name">
+                <h1>Guitar <span>Lessons</span></h1>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <button type="button" class="hamburger-menu" id="hamburger-menu" aria-label="main navigation menu button">
+          <svg class="icon-bar" xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+            <path
+              d="M176.923-269.231q-7.192 0-12.058-4.909Q160-279.049 160-286.307q0-7.257 4.865-12.013 4.866-4.757 12.058-4.757h606.154q7.192 0 12.058 4.91Q800-293.258 800-286.001q0 7.258-4.865 12.014-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.909-4.865-4.91-4.865-12.167t4.865-12.014q4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909 4.865 4.91 4.865 12.167t-4.865 12.014q-4.866 4.756-12.058 4.756H176.923Zm0-193.846q-7.192 0-12.058-4.91Q160-666.742 160-673.999q0-7.258 4.865-12.014 4.866-4.756 12.058-4.756h606.154q7.192 0 12.058 4.909Q800-680.951 800-673.693q0 7.257-4.865 12.013-4.866 4.757-12.058 4.757H176.923Z" />
+          </svg>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li class="navbar-link navbar-item">
+            <a href="/basics.html" title="Link to the basics Page">Basics</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/strings.html" title="Link to the strings page">Strings</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/tuner.html" title="Link to the tuner page">Tuner</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/frets.html" title="Link to the tuner page">Frets</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/chords.html" title="Link to the tuner page">Chords</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/rhythm.html" title="Link to the tuner page">Rhythm</a>
+          </li>
+          <li class="navbar-link navbar-item">
+            <a href="/lead.html" title="Link to the tuner page">Lead</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="top" class="global-hero-banner-with-button tuning">
+      <div class="hero-content">
+        <h2 class="title white">Welcome To The Standard Tuning Lesson.</h2>
+        <div class="hero-button-container">
+          <a href="#" class="primary-button" id="openModal">Command Hub</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
   <main>
     <article>
       <div class="main-content-container">
@@ -113,7 +107,9 @@
 
                   <table>
                     <!-- <th>What to say</th> -->
-                    <th>What to say to Connie.</th>
+                    <tr>
+                      <th>What to say to Connie.</th>
+                    </tr>
                     <tr>
                       <!-- <td>Home</td> -->
                       <td>Connie, open the Home Page</td>
@@ -165,9 +161,9 @@
                 <div class="tab-content" id="tab2">
                   <table>
                     <tbody>
-
-                      <th>What to say.</th>
-
+                      <tr>
+                        <th>What to say.</th>
+                      </tr>
                       <tr>
                         <td>Scroll Up.</td>
                       </tr>
@@ -407,14 +403,11 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section>
-          <div class="italic-text">
-            <p>Even a soft strum can get a pretty loud sound. A lot of beginner's tend to hit their guitar with
-              everything they’ve got, and can sound harsh to other people. Take your time and try to think about other
-              people too.</p>
+            <div class="italic-text">
+              <p>Even a soft strum can get a pretty loud sound. A lot of beginner's tend to hit their guitar with
+                everything they’ve got, and can sound harsh to other people. Take your time and try to think about other
+                people too.</p>
+            </div>
           </div>
         </section>
 
@@ -427,6 +420,7 @@
         </a>
       </div>
     </article>
+
     <footer>
       <div class="footer-row">
         <!-- <div class="footer-top-row_container"> -->
@@ -434,7 +428,9 @@
           <a class="logo" href="index.html" title="Guitar Lessons">
             <img class="logo-image" src="/assets/img/global-imgs/badge.svg" width="80" height="80" alt="Site logo"
               title="Guitar Lessons">
-            <h1 class="logo-name">Guitar <span>Lessons</span></h1>
+            <div class="logo-name">
+              Guitar <span>Lessons</span>
+            </div>
           </a>
         </div>
 
@@ -575,7 +571,8 @@
       </div>
     </footer>
   </main>
-  <script defer="true" src="scripts/script.js"></script>
+  <script defer src="scripts/script.js"></script>
+
 </body>
 
 </html>

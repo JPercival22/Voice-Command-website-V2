@@ -142,6 +142,7 @@ a {
 }
 
 .italic-text {
+    margin-top: 1em;
     font-style: italic;
     font-weight: 700;
 }
@@ -588,7 +589,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
 }
 
 .flex-col_centered {
@@ -596,7 +596,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     margin-bottom: 1em;
 }
 
@@ -1440,6 +1439,13 @@ footer {
         margin-bottom: 1em;
     }
 
+    .page-nav-container .card .card-content .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
     .page-nav-container .card-image {
         max-height: 250px;
     }
@@ -1505,6 +1511,10 @@ footer {
         height: auto;
     }
 
+    .flex-col_centered .guitar-headstock_tuning {
+        width: 500px;
+        height: auto;
+    }
 
     .flex-col_centered .container .circle {
         top: 54%;
@@ -1635,7 +1645,7 @@ footer {
     }
 
     /* tuner  */
-
+    /* 
     .flex-col_centered .container {
         margin-top: 2em;
     }
@@ -1666,7 +1676,7 @@ footer {
 
     #startStopButton {
         margin-top: 0;
-    }
+    } */
 
     footer {
         display: flex;
@@ -1842,7 +1852,7 @@ footer {
     .page-nav-container .card .card-content .button-container {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
 
@@ -1870,6 +1880,9 @@ footer {
         align-items: center;
         justify-content: center;
     }
+
+    /* tuner  */
+
 }
 
 @media only screen and (min-width: 1400px) {
