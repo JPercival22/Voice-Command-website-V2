@@ -1,45 +1,8 @@
-/*
-The MIT License (MIT)
 
-Author 1: Copyright (c) 2022 - FreeBurma
-FreeBurma Copyright rules: 
-
-If you are using this source code in Your Projects including 
-development, digital and electronic publication must include my GitHub repo links 
-and Author 2 copyright declaration. 
+// Author 1: Copyright (c) 2022 - FreeBurma
+// Author 2: Chris Wilson
 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-==================================================================================
-==================================================================================
-Author 2:  Copyright (c) 2014 Chris Wilson 
-Chris Wilson copyright declaration as follow. 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
 // Define a function to start/stop the audio processing
 function toggleAudioProcessing() {
   if (audioContext.state === 'suspended') {
@@ -126,14 +89,6 @@ function MicInput()
     // updatePitch(); 
 }// end LiveInput()
 
-////==================================================================================
-//// The following codes are copied from PitchDetect, GitHub source. 
-//// I gave full credit to author to accomplish my project without using too much research. 
-//// If you want to see the original source code, please go to the following link. 
-//// Source Code: https://github.com/cwilso/PitchDetect
-////==================================================================================
-
-
 function error() 
 {
     alert('Stream generation failed.');
@@ -174,8 +129,6 @@ function goStream(stream)
     updatePitch(); 
 
 }// end goStream()
-
-
 
 
 function updatePitch()
