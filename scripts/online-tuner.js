@@ -10,18 +10,22 @@ function toggleAudioProcessing() {
           // Start audio processing here
           MicInput();
           startStopButton.textContent = 'Stop Tuner'; // Change button text
+          startStopButton1.textContent = 'Stop Tuner'; // Change button text
       });
   } else if (audioContext.state === 'running') {
       // Stop audio processing here
       mediaStreamSource.disconnect();
       audioContext.suspend();
       startStopButton.textContent = 'Start Tuner'; // Change button text
+      startStopButton1.textContent = 'Start Tuner'; // Change button text
   }
 }
 
 // Add an event listener to the button
 const startStopButton = document.getElementById('startStopButton');
+const startStopButton1 = document.getElementById('startStopButton1');
 startStopButton.addEventListener('click', toggleAudioProcessing);
+startStopButton1.addEventListener('click', toggleAudioProcessing);
 
 console.log('JS Loaded ...');
 window.AudioContext = window.AudioContext || window.webkitAudioContext; 

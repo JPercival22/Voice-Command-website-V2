@@ -1109,6 +1109,10 @@ footer {
     fill: #4eb3ec;
 }
 
+#large-device-display {
+    display: none;
+}
+
 @media all and (min-width: 576px) {
 
     .main-content-container {
@@ -1345,10 +1349,6 @@ footer {
         width: 70%;
     }
 
-    .tuner-button-container .tuner-editorial {
-        margin-top: 2em;
-    }
-
     .footer-column .logo-name {
         font-family: var(--body-copy);
         font-size: 1.6rem;
@@ -1376,6 +1376,10 @@ footer {
     }
 
     /* layout-styles  */
+    #large-device-display {
+        display: none;
+    }
+
     .flex-col_left {
         align-items: center;
     }
@@ -1443,14 +1447,41 @@ footer {
 
     /* tuner  */
     .flex-col_centered .container .circle {
-        top: 68%;
+        top: 48%;
         left: 50%;
         width: 40vw;
-        height: 55vh;
+        height: 42vh;
     }
 
     .tuner-button-container {
-        margin-top: -2em;
+       display: contents;
+    }
+
+    .tuner-button-container .primary-button {
+        width: 43%;
+    }
+
+    .flex-col_centered .container .natural {
+        top: calc((50vh / 4) - 150px);
+    }
+
+    .flex-col_centered .container .natural .vline {
+        top: calc((50vh / 4) - 124px);
+        position: relative;
+    }
+
+    .flex-col_centered .container .natural .vline-l {
+        position: inherit;
+        left: -80px;
+        top: calc(12.5vh - 50px);
+        transform: rotate(320deg);
+    }
+
+    .flex-col_centered .container .natural .vline-r {
+        position: inherit;
+        left: 90px;
+        top: calc(12.5vh - 50px);
+        transform: rotate(30deg);
     }
 
     footer {
@@ -1656,6 +1687,14 @@ footer {
         justify-content: center;
     }
 
+    #sm-device-display {
+        display: none;
+    }
+
+    #large-device-display {
+        display: flex;
+    }
+
     /* tuner  */
     .flex-col-sm-dv {
         display: none;
@@ -1673,11 +1712,11 @@ footer {
     }
 
     .flex-row-lg .flex-col_centered {
-        width: 40%;
+        width: 50%;
     }
 
     .interactive-notes {
-        width: 84%;
+        width: 60%;
         margin-bottom: 2em;
         cursor: pointer;
     }
@@ -1690,10 +1729,6 @@ footer {
         gap: 1.5em;
     }
 
-    .tuner-editorial {
-        margin-top: 2em;
-    }
-
     .interactive-notes button:hover {
         background-color: var(--secondary-hover);
         color: var(--brand-color-white);
@@ -1703,27 +1738,67 @@ footer {
 
     /* dynamic tuner  */
     .flex-col_centered .container {
-        height: 35vh;
+        position: relative;
+        left: 8%;
+        height: 28vh;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 110px);
+        top: calc((50vh / 4) - 200px);
+    }
+
+    .flex-col_centered .container .natural .vline {
+
+        top: calc((50vh / 4) - 60px);
+    }
+
+    .flex-col_centered .container .natural .vline-l {
+        position: inherit;
+        left: -80px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(320deg);
+    }
+
+    .flex-col_centered .container .natural .vline-r {
+        position: inherit;
+        left: 90px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(30deg);
     }
 
     .flex-col_centered .container .circle {
-        top: 60%;
+        top: 54%;
         left: 50%;
-        width: 30vw;
-        height: 46vh;
+        width: 27vw;
+        height: 35vh;
     }
 
     .dial {
         top: 10%;
-        height: 156px;
+        left: 49%;
+    }
+
+    .center-circle {
+        left: calc(100% + -5px);
+    }
+
+    .circle>span:nth-child(2),
+    .circle>span:nth-child(3) {
+        top: 170px;
+    }
+
+    .Tune {
+        margin-top: 240px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .Tune h3 {
+        font-size: 34px;
     }
 
     .tuner-button-container {
-        margin-top: 0em;
+        display: contents;
     }
 }
 
@@ -1772,6 +1847,84 @@ footer {
 
     .footer-row {
         margin: var(--side-margins-1400px);
+    }
+
+    /* interactive tuner   */
+    .flex-col_centered .guitar-headstock_tuning {
+        width: 40%;
+        height: auto;
+    }
+
+    /* dynamic tuner  */
+    .flex-col_centered .container {
+        position: relative;
+        left: 8%;
+        height: 28vh;
+    }
+
+    .flex-col_centered .container .natural {
+        top: calc((50vh / 4) - 200px);
+    }
+
+    .flex-col_centered .container .natural .vline {
+
+        top: calc((50vh / 4) - 60px);
+    }
+
+    .flex-col_centered .container .natural .vline-l {
+        position: inherit;
+        left: -80px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(320deg);
+    }
+
+    .flex-col_centered .container .natural .vline-r {
+        position: inherit;
+        left: 90px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(30deg);
+    }
+
+    .flex-col_centered .container .circle {
+        top: 54%;
+        left: 50%;
+        width: 27vw;
+        height: 35vh;
+    }
+
+    .dial {
+        top: 10%;
+        left: 49%;
+    }
+
+    .center-circle {
+        left: calc(100% + -5px);
+    }
+
+    .circle>span:nth-child(2),
+    .circle>span:nth-child(3) {
+        top: 170px;
+    }
+
+    .Tune {
+        margin-top: 240px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .Tune h3 {
+        font-size: 34px;
+    }
+
+    .Tune.active {
+        background: rgb(6, 245, 6);
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+    }
+
+    .tuner-button-container {
+        display: contents;
     }
 }
 
@@ -1823,119 +1976,65 @@ footer {
         width: 100%;
     }
 
-    /* interactive tuner  */
-    .flex-col_centered .guitar-headstock_tuning {
-        max-width: 290px;
+    .footer-row {
+        margin: var(--side-margins-1800px);
     }
 
-    .interactive-notes button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--body-copy);
-        font-size: 2rem;
-        border: 1px solid var(--brand-color-blue);
-        border-radius: 50%;
-        box-shadow: var(--br-shadow);
-        height: 70px;
-        width: 70px;
+    /* interactive tuner   */
+    .flex-col_centered .guitar-headstock_tuning {
+        width: 40%;
+        height: auto;
     }
 
     /* dynamic tuner  */
     .flex-col_centered .container {
-        height: 32vh;
+        position: relative;
+        left: 8%;
+        height: 28vh;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 190px);
+        top: calc((50vh / 4) - 226px);
     }
 
     .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 110px);
-        position: absolute;
-    }
 
-    .flex-col_centered .container .natural .vline-r {
-        top: calc((50vh / 4) - 90px);
-        position: absolute;
-        left: 100px;
-        rotate: 38grad;
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        top: calc((50vh / 4) - 90px);
-        position: absolute;
-        left: -83px;
-        rotate: 352grad;
-    }
-
-    .flex-col_centered .container .circle {
-        top: 60%;
-        left: 50%;
-        width: 24vw;
-        height: 34vh;
-    }
-
-    .dial {
-        top: 20%;
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 200px;
-    }
-
-    .Tune {
-        margin-top: 300px;
-    }
-
-    .tuner-button-container {
-        margin-top: 0;
-    }
-
-    .tuner-button-container .primary-button {
-        width: 30%;
-    }
-
-    .footer-row {
-        margin: var(--side-margins-1800px);
-    }
-}
-
-@media only screen and (min-width:1880px) {
-    .flex-col_centered .container {
-        height: 36vh;
-    }
-
-    .flex-col_centered .container .natural .vline {
         top: calc((50vh / 4) - 60px);
     }
 
     .flex-col_centered .container .natural .vline-l {
-        top: calc(12.5vh - 37px);
-        rotate: 330deg;
+        position: inherit;
+        left: -80px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(320deg);
     }
 
     .flex-col_centered .container .natural .vline-r {
-        top: calc(12.5vh - 40px);
-        rotate: 30deg;
+        position: inherit;
+        left: 90px;
+        top: calc(12.5vh - 30px);
+        transform: rotate(30deg);
     }
 
     .flex-col_centered .container .circle {
-        top: 57%;
+        top: 54%;
         left: 50%;
         width: 22vw;
         height: 42vh;
     }
 
     .dial {
-        top: 20%;
+        top: 10%;
         left: 49%;
     }
 
     .center-circle {
         left: calc(100% + -5px);
+    }
+
+    .circle>span:nth-child(2),
+    .circle>span:nth-child(3) {
+        top: 170px;
     }
 
     .Tune {
@@ -1944,14 +2043,81 @@ footer {
         height: 55px;
     }
 
-    .Tune.active {
-        background: rgb(6, 245, 6);
-        border-radius: 50%;
+    .Tune h3 {
+        font-size: 34px;
+    }
+
+    .tuner-button-container {
+        display: contents;
+    }
+
+}
+
+@media only screen and (min-width:1880px) {
+
+    /* interactive tuner   */
+    .flex-col_centered .guitar-headstock_tuning {
+        width: 40%;
+        height: auto;
+    }
+
+    /* dynamic tuner  */
+    .flex-col_centered .container {
+        position: relative;
+        left: 8%;
+        height: 28vh;
+    }
+
+    .flex-col_centered .container .natural {
+        top: calc((50vh / 4) - 226px);
+    }
+
+    .flex-col_centered .container .natural .vline {
+        top: calc((50vh / 4) - 60px);
+    }
+
+    .flex-col_centered .container .natural .vline-l {
+        top: calc(12.5vh - 40px);
+        transform: rotate(320deg);
+    }
+
+    .flex-col_centered .container .natural .vline-r {
+        top: calc(12.5vh - 40px);
+        transform: rotate(30deg);
+    }
+
+    .flex-col_centered .container .circle {
+        top: 54%;
+        left: 50%;
+        width: 22vw;
+        height: 42vh;
+    }
+
+    .dial {
+        top: 10%;
+        left: 49%;
+    }
+
+    .center-circle {
+        left: calc(100% + -5px);
+    }
+
+    .circle>span:nth-child(2),
+    .circle>span:nth-child(3) {
+        top: 170px;
+    }
+
+    .Tune {
+        margin-top: 240px;
         width: 55px;
         height: 55px;
     }
 
     .Tune h3 {
         font-size: 34px;
+    }
+
+    .tuner-button-container {
+        display: contents;
     }
 }
