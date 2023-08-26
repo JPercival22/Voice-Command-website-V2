@@ -807,6 +807,7 @@ a {
 
 #dynamic-tuner-sm .flex-col_centered {
     width: 100%;
+    height: 45vh;
     margin: 0;
 }
 
@@ -822,7 +823,7 @@ a {
 .container {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -830,10 +831,10 @@ a {
 
 .flex-col_centered .container .circle {
     position: absolute;
-    top: 57%;
+    top: 50%;
     left: 50%;
-    width: 87vw;
-    height: 44vh;
+    width: 80vw;
+    height: 34vh;
     transform: translate(-50%, -50%);
     border-top: 5px solid var(--brand-color-purple);
     border-radius: 50%;
@@ -841,7 +842,7 @@ a {
 
 .container>.natural {
     position: absolute;
-    top: calc((50vh / 4) - 110px);
+    top: calc((50vh / 4) - 113px);
     font-weight: 500;
     display: flex;
     flex-direction: column;
@@ -871,7 +872,7 @@ a {
 .flex-col_centered .container .natural .vline-l {
     position: inherit;
     left: -80px;
-    top: calc(12.5vh - 47px);
+    top: calc(12.5vh - 44px);
     transform: rotate(320deg);
     font-weight: 500;
 }
@@ -897,7 +898,7 @@ a {
 
 .circle>span:nth-child(2) {
     position: absolute;
-    top: 164px;
+    top: 104px;
     left: -16px;
     display: flex;
     flex-direction: column;
@@ -909,7 +910,7 @@ a {
 
 .circle>span:nth-child(3) {
     position: absolute;
-    top: 164px;
+    top: 104px;
     right: -20px;
     display: flex;
     flex-direction: column;
@@ -921,10 +922,10 @@ a {
 
 .dial {
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 50%;
     width: 10px;
-    height: 120px;
+    height: 130px;
     background: linear-gradient(to right, #4d40b3, #4eb3ec);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -941,13 +942,13 @@ a {
     height: 20px;
     background-color: var(--blue-grey-1);
     border-radius: 50%;
-    transform: translate(-50%, 210%);
+    transform: translate(-50%, 233%);
 }
 
 .Tune {
     width: 100px;
     height: 50px;
-    margin-top: 240px;
+    margin-top: 140px;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -1234,6 +1235,44 @@ footer {
         top: 60%;
     }
 
+    .container {
+        height: 30vh;
+    }
+
+    .container>.natural {
+        top: calc((50vh / 4) - 159px);
+    }
+
+    .flex-col_centered .container .circle {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        width: 54vw;
+        height: 29vh;
+    }
+
+    .dial {
+        left: 49%;
+        height: 130px;
+    }
+
+    .center-circle {
+        transform: translate(-50%, 314%);
+    }
+
+    .circle>span:nth-child(2), 
+    .circle>span:nth-child(3) {
+        top: 125px;
+    }
+
+    .Tune {
+        margin-top: 170px;
+    }
+
+    .tuner-button-container .primary-button {
+        width: 60%;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1428,7 +1467,6 @@ footer {
         letter-spacing: 1pt;
     }
 
-
 }
 
 @media screen and (min-width: 992px) {
@@ -1445,7 +1483,7 @@ footer {
 
     .flex-col_left {
         align-items: center;
-        margin-bottom: 5em;
+ 
     }
 
     .flex-col_left p {
@@ -1510,15 +1548,24 @@ footer {
     }
 
     /* tuner  */
-    .flex-col_centered .container .circle {
-        top: 48%;
-        left: 50%;
-        width: 34vw;
-        height: 30vh;
+    
+    #dynamic-tuner-sm .flex-col_left {
+        margin-bottom: 0;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 174px);
+        top: calc((50vh / 4) - 99px);
+    }
+
+    .flex-col_centered .container .circle {
+        top: 56%;
+        left: 50%;
+        width: 34vw;
+        height: 37vh;
+    }
+
+    .flex-col_centered .container .natural {
+        top: calc((50vh / 4) - 99px);
     }
 
     .flex-col_centered .container .natural .vline {
@@ -1538,6 +1585,19 @@ footer {
         left: 90px;
         top: calc(12.5vh - 50px);
         transform: rotate(30deg);
+    }
+
+    .dial {
+        top: 16%;
+        height: 144px;
+    }    
+
+    .Tune {
+        margin-top: 267px;
+    }
+
+    .center-circle {
+        transform: translate(-50%, 288%);
     }
 
     .tuner-button-container .primary-button {
@@ -2055,9 +2115,6 @@ footer {
         width: 100%;
     }
 
-    .footer-row {
-        margin: var(--side-margins-1800px);
-    }
 
     /* interactive tuner   */
     .flex-col_centered .guitar-headstock_tuning {
@@ -2081,6 +2138,10 @@ footer {
     .center-circle {
         left: calc(100% + -5px);
         transform: translate(-50%, 250%);
+    }
+
+    .footer-row {
+        margin: var(--side-margins-1800px);
     }
 
 }
