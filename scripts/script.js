@@ -80,8 +80,17 @@ tabButtons[0].click();
 
 function play(sound) {
   var audio = document.getElementById("audio");
-  audio.setAttribute('src', sound);
-  audio.play();
+  var audio2 = document.getElementById("audio-lg");
+
+  if (audio) {
+      audio.setAttribute('src', sound);
+      audio.play();
+  }
+
+  if (audio2) {
+      audio2.setAttribute('src', sound);
+      audio2.play();
+  }
 }
 
 
