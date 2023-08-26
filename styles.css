@@ -2155,10 +2155,10 @@ footer {
       }
 
     .flex-col_centered .container .circle {
-        top: 62%;
+        top: 60%;
         left: 50%;
         width: 15vw;
-        height: 21vh;
+        height: 26vh;
     }
 
     .circle>span:nth-child(2),
