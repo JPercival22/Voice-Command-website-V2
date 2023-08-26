@@ -187,6 +187,11 @@ a {
     transition: all .3s ease-in-out;
 }
 
+.primary-button:active,
+.secondary-button::active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
 /* General Component styles  */
 
 #navbar {
@@ -799,9 +804,14 @@ a {
 }
 
 /* dynamic tuner  */
-.flex-row-lg {
-    display: flex;
-    flex-direction: column;
+
+#dynamic-tuner-sm .flex-col_centered {
+    width: 100%;
+    margin: 0;
+}
+
+#dynamic-tuner-sm .flex-col_left {
+    margin-bottom: 3em;
 }
 
 .flex-col_centered .guitar-headstock_tuning {
@@ -818,20 +828,21 @@ a {
     align-items: center;
 }
 
-.circle {
+.flex-col_centered .container .circle {
     position: absolute;
-    top: 50%;
+    top: 57%;
     left: 50%;
+    width: 87vw;
+    height: 44vh;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
     border-top: 5px solid var(--brand-color-purple);
     border-radius: 50%;
 }
 
 .container>.natural {
     position: absolute;
-    top: calc((50vh / 4) - 97px);
+    top: calc((50vh / 4) - 110px);
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -849,15 +860,35 @@ a {
     color: black;
     border-radius: 50%;
     font-size: 2rem;
-    font-weight: 600;
+}
+
+.flex-col_centered .container .natural .vline {
+    top: calc((50vh / 4) - 124px);
+    position: relative;
+    font-weight: 500;
+}
+
+.flex-col_centered .container .natural .vline-l {
+    position: inherit;
+    left: -80px;
+    top: calc(12.5vh - 47px);
+    transform: rotate(320deg);
+    font-weight: 500;
+}
+
+.flex-col_centered .container .natural .vline-r {
+    position: inherit;
+    left: 90px;
+    top: calc(12.5vh - 47px);
+    transform: rotate(30deg);
+    font-weight: 500;
 }
 
 .circle>span {
-    top: 150px;
+    top: calc((50vh / 4) - 130px);
     width: 20px;
     height: 40px;
     font-size: 2rem;
-    font-weight: 600;
     background: #fff;
     display: flex;
     justify-content: center;
@@ -866,7 +897,8 @@ a {
 
 .circle>span:nth-child(2) {
     position: absolute;
-    left: -10px;
+    top: 164px;
+    left: -16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -877,7 +909,8 @@ a {
 
 .circle>span:nth-child(3) {
     position: absolute;
-    right: -10px;
+    top: 164px;
+    right: -20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -914,13 +947,12 @@ a {
 .Tune {
     width: 100px;
     height: 50px;
-    margin-top: 200px;
+    margin-top: 240px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 .circle.active {
     border-top: 3px solid rgb(6, 245, 6);
@@ -942,7 +974,7 @@ a {
 }
 
 .Tune h3 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
 }
 
@@ -976,28 +1008,25 @@ a {
     }
 }
 
-.discription {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 20px;
-    width: 100vw;
-    color: #fffa;
-    font-size: 16px;
-}
 
-.flex-row-lg .flex-col_centered .button-container {
+.tuner-button-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-.flex-row-lg .flex-col_centered .button-container p {
-    margin-top: 1em;
+.tuner-button-container .primary-button {
+    width: 100%;
 }
 
-/* tuner notes styles  */
+.tuner-button-container .primary-button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+/* interactive tuner */
 .interactive-notes .col {
     display: flex;
     flex-direction: column;
@@ -1203,7 +1232,6 @@ footer {
 
     .modal::after {
         top: 60%;
-        /* Adjust this value as needed */
     }
 
 }
@@ -1300,8 +1328,41 @@ footer {
         height: 46vh;
     }
 
+    /* dynamic tuner  */
+
+    #dynamic-tuner-sm .flex-col_left {
+        margin-bottom: 3em;
+    }
+
     .flex-col_centered .container .natural {
         top: calc((50vh / 4) - 123px);
+    }
+
+    .flex-col_centered .container .natural {
+        top: calc((50vh / 4) - 132px);
+        font-weight: 500;
+    }
+
+    .flex-col_centered .container .natural .vline {
+        top: calc((50vh / 4) - 124px);
+        position: relative;
+        font-weight: 500;
+    }
+
+    .flex-col_centered .container .natural .vline-l {
+        position: inherit;
+        left: -80px;
+        top: calc(12.5vh - 50px);
+        transform: rotate(320deg);
+        font-weight: 500;
+    }
+
+    .flex-col_centered .container .natural .vline-r {
+        position: inherit;
+        left: 90px;
+        top: calc(12.5vh - 50px);
+        transform: rotate(30deg);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .circle {
@@ -1341,12 +1402,13 @@ footer {
     .tuner-button-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
     .tuner-button-container .primary-button {
-        width: 70%;
+        width: 50%;
     }
 
     .footer-column .logo-name {
@@ -1366,6 +1428,7 @@ footer {
         letter-spacing: 1pt;
     }
 
+
 }
 
 @media screen and (min-width: 992px) {
@@ -1382,6 +1445,7 @@ footer {
 
     .flex-col_left {
         align-items: center;
+        margin-bottom: 5em;
     }
 
     .flex-col_left p {
@@ -1449,20 +1513,12 @@ footer {
     .flex-col_centered .container .circle {
         top: 48%;
         left: 50%;
-        width: 40vw;
-        height: 42vh;
-    }
-
-    .tuner-button-container {
-       display: contents;
-    }
-
-    .tuner-button-container .primary-button {
-        width: 43%;
+        width: 34vw;
+        height: 30vh;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 150px);
+        top: calc((50vh / 4) - 174px);
     }
 
     .flex-col_centered .container .natural .vline {
@@ -1483,6 +1539,12 @@ footer {
         top: calc(12.5vh - 50px);
         transform: rotate(30deg);
     }
+
+    .tuner-button-container .primary-button {
+        width: 40%;
+    }
+
+    /* footer styles  */
 
     footer {
         display: flex;
@@ -1552,6 +1614,9 @@ footer {
     .help-link span {
         text-transform: lowercase;
     }
+
+
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1695,6 +1760,10 @@ footer {
         display: flex;
     }
 
+    #large-device-display .flex-row_center {
+        display: flex;
+    }
+
     /* tuner  */
     .flex-col-sm-dv {
         display: none;
@@ -1709,6 +1778,17 @@ footer {
         align-items: center;
         flex-wrap: nowrap;
         width: 100%;
+        margin-top: 3em;
+    }
+
+    .flex-row_j-t {
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1em;
+        margin-bottom: 1em;
     }
 
     .flex-row-lg .flex-col_centered {
@@ -1737,64 +1817,73 @@ footer {
     }
 
     /* dynamic tuner  */
+
     .flex-col_centered .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        left: 8%;
+        left: unset;
         height: 28vh;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 200px);
+        top: calc((50vh / 4) - 182px);
     }
 
     .flex-col_centered .container .natural .vline {
-
-        top: calc((50vh / 4) - 60px);
+        top: calc((50vh / 4) - 122px);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .natural .vline-l {
         position: inherit;
         left: -80px;
-        top: calc(12.5vh - 30px);
+        top: calc(12.5vh - 40px);
         transform: rotate(320deg);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .natural .vline-r {
         position: inherit;
         left: 90px;
-        top: calc(12.5vh - 30px);
+        top: calc(12.5vh - 40px);
         transform: rotate(30deg);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .circle {
         top: 54%;
         left: 50%;
-        width: 27vw;
-        height: 35vh;
+        width: 22vw;
+        height: 37vh;
     }
 
     .dial {
         top: 10%;
         left: 49%;
+        height: 120px;
     }
 
     .center-circle {
         left: calc(100% + -5px);
+        transform: translate(-50%, 250%);
     }
 
     .circle>span:nth-child(2),
     .circle>span:nth-child(3) {
-        top: 170px;
+        top: 123px;
     }
 
     .Tune {
-        margin-top: 240px;
-        width: 55px;
-        height: 55px;
+        margin-top: 160px;
+        width: 45px;
+        height: 45px;
     }
 
     .Tune h3 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .tuner-button-container {
@@ -1830,97 +1919,87 @@ footer {
         margin-bottom: 2em;
     }
 
-    .flex-col_centered .container .circle {
-        top: 66%;
-        left: 50%;
-        width: 30vw;
-        height: 50vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 170px);
-    }
-
-    .tuner-button-container {
-        margin-top: 1em;
-    }
-
     .footer-row {
         margin: var(--side-margins-1400px);
     }
 
     /* interactive tuner   */
     .flex-col_centered .guitar-headstock_tuning {
-        width: 40%;
+        width: 50%;
         height: auto;
     }
 
     /* dynamic tuner  */
     .flex-col_centered .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: relative;
-        left: 8%;
+        left: unset;
         height: 28vh;
     }
 
     .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 200px);
+        top: calc((50vh / 4) - 182px);
     }
 
     .flex-col_centered .container .natural .vline {
-
-        top: calc((50vh / 4) - 60px);
+        top: calc((50vh / 4) - 122px);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .natural .vline-l {
         position: inherit;
         left: -80px;
-        top: calc(12.5vh - 30px);
+        top: calc(12.5vh - 40px);
         transform: rotate(320deg);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .natural .vline-r {
         position: inherit;
         left: 90px;
-        top: calc(12.5vh - 30px);
+        top: calc(12.5vh - 40px);
         transform: rotate(30deg);
+        font-weight: 500;
     }
 
     .flex-col_centered .container .circle {
         top: 54%;
         left: 50%;
-        width: 27vw;
-        height: 35vh;
+        width: 22vw;
+        height: 37vh;
     }
 
     .dial {
         top: 10%;
         left: 49%;
+        height: 120px;
     }
 
     .center-circle {
         left: calc(100% + -5px);
+        transform: translate(-50%, 250%);
     }
 
     .circle>span:nth-child(2),
     .circle>span:nth-child(3) {
-        top: 170px;
+        top: 123px;
     }
 
     .Tune {
-        margin-top: 240px;
-        width: 55px;
-        height: 55px;
+        margin-top: 160px;
+        width: 45px;
+        height: 45px;
     }
 
     .Tune h3 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
-    .Tune.active {
-        background: rgb(6, 245, 6);
-        border-radius: 50%;
-        width: 55px;
-        height: 55px;
+    #large-device-display .flex-row_center {
+        display: flex;
     }
 
     .tuner-button-container {
@@ -1986,138 +2065,47 @@ footer {
         height: auto;
     }
 
-    /* dynamic tuner  */
-    .flex-col_centered .container {
-        position: relative;
-        left: 8%;
-        height: 28vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 226px);
-    }
-
-    .flex-col_centered .container .natural .vline {
-
-        top: calc((50vh / 4) - 60px);
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        position: inherit;
-        left: -80px;
-        top: calc(12.5vh - 30px);
-        transform: rotate(320deg);
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        position: inherit;
-        left: 90px;
-        top: calc(12.5vh - 30px);
-        transform: rotate(30deg);
-    }
-
     .flex-col_centered .container .circle {
         top: 54%;
         left: 50%;
-        width: 22vw;
-        height: 42vh;
+        width: 16vw;
+        height: 36vh;
     }
 
     .dial {
         top: 10%;
-        left: 49%;
+        left: 50%;
+        height: 130px;
     }
 
     .center-circle {
         left: calc(100% + -5px);
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 170px;
-    }
-
-    .Tune {
-        margin-top: 240px;
-        width: 55px;
-        height: 55px;
-    }
-
-    .Tune h3 {
-        font-size: 34px;
-    }
-
-    .tuner-button-container {
-        display: contents;
+        transform: translate(-50%, 250%);
     }
 
 }
 
 @media only screen and (min-width:1880px) {
-
-    /* interactive tuner   */
-    .flex-col_centered .guitar-headstock_tuning {
-        width: 40%;
-        height: auto;
-    }
-
-    /* dynamic tuner  */
-    .flex-col_centered .container {
-        position: relative;
-        left: 8%;
-        height: 28vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 226px);
-    }
-
-    .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 60px);
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        top: calc(12.5vh - 40px);
-        transform: rotate(320deg);
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        top: calc(12.5vh - 40px);
-        transform: rotate(30deg);
-    }
-
     .flex-col_centered .container .circle {
-        top: 54%;
+        top: 48%;
         left: 50%;
-        width: 22vw;
-        height: 42vh;
+        width: 16vw;
+        height: 24vh;
     }
 
     .dial {
         top: 10%;
         left: 49%;
+        height: 130px;
     }
 
     .center-circle {
         left: calc(100% + -5px);
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 170px;
+        transform: translate(-50%, 250%);
     }
 
     .Tune {
-        margin-top: 240px;
-        width: 55px;
-        height: 55px;
+        margin-top: 30%;
     }
 
-    .Tune h3 {
-        font-size: 34px;
-    }
-
-    .tuner-button-container {
-        display: contents;
-    }
 }

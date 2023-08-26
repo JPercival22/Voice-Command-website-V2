@@ -223,25 +223,28 @@
           </div>
         </section>
 
-        <section>
-          <h3>Online Microphone Tuner</h3>
-          <div class="flex-col_left">
-            <p>This tuner uses your devices microphone, once you click the Start button below, your
-              browser will ask to access your microphone.
-              Please press ok or the tuner will not work. If you accidentally select no, please refresh your browser to
-              start again. <br>
-              Once you play any of your strings the tuner will tell you what note is detected. If the note is out of
-              tune, the tuner will turn red the needle will rotate to the left or to the right.
-              <br>
-              Left means your string is Flat and you need to tighten that string using the Tuning Peg found on the
-              Machine head. <br>
-              Right means your string is Sharp and you need to loosen that string using the Tuning Peg. <br>
-              Try to aim and tune each string, so the tuners needle rotates to the center and the tuner turns green.
+        <section id="sm-device-display">
+          <h3>Interactive Tuner</h3>
+          <div class="flex-row">
+            <p>The traditional way to tune the guitar, is by listening. So, now we know what each string is to be tuned
+              to, so now we need
+              to know what these notes sound like. This method can be difficult at first, but is really helpful if you
+              dont have access to
+              a Tuner. To tune, listen to the required note and then compare that sound with how your string sounds. If
+              it sounds flat (lower in
+              pitch that the actual note), then you need to tighten the string and vice versa if it sounds sharp (higher
+              pitched than the actual note),
+              you will need to loosen the string using your Machine Head.
             </p>
           </div>
-        </section>
-
-        <section id="sm-device-display">
+          <div class="flex-row">
+            <p>To help you, below is the image of a Guitar's Head Stock. At the sides each machine head is a note,
+              signifying
+              what each string should be tuned to. You can check this with the online tuner, by pressing the
+              start
+              button, either manually or vocally using the command, then plucking any string to see what that string is
+              tuned to. </p>
+          </div>
           <div class="flex-col-sm-dv">
             <div class="flex-col_centered">
               <div class="flex-row interactive-notes">
@@ -265,7 +268,7 @@
                 <img class="emphasis-logo" src="/assets/img/global-imgs/badge.svg" alt="company logo" width="60"
                   height="60">
                 <p>
-                  Ask Connie to play any strings note, once Connie understands you, the sound
+                  Ask, "<strong>Connie, play</strong>" and then any strings note, once Connie understands you, the sound
                   of that note will play
                   through your device. Alternatively, you can click or touch each note to hear it to check with your
                   guitar.
@@ -273,53 +276,71 @@
               </div>
 
             </div>
-
-            <div class="flex-col_centered">
-              <div class="container">
-                <div class="natural">
-                  <p>&#10003;</p>
-                  <p class="vline">&#124;</p>
-                  <p class="vline-l">&#124;</p>
-                  <p class="vline-r">&#124;</p>
-                  <p class="hidden">&#9838;</p>
-                </div>
-
-                <div class="circle ">
-                  <div class="dial ">
-                    <div class="center-circle"></div>
-                  </div>
-
-                  <span class="flat">&#9837;</span>
-
-                  <span class="sharp">&#9839;</span>
-                </div>
-
-                <div class="Tune">
-                  <h3 class="NoteValue">--</h3>
-                </div>
+          </div>
+        </section>
+        <section id="dynamic-tuner-sm">
+          <h3>Online Microphone Tuner</h3>
+          <div class="flex-col_left">
+            <p>This tuner uses your devices microphone, once you click the Start button below, your
+              browser will ask to access your microphone.
+              Please press ok or the tuner will not work. If you accidentally select no, please refresh your browser to
+              start again. <br>
+              Once you play any of your strings the tuner will tell you what note is detected. If the note is out of
+              tune, the tuner will turn red the needle will rotate to the left or to the right.
+              <br>
+              Left means your string is Flat and you need to tighten that string using the Tuning Peg found on the
+              Machine head. <br>
+              Right means your string is Sharp and you need to loosen that string using the Tuning Peg. <br>
+              Try to aim and tune each string, so the tuners needle rotates to the center and the tuner turns green.
+            </p>
+          </div>
+          <div class="flex-col_centered">
+            <div class="container">
+              <div class="natural">
+                <p>&#10003;</p>
+                <p class="vline">&#124;</p>
+                <p class="vline-l">&#124;</p>
+                <p class="vline-r">&#124;</p>
+                <p class="hidden">&#9838;</p>
               </div>
-            </div>
 
-            <div class="flex-col_centered">
-              <div class="tuner-button-container">
-                <button id="startStopButton" class="primary-button">Start Tuner</button>
+              <div class="circle ">
+                <div class="dial ">
+                  <div class="center-circle"></div>
+                </div>
+
+                <span class="flat">&#9837;</span>
+
+                <span class="sharp">&#9839;</span>
               </div>
-            </div>
-            <div class="flex-row">
-              <p>To help you, above is the image of a Guitar's Head Stock, besides each machine head is a note, signifying
-                what each string should be tuned to. You can check this with the online tuner too by pressing the
-                start
-                button, either manually or vocally using the command. </p>
+
+              <div class="Tune">
+                <h3 class="NoteValue">--</h3>
+              </div>
             </div>
           </div>
+
+          <!-- <div class="flex-col_centered"> -->
+            <div class="tuner-button-container">
+              <button id="startStopButton" class="primary-button">Start Tuner</button>
+            </div>
+          <!-- </div> -->
 
       </section>
 
       <section id="large-device-display">
+        <div class="flex-row">
+          <p>To help you, below is the image of a Guitar's Head Stock. At the sides each machine head is a note,
+            signifying
+            what each string should be tuned to. You can check this with the online tuner, by pressing the
+            start
+            button, either manually or vocally using the command, then playing any string to see what that string is
+            tuned to. </p>
+        </div>
         <div class="flex-row-lg">
           <div class="flex-col_centered">
             <div class="flex-row interactive-notes">
-              <audio id="audio audio-lg"></audio>
+              <audio id="audio-lg"></audio>
               <div class="col">
                 <button onclick="play('/assets/mp3/lowE.mp3')">E</button>
                 <button onclick="play('/assets/mp3/A.mp3')">A</button>
@@ -363,13 +384,13 @@
           </div>
 
         </div>
-        <div class="flex-row">
-          <div class="flex-col_left-md">
+        <div class="flex-row_j-t">
+          <div class="flex-col_centered">
             <div class="flex-row">
               <img class="emphasis-logo" src="/assets/img/global-imgs/badge.svg" alt="company logo" width="60"
                 height="60">
               <p>
-                Ask Connie to play any strings note, once Connie understands you, the sound
+                Ask, "<strong>Connie, play</strong>" snd the any strings note, once Connie understands you, the sound
                 of that note will play
                 through your device. Alternatively, you can click or touch each note to hear it to check with your
                 guitar.
@@ -383,12 +404,8 @@
             </div>
           </div>
         </div>
-        <div class="flex-row">
-          <p>To help you, above is the image of a Guitar's Head Stock, besides each machine head is a note, signifying
-            what each string should be tuned to. You can check this with the online tuner too by pressing the
-            start
-            button, either manually or vocally using the command. </p>
-        </div>
+
+
       </section>
 
       <div class="italic-text">
@@ -407,7 +424,6 @@
           </svg>
         </a>
       </div>
-
       <!-- end of main container  -->
       </div>
     </article>
