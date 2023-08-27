@@ -505,8 +505,10 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1em;
     margin-bottom: 1em;
+    width: 100%;
 }
 
 /* home page -inner course navigation  */
@@ -595,6 +597,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
 }
 
 .flex-col_centered {
@@ -602,6 +605,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     margin-bottom: 1em;
 }
 
@@ -806,16 +810,6 @@ a {
 
 /* dynamic tuner  */
 
-#dynamic-tuner-sm .flex-col_centered {
-    width: 100%;
-    height: 45vh;
-    margin: 0;
-}
-
-#dynamic-tuner-sm .flex-col_left {
-    margin-bottom: 3em;
-}
-
 .flex-col_centered .guitar-headstock_tuning {
     width: 100%;
     height: auto;
@@ -824,7 +818,7 @@ a {
 .container {
     position: relative;
     width: 100%;
-    height: 45vh;
+    height: 37.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -832,10 +826,10 @@ a {
 
 .flex-col_centered .container .circle {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
-    width: 80vw;
-    height: 34vh;
+    width: 260px;
+    height: 280px;
     transform: translate(-50%, -50%);
     border-top: 5px solid var(--brand-color-purple);
     border-radius: 50%;
@@ -843,12 +837,8 @@ a {
 
 .container>.natural {
     position: absolute;
-    top: calc((50vh / 4) - 113px);
+    top: calc((50vh / 4) - 97px);
     font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background: #fff;
 }
 
@@ -856,33 +846,39 @@ a {
     display: none;
 }
 
-.container>.natural p,
-.container>span p {
+.container>.natural .check {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: black;
     border-radius: 50%;
     font-size: 2rem;
 }
 
 .flex-col_centered .container .natural .vline {
-    top: calc((50vh / 4) - 124px);
-    position: relative;
+    top: calc((50vh / 4) - 58px);
+    position: inherit;
+    font-size: 2rem;
     font-weight: 500;
+    left: 7px;
 }
 
 .flex-col_centered .container .natural .vline-l {
     position: inherit;
     left: -80px;
-    top: calc(12.5vh - 44px);
+    top: calc(12.5vh - 22px);
     transform: rotate(320deg);
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .flex-col_centered .container .natural .vline-r {
     position: inherit;
     left: 90px;
-    top: calc(12.5vh - 47px);
+    top: calc(12.5vh - 27px);
     transform: rotate(30deg);
+    font-size: 2rem;
     font-weight: 500;
 }
 
@@ -912,7 +908,7 @@ a {
 .circle>span:nth-child(3) {
     position: absolute;
     top: 104px;
-    right: -20px;
+    right: -15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -923,13 +919,11 @@ a {
 
 .dial {
     position: absolute;
-    top: 0%;
-    left: 50%;
-    width: 10px;
-    height: 130px;
-    background: linear-gradient(to right, #4d40b3, #4eb3ec);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    top: 10%;
+    left: 49.5%;
+    height: 100px;
+    border: 2px solid var(--brand-color-d-blue);
+    border-radius: 20px;
     transform-origin: bottom center;
     transition-delay: 0.1s;
 }
@@ -938,34 +932,21 @@ a {
     content: "";
     position: absolute;
     top: 50%;
-    left: calc(100% + -4px);
+    left: calc(100% + 0px);
     width: 20px;
     height: 20px;
     background-color: var(--blue-grey-1);
     border-radius: 50%;
-    transform: translate(-50%, 233%);
+    transform: translate(-50%, 210%);
 }
 
 .Tune {
-    width: 100px;
-    height: 50px;
-    margin-top: 140px;
+    margin-top: 245px;
     background: #fff;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.circle.active {
-    border-top: 3px solid rgb(6, 245, 6);
-}
-
-.natural.active {
-    background: rgb(6, 245, 6);
-    color: #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
 }
 
 .flat.active,
@@ -983,8 +964,7 @@ a {
 .Tune.active {
     background: rgb(6, 245, 6);
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    padding: 12px;
 }
 
 .NoteValue {
@@ -1001,15 +981,14 @@ a {
     0%,
     100% {
         transform: rotate(-90deg);
-        transition: all .3s ease-in-out;
+        transition: all .1s ease-in-out;
     }
 
     50% {
         transform: rotate(90deg);
-        transition: all .3s ease-in-out;
+        transition: all .1s ease-in-out;
     }
 }
-
 
 .tuner-button-container {
     display: flex;
@@ -1020,7 +999,7 @@ a {
 }
 
 .tuner-button-container .primary-button {
-    width: 100%;
+    width: 270px;
 }
 
 .tuner-button-container .primary-button:active {
@@ -1047,13 +1026,15 @@ a {
 }
 
 .col_center {
+    display: flex;
+    flex-direction: column;
+}
+.interactive-placeholder {
     background-image: url(assets/img/tuner-imgs/new-headstock.webp);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 255px;
-    display: flex;
-    flex-direction: column;
-    width: 156px;
+    height: 216px;
+    width: 150px;
 }
 
 .interactive-notes button {
@@ -1088,6 +1069,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    gap: 3em;
     margin-bottom: 1em;
 }
 
@@ -1166,10 +1148,6 @@ footer {
 
 .help-link span {
     text-transform: lowercase;
-}
-
-#large-device-display {
-    display: none;
 }
 
 @media all and (min-width: 576px) {
@@ -1263,44 +1241,6 @@ footer {
         top: 60%;
     }
 
-    .container {
-        height: 30vh;
-    }
-
-    .container>.natural {
-        top: calc((50vh / 4) - 159px);
-    }
-
-    .flex-col_centered .container .circle {
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        width: 54vw;
-        height: 29vh;
-    }
-
-    .dial {
-        left: 49%;
-        height: 130px;
-    }
-
-    .center-circle {
-        transform: translate(-50%, 314%);
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 125px;
-    }
-
-    .Tune {
-        margin-top: 170px;
-    }
-
-    .tuner-button-container .primary-button {
-        width: 60%;
-    }
-
     .footer-column .footer-list-row {
         display: flex;
         flex-direction: row;
@@ -1310,7 +1250,6 @@ footer {
         width: 100%;
         gap: 2em;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -1399,94 +1338,6 @@ footer {
     .flex-col_centered .full-width-image {
         width: 80%;
         height: auto;
-    }
-
-    .flex-col_centered .container {
-        height: 46vh;
-    }
-
-    /* dynamic tuner  */
-
-    #dynamic-tuner-sm .flex-col_left {
-        margin-bottom: 3em;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 123px);
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 132px);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 124px);
-        position: relative;
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        position: inherit;
-        left: -80px;
-        top: calc(12.5vh - 50px);
-        transform: rotate(320deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        position: inherit;
-        left: 90px;
-        top: calc(12.5vh - 50px);
-        transform: rotate(30deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .circle {
-        top: 55%;
-        left: 50%;
-        width: 50vw;
-        height: 44vh;
-    }
-
-    .container>span {
-        top: calc((50vh / 4) - 130px);
-    }
-
-    .circle>span:nth-child(2) {
-        top: 164px;
-        left: -16px;
-    }
-
-    .circle>span:nth-child(3) {
-        top: 164px;
-        right: -20px;
-    }
-
-    .dial {
-        top: 6%;
-        height: 166px;
-    }
-
-    .center-circle {
-        transform: translate(-50%, 323%);
-    }
-
-    .Tune {
-        margin-top: 245px;
-    }
-
-    .tuner-button-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin-top: 2em;
-    }
-
-    .tuner-button-container .primary-button {
-        width: 50%;
     }
 
     .footer-column .logo-name {
@@ -1586,65 +1437,7 @@ footer {
         height: 460px;
     }
 
-    /* tuner  */
-
-    #dynamic-tuner-sm .flex-col_left {
-        margin-bottom: 0;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 99px);
-    }
-
-    .flex-col_centered .container .circle {
-        top: 56%;
-        left: 50%;
-        width: 34vw;
-        height: 37vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 99px);
-    }
-
-    .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 124px);
-        position: relative;
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        position: inherit;
-        left: -80px;
-        top: calc(12.5vh - 50px);
-        transform: rotate(320deg);
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        position: inherit;
-        left: 90px;
-        top: calc(12.5vh - 50px);
-        transform: rotate(30deg);
-    }
-
-    .dial {
-        top: 16%;
-        height: 144px;
-    }
-
-    .Tune {
-        margin-top: 267px;
-    }
-
-    .center-circle {
-        transform: translate(-50%, 288%);
-    }
-
-    .tuner-button-container .primary-button {
-        width: 40%;
-    }
-
     /* footer styles  */
-
     footer {
         display: flex;
         flex-direction: column;
@@ -1888,80 +1681,6 @@ footer {
         cursor: pointer;
     }
 
-    /* dynamic tuner  */
-
-    .flex-col_centered .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: unset;
-        height: 28vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 182px);
-    }
-
-    .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 122px);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        position: inherit;
-        left: -80px;
-        top: calc(12.5vh - 40px);
-        transform: rotate(320deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        position: inherit;
-        left: 90px;
-        top: calc(12.5vh - 40px);
-        transform: rotate(30deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .circle {
-        top: 54%;
-        left: 50%;
-        width: 22vw;
-        height: 37vh;
-    }
-
-    .dial {
-        top: 10%;
-        left: 49%;
-        height: 120px;
-    }
-
-    .center-circle {
-        left: calc(100% + -5px);
-        transform: translate(-50%, 250%);
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 123px;
-    }
-
-    .Tune {
-        margin-top: 160px;
-        width: 45px;
-        height: 45px;
-    }
-
-    .Tune h3 {
-        font-size: 30px;
-    }
-
-    .tuner-button-container {
-        display: contents;
-    }
-
     .social-media-link,
     .social-media-icons {
         width: 42px;
@@ -2005,83 +1724,6 @@ footer {
     .flex-col_centered .guitar-headstock_tuning {
         width: 50%;
         height: auto;
-    }
-
-    /* dynamic tuner  */
-    .flex-col_centered .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: unset;
-        height: 28vh;
-    }
-
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 182px);
-    }
-
-    .flex-col_centered .container .natural .vline {
-        top: calc((50vh / 4) - 122px);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-l {
-        position: inherit;
-        left: -80px;
-        top: calc(12.5vh - 40px);
-        transform: rotate(320deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .natural .vline-r {
-        position: inherit;
-        left: 90px;
-        top: calc(12.5vh - 40px);
-        transform: rotate(30deg);
-        font-weight: 500;
-    }
-
-    .flex-col_centered .container .circle {
-        top: 54%;
-        left: 50%;
-        width: 22vw;
-        height: 37vh;
-    }
-
-    .dial {
-        top: 10%;
-        left: 49%;
-        height: 120px;
-    }
-
-    .center-circle {
-        left: calc(100% + -5px);
-        transform: translate(-50%, 250%);
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 123px;
-    }
-
-    .Tune {
-        margin-top: 160px;
-        width: 45px;
-        height: 45px;
-    }
-
-    .Tune h3 {
-        font-size: 30px;
-    }
-
-    #large-device-display .flex-row_center {
-        display: flex;
-    }
-
-    .tuner-button-container {
-        display: contents;
     }
 }
 
@@ -2142,43 +1784,10 @@ footer {
         width: 100%;
     }
 
-
     /* interactive tuner   */
     .flex-col_centered .guitar-headstock_tuning {
         width: 40%;
         height: auto;
-    }
-
-    /* dynamic tuner  */
-    .flex-col_centered .container .natural {
-        top: calc((50vh / 4) - 158px);
-      }
-
-    .flex-col_centered .container .circle {
-        top: 60%;
-        left: 50%;
-        width: 15vw;
-        height: 26vh;
-    }
-
-    .circle>span:nth-child(2),
-    .circle>span:nth-child(3) {
-        top: 108px;
-    }
-
-    .dial {
-        top: 10%;
-        left: 48%;
-        height: 110px;
-    }
-
-    .center-circle {
-        left: calc(100% + -5px);
-        transform: translate(-50%, 260%);
-    }
-
-    .Tune {
-        margin-top: 245px;
     }
 
     .footer-row {

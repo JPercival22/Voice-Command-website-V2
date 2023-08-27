@@ -10,22 +10,18 @@ function toggleAudioProcessing() {
           // Start audio processing here
           MicInput();
           startStopButton.textContent = 'Stop Tuner'; // Change button text
-          startStopButton1.textContent = 'Stop Tuner'; // Change button text
       });
   } else if (audioContext.state === 'running') {
       // Stop audio processing here
       mediaStreamSource.disconnect();
       audioContext.suspend();
       startStopButton.textContent = 'Start Tuner'; // Change button text
-      startStopButton1.textContent = 'Start Tuner'; // Change button text
   }
 }
 
 // Add an event listener to the button
 const startStopButton = document.getElementById('startStopButton');
-const startStopButton1 = document.getElementById('startStopButton1');
 startStopButton.addEventListener('click', toggleAudioProcessing);
-startStopButton1.addEventListener('click', toggleAudioProcessing);
 
 console.log('JS Loaded ...');
 window.AudioContext = window.AudioContext || window.webkitAudioContext; 
@@ -245,7 +241,7 @@ function updatePitch()
 setInterval(() => 
 {
     updatePitch(); 
-}, 1000/2); 
+}, 500); 
 
 
 function autoCorrelate(buf, sampleRate)
@@ -385,33 +381,23 @@ function DisplayNote(noteVal)
 */
 function SetGreenColorForTune(detune, isMove=false)
 {
-    circle = document.querySelector('.circle'); 
     dial = document.querySelector('.dial'); 
     Tune = document.querySelector('.Tune'); 
-    natural = document.querySelector('.natural'); 
-
     flat = document.querySelector('.flat'); 
     sharp = document.querySelector('.sharp'); 
-
-
     //// Resetting the background colors 
     //// Showing the red background on FLat or Sharp
     if (detune >= 0 && detune <= 3)
     {
-        circle.classList.add('active'); 
         dial.classList.add('active'); 
         Tune.classList.add('active'); 
-        natural.classList.add('active'); 
-    
         flat.classList.remove('active'); 
         sharp.classList.remove('active'); 
     }
     else 
     {
-        circle.classList.remove('active'); 
         dial.classList.remove('active'); 
         Tune.classList.remove('active'); 
-        natural.classList.remove('active'); 
 
         if (detune < 0)
         {
