@@ -120,6 +120,32 @@ p {
     line-height: 1.78;
 }
 
+.guitar-tuner {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#frequency-bars {
+    display: block;
+    margin: auto;
+}
+
+#note-name {
+    position: absolute; /* Position the text absolutely within the .guitar-tuner container */
+    top: 50%; /* Move the text to the vertical center */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); /* Adjust the position to center the text */
+    font-size: 22px;
+    text-align: center;
+}
 a {
     font-family: var(--body-copy);
     color: var(--primary-text-color-1);
