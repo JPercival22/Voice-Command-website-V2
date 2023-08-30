@@ -2,8 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
     var toggleButton = document.getElementById("toggle-tuner");
     var correlation_worker = new Worker("scripts/correlation_worker.js");
     var isTunerRunning = false;
+    var canvas = document.getElementById("frequency-bars");
 
-    correlation_worker.addEventListener("message", interpret_correlation_result);
+    if (canvas && canvas.getContext) {
+        var canvasContext = canvas.getContext("2d");
+        var tunerContent = document.querySelector(".guitar-tuner"); // Use the correct class name
+        resizeCanvas();
+
+        window.addEventListener("resize", resizeCanvas);
+
+        function resizeCanvas() {
+            canvas.width = tunerContent.clientWidth;
+            canvas.height = tunerContent.clientHeight;
+        }
+
+        correlation_worker.addEventListener("message", interpret_correlation_result);
+    } else {
+        console.error("Canvas element not found or getContext is not supported.");
+    }
 
     toggleButton.addEventListener("click", function () {
         if (isTunerRunning) {
@@ -22,10 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
         get_user_media.call(navigator, { "audio": true }, use_stream, function () { });
     }
 
+
     function use_stream(stream) {
         var audio_context = new AudioContext();
         var microphone = audio_context.createMediaStreamSource(stream);
-        window.source = microphone; // Workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=934512
+        window.source = microphone;
         var script_processor = audio_context.createScriptProcessor(1024, 1, 1);
 
         script_processor.connect(audio_context.destination);
@@ -59,41 +76,57 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function interpret_correlation_result(event) {
-        var timeseries = event.data.timeseries;
-        var frequency_amplitudes = event.data.frequency_amplitudes;
+        if (event.data) { // Check if there's valid data in the event
+            var timeseries = event.data.timeseries;
+            var frequency_amplitudes = event.data.frequency_amplitudes;
 
-        var magnitudes = frequency_amplitudes.map(function (z) { return z[0] * z[0] + z[1] * z[1]; });
+            var magnitudes = frequency_amplitudes.map(function (z) { return z[0] * z[0] + z[1] * z[1]; });
 
-        var maximum_index = -1;
-        var maximum_magnitude = 0;
-        for (var i = 0; i < magnitudes.length; i++) {
-            if (magnitudes[i] <= maximum_magnitude)
-                continue;
+            canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
-            maximum_index = i;
-            maximum_magnitude = magnitudes[i];
-        }
+            var barWidth = (canvas.width / magnitudes.length) * 1.5; // Adjust the width
+            var maxBarHeight = canvas.height * 0.9; // Maximum bar height to avoid overflowing
 
-        var average = magnitudes.reduce(function (a, b) { return a + b; }, 0) / magnitudes.length;
-        var confidence = maximum_magnitude / average;
-        var confidence_threshold = 10;
-        if (confidence > confidence_threshold) {
-            var dominant_frequency = test_frequencies[maximum_index];
-            document.getElementById("note-name").textContent = dominant_frequency.name;
-            document.getElementById("frequency").textContent = dominant_frequency.frequency;
+            for (var i = 0; i < magnitudes.length; i++) {
+                var barHeight = (magnitudes[i] * maxBarHeight) / 10000;
+                var x = tunerContent.offsetLeft + i * barWidth; // Calculate relative to container's left
+                var y = canvas.height - barHeight;
+            
+                var opacity = magnitudes[i] / 10000;
+                canvasContext.fillStyle = `rgba(0, 128, 255, ${opacity})`;
+                canvasContext.fillRect(x, y, barWidth, barHeight);
+            
+            }
+
+            var maximum_index = -1;
+            var maximum_magnitude = 0;
+            for (var i = 0; i < magnitudes.length; i++) {
+                if (magnitudes[i] <= maximum_magnitude)
+                    continue;
+
+                maximum_index = i;
+                maximum_magnitude = magnitudes[i];
+            }
+
+            var average = magnitudes.reduce(function (a, b) { return a + b; }, 0) / magnitudes.length;
+            var confidence = maximum_magnitude / average;
+            var confidence_threshold = 10;
+            if (confidence > confidence_threshold) {
+                var dominant_frequency = test_frequencies[maximum_index];
+                document.getElementById("note-name").innerHTML = dominant_frequency.name;
+            }
         }
     }
 
-    // Define the set of test frequencies that we'll use to analyze microphone data.
-    var C2 = 65.41; // C2 note, in Hz.
+    var C2 = 65.41;
     var notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
     var test_frequencies = [];
-    for (var i = 0; i < 30; i++) {
+    for (var i = 0; i < 120; i++) { // Increased the loop count for more notes
         var note_frequency = C2 * Math.pow(2, i / 12);
         var note_name = notes[i % 12];
         var note = { "frequency": note_frequency, "name": note_name };
-        var just_above = { "frequency": note_frequency * Math.pow(2, 1 / 48), "name": note_name + " (a bit sharp)" };
-        var just_below = { "frequency": note_frequency * Math.pow(2, -1 / 48), "name": note_name + " (a bit flat)" };
+        var just_above = { "frequency": note_frequency * Math.pow(2, 1 / 48), "name": note_name + "<br>(a bit sharp)" };
+        var just_below = { "frequency": note_frequency * Math.pow(2, -1 / 48), "name": note_name + "<br>(a bit flat)" };
         test_frequencies = test_frequencies.concat([just_below, note, just_above]);
     }
 });
