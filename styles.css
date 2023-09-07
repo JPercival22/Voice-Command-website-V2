@@ -138,14 +138,18 @@ p {
 }
 
 #note-name {
-    position: absolute; /* Position the text absolutely within the .guitar-tuner container */
-    top: 50%; /* Move the text to the vertical center */
+    position: absolute;
+    /* Position the text absolutely within the .guitar-tuner container */
+    top: 50%;
+    /* Move the text to the vertical center */
     left: 0;
     right: 0;
-    transform: translateY(-50%); /* Adjust the position to center the text */
+    transform: translateY(-50%);
+    /* Adjust the position to center the text */
     font-size: 22px;
     text-align: center;
 }
+
 a {
     font-family: var(--body-copy);
     color: var(--primary-text-color-1);
@@ -537,6 +541,18 @@ a {
     width: 100%;
 }
 
+/* flex-roe-space-around  */
+.flex-row-SA {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
 /* home page -inner course navigation  */
 
 .page-nav-container {
@@ -834,187 +850,69 @@ a {
     background-image: url(/img/eminor-min.png);
 }
 
-/* dynamic tuner  */
+/* dynamic tuner page */
+.flex-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+/* table  */
+.guitar-tuner-table {
+    border-collapse: collapse;
+    width: 100%;
+    flex-direction: column;
+    font-family: "Poppins";
+}
+
+.guitar-tuner-table th,
+.guitar-tuner-table th td {
+    padding: 8px;
+    text-align: left;
+}
+
+.guitar-tuner-table th {
+    background-color: #330066;
+    color: white;
+    font-size: 18px;
+    /* Larger header text size */
+}
+
+.guitar-tuner-table td {
+    padding: 10px 18px;
+}
+.guitar-tuner-table tr:nth-child(odd) {
+    background-color: #f7f7f7;
+    /* Zebra striping */
+}
+
+.guitar-tuner-table td:first-child,
+.guitar-tuner-table th:first-child {
+    width: 70%;
+    /* String column wider */
+}
+
+.guitar-tuner-table td:nth-child(2),
+.guitar-tuner-table th:nth-child(2) {
+    width: 30%;
+    /* Status column wider */
+}
+
+.guitar-tuner-table td:nth-child(3),
+.guitar-tuner-table th:nth-child(3) {
+    width: 10%;
+    /* Note column wider */
+}
+
 
 .flex-col_centered .guitar-headstock_tuning {
     width: 100%;
     height: auto;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    height: 37.5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.flex-col_centered .container .circle {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    width: 260px;
-    height: 280px;
-    transform: translate(-50%, -50%);
-    border-top: 5px solid var(--brand-color-purple);
-    border-radius: 50%;
-}
-
-.container>.natural {
-    position: absolute;
-    top: calc((50vh / 4) - 97px);
-    font-weight: 500;
-    background: #fff;
-}
-
-.container>.natural .hidden {
-    display: none;
-}
-
-.container>.natural .check {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    border-radius: 50%;
-    font-size: 2rem;
-}
-
-.flex-col_centered .container .natural .vline {
-    top: calc((50vh / 4) - 58px);
-    position: inherit;
-    font-size: 2rem;
-    font-weight: 500;
-    left: 7px;
-}
-
-.flex-col_centered .container .natural .vline-l {
-    position: inherit;
-    left: -80px;
-    top: calc(12.5vh - 22px);
-    transform: rotate(320deg);
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.flex-col_centered .container .natural .vline-r {
-    position: inherit;
-    left: 90px;
-    top: calc(12.5vh - 27px);
-    transform: rotate(30deg);
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.circle>span {
-    top: calc((50vh / 4) - 130px);
-    width: 20px;
-    height: 40px;
-    font-size: 2rem;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle>span:nth-child(2) {
-    position: absolute;
-    top: 104px;
-    left: -16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-}
-
-.circle>span:nth-child(3) {
-    position: absolute;
-    top: 104px;
-    right: -15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-}
-
-.dial {
-    position: absolute;
-    top: 10%;
-    left: 49.5%;
-    height: 100px;
-    border: 2px solid var(--brand-color-d-blue);
-    border-radius: 20px;
-    transform-origin: bottom center;
-    transition-delay: 0.1s;
-}
-
-.center-circle {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: calc(100% + 0px);
-    width: 20px;
-    height: 20px;
-    background-color: var(--blue-grey-1);
-    border-radius: 50%;
-    transform: translate(-50%, 210%);
-}
-
-.Tune {
-    margin-top: 245px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.flat.active,
-.sharp.active {
-    background: rgb(255, 0, 0, 0.7);
-    color: #fff;
-    border-radius: 50%;
-}
-
-.Tune h3 {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.Tune.active {
-    background: rgb(6, 245, 6);
-    border-radius: 50%;
-    padding: 12px;
-}
-
-.NoteValue {
-    margin-bottom: 0;
-}
-
-.NoteValue.active {
-    color: #fff;
-}
-
-/* //// Animation - Rotating the dial from -90 to +90 of 180 deg */
-@keyframes MoveDial_90CW {
-
-    0%,
-    100% {
-        transform: rotate(-90deg);
-        transition: all .1s ease-in-out;
-    }
-
-    50% {
-        transform: rotate(90deg);
-        transition: all .1s ease-in-out;
-    }
-}
 
 .tuner-button-container {
     display: flex;
@@ -1055,6 +953,7 @@ a {
     display: flex;
     flex-direction: column;
 }
+
 .interactive-placeholder {
     background-image: url(assets/img/tuner-imgs/new-headstock.webp);
     background-size: cover;
@@ -1410,6 +1309,10 @@ footer {
         max-width: 500px;
     }
 
+    .flex-row-SA {
+        flex-wrap: nowrap;
+    }
+    
     .global-hero-banner-with-button {
         padding-top: 160px;
         padding-bottom: 160px;
@@ -1649,11 +1552,6 @@ footer {
     /* layout  */
     .flex-col_left {
         margin-bottom: 1em;
-    }
-
-    /* tuner  */
-    .flex-col-sm-dv {
-        display: none;
     }
 
     .flex-row-lg {
