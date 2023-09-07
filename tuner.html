@@ -22,7 +22,7 @@
   <script defer src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/1.0.0/speechkitt.min.js"></script> -->
   <!-- <script src="scripts/correlation_worker.js"></script> -->
   <!-- <script src="scripts/tuner-script.js"></script> -->
-  <script src="scripts/script.js"></script>
+
 
 </head>
 
@@ -203,14 +203,16 @@
         <div class="flex-col_left">
           <p>
             It is super important to keep your guitar in tune. Most music is tuned using the Standard Tuning. Standard
-            Tuning is where you tune your guitar strings from the bass string to the lightest on your guitar, using
+            Tuning is where you tune your guitar strings from the Bass string (string 6) on your guitar, using
             the notes <strong>E</strong>, <strong>A</strong>, <strong>D</strong>, <strong>G</strong>,
             <strong>B</strong> and
             <strong>E</strong>.
           </p> <br>
           <p>
-            A simple way to remember this order of notes is by using the phrase, Every Amateur Musician Does Get
-            Better Eventually. Each first letter from every word matches the Standard Tuning note order.
+            A simple way to remember this order of notes is by using the phrase, <strong>E</strong>very
+            <strong>A</strong>mateur <strong>D</strong>oes <strong>G</strong>et
+            <strong>B</strong>etter <strong>E</strong>ventually. Each first letter from every word matches the Standard
+            Tuning note order.
           </p>
         </div>
         <br>
@@ -222,23 +224,92 @@
             </span>
           </p>
         </div>
-        <p>So, now we know each string's tone, we need to know what these notes sound like. Occasionally, a tuner may
-          not be available, so this can be really helpful.
-          To help you, below is the image of a Guitar's headstock. The sides of each machine head have a note button,
-          signifying each strings tuning.
-        </p>
       </section>
 
+      <section id="dynamic-tuner">
+        <h3>Online Microphone Tuner</h3>
+        <div class="flex-col_left">
+          <p>When you click the Start button below, your browser will ask you to access your microphone. Please accept
+            this request, as the tuner will not work without your consent. If you accidentally select no, please refresh
+            your browser and start again.
+            The Guitar Tuner will detect each note when you play each guitar string.
+            When a string is in tune, the background will turn Green, and when it is out of tune (a bit sharp or flat),
+            it will turn Red.
+            If your string is Flat, you need to tighten that string using the Tuning Peg found on the Machine head.
+            If your string is Sharp, you need to loosen that string using the Tuning Peg. <br>
+          </p>
+        </div>
+
+      </section>
+      <section>
+        <div class="flex-row-SA">
+          <div class="flex-col">
+          
+              <table class="guitar-tuner-table">
+                <tr>
+                  <th>String</th>
+                  <th>Status</th>
+                  <th>Note</th>
+                </tr>
+                <tr>
+                  <td>6th (Low E)</td>
+                  <td>Tune to</td>
+                  <td>E</td>
+                </tr>
+                <tr>
+                  <td>5th (A)</td>
+                  <td>Tune to</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  <td>4th (D)</td>
+                  <td>Tune to</td>
+                  <td>D</td>
+                </tr>
+                <tr>
+                  <td>3rd (G)</td>
+                  <td>Tune to</td>
+                  <td>G</td>
+                </tr>
+                <tr>
+                  <td>2nd (B)</td>
+                  <td>Tune to</td>
+                  <td>B</td>
+                </tr>
+                <tr>
+                  <td>1st (High E)</td>
+                  <td>Tune to</td>
+                  <td>E</td>
+                </tr>
+
+              </table>
+            </div>
+         
+          <div class="flex-col">
+
+            <div class="guitar-tuner">
+              <p id="note-name"></p>
+              <p id="tuning-status-text">Press Start Button To Begin.</p>
+            </div>
+            <br>
+            <div class="tuner-button-container">
+              <button id="toggle-tuner" class="primary-button">Start Tuner</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
         <div class="flex-row">
-          <p>To help you, below is the image of a Guitar's Head Stock. At the sides of each machine head is a note,
-            signifying
-            what each string should be tuned to. To tune, listen to the required note and then compare that sound with
-            how your string sounds. If
-            it sounds flat (lower in
-            pitch that the actual note), then you need to tighten the string and vice versa if it sounds sharp (higher
-            pitched than the actual note),
-            you will need to loosen the string using your Machine Head. </p>
+          <p>Sometimes, a Guitar Tuner may not always be available. The old-fashioned way was to remember how each note
+            sounded. This method of tuning is still important today for those same reasons. Also, you can use the tuner
+            below to see if your guitar strings match! <br>
+            Below is a picture of a guitar's headstock. At the side of each machine head is a button. Selecting any of
+            these buttons will play each string note through your device. Give it a try and compare your tuned string to
+            the related sound. <br>
+            These small checks will help train your ears in good time, which will help you check if your guitar stays in
+            tune whilst playing.
+            If you get good at this, you may never need to use a tuner again - your ears will do it for you!
+          </p>
         </div>
         <div class="flex-row">
           <div class="flex-col_centered">
@@ -265,7 +336,8 @@
               <p>
                 Ask, "<strong>Connie, play ...</strong>" and then any strings note. Once Connie understands you, the
                 sound
-                of that note will play through your device. Alternatively, you can click or touch one of the notes to
+                of that note will play through your device. <br> Alternatively, you can click or touch one of the notes
+                to
                 hear it and check with your guitar.
               </p>
             </div>
@@ -273,69 +345,6 @@
         </div>
       </section>
 
-      <section id="dynamic-tuner">
-        <h3>Online Microphone Tuner</h3>
-        <div class="flex-col_left">
-          <p>This tuner uses your devices microphone, once you click the Start button below, your
-            browser will ask to access your microphone.
-            Please press ok or the tuner will not work. If you accidentally select no, please refresh your browser
-            to
-            start again. <br>
-            Once you play any of your strings the tuner will tell you what note is detected. If the note is out of
-            tune, the tuner will turn red the needle will rotate to the left or to the right.
-            <br>
-            If the dial moves to the left, this means that your string is Flat and you need to tighten that string,
-            using the Tuning Peg, found on the
-            Machine head. <br>
-            If the dial moves to the right, this means that your string is Sharp and you need to loosen that string
-            using the Tuning Peg. <br>
-            Try to aim and tune each string, so that the tuners needle rotates to the center and the tuner turns green.
-          </p>
-        </div>
-
-      </section>
-
-      <section>
-        <div class="flex-row">
-          <div class="flex-col_centered">
-              <p>Push Start Button and play string.</p>
-              <div class="guitar-tuner">
-                <h2 id="note-name"></h2>
-                <canvas id="frequency-bars" width="300" height="300"></canvas>
-              </div>
-          </div>
-          <div class="tuner-button-container">
-              <button id="toggle-tuner" class="primary-button">Start Tuner</button>
-          </div>
-      </div>
-
-
-      </section>
-      <!-- <div class="container">
-              <div class="natural">
-                <p class="check">&#10003;</p>
-                <p class="vline">&#124;</p>
-                <p class="vline-l">&#124;</p>
-                <p class="vline-r">&#124;</p>
-                <p class="hidden">&#9838;</p>
-              </div>
-              <div class="circle ">
-                <div class="dial ">
-                  <div class="center-circle"></div>
-                </div>
-                <span class="flat">&#9837;</span>
-                <span class="sharp">&#9839;</span>
-              </div>
-              <div class="Tune">
-                <h3 class="NoteValue">--</h3>
-              </div>
-            </div>
-          </div>
-        </div> -->
-      <!-- <div class="flex-col_centered">
-          <div class="tuner-button-container">
-            <button id="startStopButton" class="primary-button">Start Tuner</button>
-           </div> -->
 
 
 
@@ -506,6 +515,7 @@
       </div>
     </footer>
   </main>
+  <script src="scripts/script.js"></script>
   <script src="scripts/tuner-script.js"></script>
 </body>
 
